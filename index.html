@@ -95,9 +95,16 @@
 
 
     </div>
-<audio autoplay loop controls>
+<audio id="bgMusic" loop>
   <source src="audio/main.mp3" type="audio/mpeg">
 </audio>
+
+<script>
+  const bgMusic = document.getElementById("bgMusic");
+
+  document.addEventListener("click", () => {
+    bgMusic.play();
+  }, { once: true });
 <script>
 window.addEventListener("load", () => {
   const search = document.getElementById("search");
