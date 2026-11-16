@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>27 Dresses</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body class="movie dresses">
+    <h3><a href="index.html">Back to Home</a></h3>
+
+    <!-- HEADING -->
+    <h1>27 DRESSES</h1>
+
+    <div class="poster-row">
+      <div class="poster-card">
+        <img src="images/dresses.jpg" alt="27 Dresses" loading="lazy">
+        <div class="poster-overlay">
+          <p>"I like to glance back at the poor bastard getting married... I don't know, he always looks really, really happy."</p>
+        </div>
+      </div>
+
+      <div class="poster-card">
+        <img src="images/dresses-1.jpg" alt="27 Dresses" loading="lazy">
+        <div class="poster-overlay">
+          <p>"Always a bridesmaid, never a bride."</p>
+        </div>
+      </div>
+
+      <div class="poster-card">
+        <img src="images/dresses-2.jpg" alt="27 Dresses" loading="lazy">
+        <div class="poster-overlay">
+          <p>"Maybe it's finally her turn."</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- DESCRIPTION -->
+    <div class="movie-info">
+
+      <div class="info-column">
+        <h2>Genre</h2>
+        <p>Romantic Comedy</p>
+
+        <h2>Release Date</h2>
+        <p>2008</p>
+
+        <h2>Runtime</h2>
+        <p>111 minutes</p>
+
+        <h2>Director</h2>
+        <p>Anne Fletcher</p>
+      </div>
+
+      <div class="info-column">
+        <h2>Main Cast</h2>
+        <ul class="cast-list">
+          <li>Katherine Heigl - Jane Nichols</li>
+          <li>James Marsden - Kevin Doyle</li>
+          <li>Malin Åkerman - Tess Nichols</li>
+          <li>Edward Burns - George</li>
+        </ul>
+      </div>
+
+      <div class="info-column">
+        <h2>Overview</h2>
+        <p>
+          Jane Nichols has been a bridesmaid 27 times but has never been a bride.
+          When her younger sister captures the heart of the man Jane secretly
+          loves, she begins to question whether she's spent too much of her life
+          putting everyone else's happiness before her own.
+        </p>
+
+        <h2>Trivia</h2>
+        <ul class="trivia">
+          <li>The film's iconic bridesmaid dress montage became one of its most memorable scenes.</li>
+          <li>Katherine Heigl performed many of the comedic scenes herself.</li>
+          <li>The movie has become a popular romantic comedy comfort film.</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <audio id="bgMusic" autoplay loop controls>
+      <source src="audio/dresses.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+      const audio = document.getElementById("bgMusic");
+
+      audio.addEventListener("loadedmetadata", function () {
+        audio.currentTime = 48.5;
+      });
+    </script>
+
+  </body>
+</html>

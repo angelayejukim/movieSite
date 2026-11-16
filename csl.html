@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crazy, Stupid, Love</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body class="movie csl">
+    <h3><a href="index.html">Back to Home</a></h3>
+
+    <!-- HEADING -->
+    <h1>CRAZY, STUPID, LOVE.</h1>
+
+    <div class="poster-row">
+      <div class="poster-card">
+        <img src="images/csl.jpg" alt="Crazy, Stupid, Love" loading="lazy">
+        <div class="poster-overlay">
+          <p>"Be better than the Gap."</p>
+        </div>
+      </div>
+
+      <div class="poster-card">
+        <img src="images/csl-1.jpg" alt="Crazy, Stupid, Love" loading="lazy">
+        <div class="poster-overlay">
+          <p>"It's like you're photoshopped."</p>
+        </div>
+      </div>
+
+      <div class="poster-card">
+        <img src="images/csl-2.jpg" alt="Crazy, Stupid, Love" loading="lazy">
+        <div class="poster-overlay">
+          <p>"The war between the sexes is over. We won the second women started doing pole dancing for exercise."</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- DESCRIPTION -->
+    <div class="movie-info">
+
+      <div class="info-column">
+        <h2>Genre</h2>
+        <p>Comedy, Drama, Romance</p>
+
+        <h2>Release Date</h2>
+        <p>2011</p>
+
+        <h2>Runtime</h2>
+        <p>118 minutes</p>
+
+        <h2>Director</h2>
+        <p>Glenn Ficarra &amp; John Requa</p>
+      </div>
+
+      <div class="info-column">
+        <h2>Main Cast</h2>
+        <ul class="cast-list">
+          <li>Steve Carell - Cal Weaver</li>
+          <li>Julianne Moore - Emily Weaver</li>
+          <li>Ryan Gosling - Jacob Palmer</li>
+          <li>Emma Stone - Hannah Weaver</li>
+        </ul>
+      </div>
+
+      <div class="info-column">
+        <h2>Overview</h2>
+        <p>
+          Crazy, Stupid, Love. follows Cal Weaver, whose seemingly perfect life
+          is turned upside down after his wife asks for a divorce. With help
+          from the charismatic Jacob Palmer, Cal learns to navigate modern
+          dating while multiple interconnected love stories reveal that
+          relationships are often messy, unexpected, and deeply rewarding.
+        </p>
+
+        <h2>Trivia</h2>
+        <ul class="trivia">
+          <li>The film features an ensemble cast including Steve Carell, Ryan Gosling, Emma Stone, Julianne Moore, and Kevin Bacon.</li>
+          <li>Ryan Gosling and Emma Stone's chemistry in the film led to them starring together again in <em>Gangster Squad</em> and <em>La La Land</em>.</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <audio id="bgMusic" autoplay loop controls>
+      <source src="audio/csl.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+      const audio = document.getElementById("bgMusic");
+
+      audio.addEventListener("loadedmetadata", function () {
+        audio.currentTime = 0;
+      });
+    </script>
+
+  </body>
+</html>

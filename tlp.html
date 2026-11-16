@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Little Prince</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body class="movie tlp">
+    <h3><a href="index.html">Back to Home</a></h3>
+
+    <!-- HEADING -->
+    <h1>THE LITTLE PRINCE</h1>
+
+    <div class="poster-row">
+      <div class="poster-card">
+        <img src="images/tlp.jpg" alt="The Little Prince" loading="lazy">
+        <div class="poster-overlay">
+          <p>"It is only with the heart that one can see rightly."</p>
+        </div>
+      </div>
+
+      <div class="poster-card">
+        <img src="images/tlp-1.jpg" alt="The Little Prince" loading="lazy">
+        <div class="poster-overlay">
+          <p>"What is essential is invisible to the eye."</p>
+        </div>
+      </div>
+
+      <div class="poster-card">
+        <img src="images/tlp-2.jpg" alt="The Little Prince" loading="lazy">
+        <div class="poster-overlay">
+          <p>"All grown-ups were once children... but only few of them remember it."</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- DESCRIPTION -->
+    <div class="movie-info">
+
+      <div class="info-column">
+        <h2>Genre</h2>
+        <p>Animation, Adventure, Fantasy</p>
+
+        <h2>Release Date</h2>
+        <p>2015</p>
+
+        <h2>Runtime</h2>
+        <p>108 minutes</p>
+
+        <h2>Director</h2>
+        <p>Mark Osborne</p>
+      </div>
+
+      <div class="info-column">
+        <h2>Main Cast</h2>
+        <ul class="cast-list">
+          <li>Mackenzie Foy - The Little Girl</li>
+          <li>Jeff Bridges - The Aviator</li>
+          <li>Riley Osborne - The Little Prince</li>
+          <li>Marion Cotillard - The Rose</li>
+          <li>Benicio del Toro - The Snake</li>
+        </ul>
+      </div>
+
+      <div class="info-column">
+        <h2>Overview</h2>
+        <p>
+          <em>The Little Prince</em> follows a young girl whose carefully
+          planned life is transformed when she befriends her eccentric elderly
+          neighbor, the Aviator. Through his stories about the Little Prince
+          and his travels among the stars, she discovers the importance of
+          imagination, friendship, love, and seeing the world with an open
+          heart.
+        </p>
+
+        <h2>Trivia</h2>
+        <ul class="trivia">
+          <li>The film is inspired by Antoine de Saint-Exupéry's beloved 1943 novella <em>The Little Prince</em>.</li>
+          <li>It combines computer animation with stop-motion-inspired visuals to distinguish the storybook sequences from the modern-world narrative.</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <audio id="bgMusic" autoplay loop controls>
+      <source src="audio/tlp.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+      const audio = document.getElementById("bgMusic");
+
+      audio.addEventListener("loadedmetadata", function () {
+        audio.currentTime = 20.2;
+      });
+    </script>
+
+  </body>
+</html>

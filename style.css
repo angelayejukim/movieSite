@@ -1,0 +1,2043 @@
+/* #region FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@500;600;700&family=Poppins:wght@400;500;600&display=swap');
+body.home .cinema-header {
+    text-align: center;
+    margin: 60px auto 45px;
+}
+
+body.home .cinema-header h1 {
+    font-family: 'Bodoni Moda', serif;
+    font-size: clamp(60px, 8vw, 95px);
+    font-weight: 700;
+    letter-spacing: 15px;
+    color: #fffaf0;
+    transform: scaleX(1);
+    margin: 0;
+    line-height: 1.2;
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+}
+/* Search bar */
+#search,
+#search::placeholder {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+#sort,
+#sort option {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+/* #endregion */
+
+/* #region GENERAL PAGE STYLES */
+body{
+  background-color:#2f2f2f;
+  color:floralwhite;
+  text-align:center;
+  text-shadow:1px 1px 4px rgba(0,0,0,.35);
+  overflow-x:hidden;
+}
+h1{
+  letter-spacing:clamp(4px, 1vw, 10px);
+  font-size:clamp(42px, 8vw, 70px);
+  margin-bottom:20px;
+}
+h2{
+  margin-top:20px;
+}
+h3{
+  margin:15px;
+  padding:5px;
+  font-family:Roboto;
+  text-align:left;
+}
+body.home h3{
+  text-align:center;
+  font-size:28px;
+  margin-top:-10px;
+}
+p{
+  text-align:left;
+  font-size:18px;
+  margin:15px;
+}
+hr {
+  border: none;
+  height: 5px;
+  width: 92%;
+  margin: 2rem auto;
+  background: linear-gradient(
+    to right,
+    transparent,
+    #ffffff,
+    transparent
+  );
+}
+
+/* HOMEPAGE POSTER LAYOUT */
+.container{
+  display:grid;
+  grid-template-columns:repeat(4, 1fr);
+  gap:35px;
+  justify-items:center;
+  align-items:start;
+  padding:0 20px 30px;
+  max-width:1500px;
+  margin:0 auto;
+}
+
+.container a{
+  display:block;
+}
+
+.container img{
+  width:100%;
+  max-width:300px;
+  height:auto;
+}
+
+.container .genre-heading{
+  grid-column:1 / -1;
+}
+
+
+
+/* Genre headings */
+.genre-heading {
+    width: 100%;
+    margin: 35px 0 15px;
+    text-align: center;
+    font-size: 2rem;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Space between genre sections */
+.genre-heading:not(:first-child) {
+    margin-top: 50px;
+}
+/* #endregion */
+
+/* #region MOVIE STYLES */
+/* MOVIE POSTERS */
+.container img, .movie img{
+  border-radius:12px;
+  transition:transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  width:min(300px, 90vw);
+  height:auto;
+  aspect-ratio:300 / 430;
+  object-fit:cover;
+  box-shadow:0 10px 25px rgba(0, 0, 0, 0.495);
+}
+.container img:hover, .movie img:hover{
+  transform: translateY(-20px) scale(1.03);
+  box-shadow:
+    0 10px 18px var(--border),
+    0 0 20px var(--border);
+}
+.container img:active, .movie img:active{
+  transform:scale(0.97);
+}
+
+/* RESTORE POSTER BORDER COLORS ON HOME PAGE */
+.container img{
+  border:5px solid var(--border, #ffffff);
+}
+
+/* MOVIE PAGE TEXT */
+.movie p, .movie ul{
+  font-size:20px;
+  text-align:left;
+  text-shadow:none;
+  font-weight:bold;
+  color:#505050;
+  margin-left:30px;
+}
+
+/* COMBINED H1 STYLE */
+.hunger-games h1, .social-network h1, .sheep h1{
+  font-size:70px;
+  letter-spacing:15px;
+}
+.budapest h1, .scheme h1, .pas h1, .devil h1{
+  font-size:70px;
+  letter-spacing:12px;
+}
+
+/* COMBINED H2 STYLE */
+.movie h2{
+  text-shadow:none;
+  font-size:28px;
+  text-align:left;
+  margin:25px 0 5px 30px;
+}
+
+/* BACK TO HOME BUTTONS */
+.movie a{
+  font-family:Verdana, sans-serif;
+  text-shadow:none;
+  text-decoration:none;
+  margin:25px;
+  border-radius:8px;
+  padding:7px 10px;
+  font-size:20px;
+  transition:transform 0.3s ease-in-out;
+  display:inline-flex;
+  transform:scale(1.2);
+}
+.movie a:hover{
+  transform:scale(1.4);
+}
+
+.movie a:active{
+  transform:scale(1.2);
+}
+
+.movie{
+  --background:white;
+  --primary:black;
+  --secondary:black;
+  --border:black;
+  --button:black;
+  --button-bg:rgba(0,0,0,.2);
+  --button-hover:black;
+  --button-hover-color:white;
+  --heading-shadow:#000;
+}
+body.movie{
+  background:var(--background);
+}
+.movie img{
+  border:5px solid var(--border);
+}
+.movie h1 {
+    color: var(--primary);
+    text-shadow: 3px 2px 3px var(--heading-shadow);
+
+    font-size: clamp(70px, 10vw, 70px);
+    margin-top: -20px;
+    margin-bottom: 50px;
+}
+.movie h2{
+  color:var(--secondary);
+}
+.movie h3{
+  color:var(--h3, var(--button));
+  text-shadow:none;
+  font-size:25px;
+}
+.movie a{
+  border:3px solid var(--button);
+  background-color:var(--button-bg);
+  color:var(--button);
+}
+.movie a:hover{
+  background-color:var(--button-hover);
+  color:var(--button-hover-color, white);
+}
+.cast-list{
+  display:flex;
+  flex-direction:column;
+  padding-left:20px;
+}
+.trivia{
+  display:flex;
+  flex-direction:column;
+  padding-left:20px;
+}
+
+/* #endregion */
+
+/* #region Poster Quote Overlay */
+.poster-card{
+    position:relative;
+    display:inline-block;
+    margin: 0 30px;
+    
+}
+
+.poster-card img{
+    display:block;
+    
+}
+
+.poster-overlay{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    border-radius:12px;
+    border-color:var(--border);
+    border-style:solid;
+    border-width:5px;
+  box-shadow:
+    0 10px 18px var(--border),
+    0 0 20px var(--border);
+
+
+
+    background:rgba(0,0,0,.72);
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    gap:18px;
+
+    opacity:0;
+    transition:.35s ease;
+
+    padding:25px;
+    box-sizing:border-box;
+    
+}
+
+.poster-card:hover .poster-overlay{
+    opacity:1;
+}
+
+.poster-overlay p{
+    color:white !important;
+    font-size:20px;
+    font-style:italic;
+    font-weight:510;
+    text-align:center !important;
+    margin:0;
+    text-shadow:1px 1px 3px rgba(255, 255, 255, 0.441);
+    line-height:1.5;
+}
+.poster-card {
+    transition: transform 0.3s ease-in-out;
+}
+
+.poster-card:hover {
+    transform: translateY(-20px) scale(1.03);
+}
+
+.poster-card:hover .poster-overlay {
+    opacity: 1;
+}
+/* #endregion */
+
+/* #region RESPONSIVE + ACCESSIBILITY IMPROVEMENTS */
+a{
+  display:inline-block;
+}
+
+audio{
+  width:min(420px, 90vw);
+  margin:25px auto 40px;
+  display:block;
+}
+
+.container a:focus-visible,
+.movie a:focus-visible{
+  outline:3px solid floralwhite;
+  outline-offset:6px;
+}
+
+@media (max-width:700px){
+  body{
+    text-shadow:none;
+  }
+
+  h1{
+    letter-spacing:4px;
+  }
+
+  .container{
+    gap:20px;
+    padding:0 10px 25px;
+  }
+
+  .container img,
+  .movie img{
+    width:min(260px, 86vw);
+  }
+
+  .movie p,
+  .movie ul{
+    font-size:18px;
+    margin-left:18px;
+    margin-right:18px;
+  }
+
+  .movie h2{
+    font-size:24px;
+    margin-left:18px;
+  }
+}
+
+@media (prefers-reduced-motion:reduce){
+  .container img,
+  .movie img,
+  .movie a{
+    transition:none;
+  }
+
+  .container img:hover,
+  .movie img:hover,
+  .movie a:hover{
+    transform:none;
+  }
+}
+/* #endregion */
+
+/* #region Modern Search + Sort Controls ===== */
+
+.controls{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:20px;
+  flex-wrap:nowrap;
+  margin:25px auto 35px;
+}
+
+#search,
+#sort{
+  height:54px;
+  margin:0;
+  border:2px solid rgba(255,250,240,.45);
+  border-radius:18px;
+  background:rgba(255,255,255,.12);
+  backdrop-filter:blur(10px);
+  color:floralwhite;
+  font-size:17px;
+  box-shadow:0 8px 22px rgba(0,0,0,.25);
+  transition:.25s ease;
+}
+
+#search{
+  width:340px;
+  max-width:70vw;
+  padding:0 18px;
+}
+
+#search::placeholder{
+  color:rgba(255,250,240,.75);
+}
+
+#sort{
+  width:145px;
+  padding:0 14px;
+  cursor:pointer;
+}
+
+#sort option{
+  background:#1b1b1b;
+  color:white;
+}
+
+#search:hover,
+#search:focus,
+#sort:hover,
+#sort:focus{
+  transform:translateY(-2px);
+  background:rgba(255,255,255,.18);
+  border-color:floralwhite;
+  outline:none;
+  box-shadow:0 12px 28px rgba(0,0,0,.35);
+}
+
+/* ===== Genre Headings ===== */
+
+.genre-heading{
+  width:100%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:18px;
+  margin:55px auto 20px;
+  font-size:clamp(28px,4vw,42px);
+  letter-spacing:3px;
+  text-transform:uppercase;
+  color:floralwhite;
+}
+
+.genre-heading::before,
+.genre-heading::after{
+  content:"";
+  height:3px;
+  width:min(180px,22vw);
+  border-radius:999px;
+  background:linear-gradient(to right,transparent,floralwhite);
+}
+
+.genre-heading::after{
+  background:linear-gradient(to left,transparent,floralwhite);
+}
+/* #endregion */
+
+/* #region Center posters on movie pages */
+body.movie .poster-row{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:55px;
+  flex-wrap:wrap;
+  width:100%;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+body.movie .poster-card{
+  margin-left:auto;
+  margin-right:auto;
+}
+
+body.movie .poster-row{
+  display:flex !important;
+  justify-content:center !important;
+  align-items:flex-start !important;
+  gap:55px !important;
+  flex-wrap:wrap !important;
+  width:100% !important;
+  margin:0 auto 110px !important;
+}
+
+body.movie .poster-row .poster-card{
+  margin:0 !important;
+}
+
+/* Older movie pages without .poster-row:
+   keeps the text layout exactly the same, only nudges the poster row */
+@supports selector(body:has(.poster-card)){
+  body.movie:not(:has(.poster-row)) > .poster-card{
+    position:relative !important;
+    left:0 !important;
+  }
+}
+
+@media (max-width:1100px){
+  @supports selector(body:has(.poster-card)){
+    body.movie:not(:has(.poster-row)) > .poster-card{
+      left:0 !important;
+    }
+  }
+}
+/* #endregion */
+
+/* #region SHARED MOVIE PAGE LAYOUT */
+body.movie{
+  max-width:1500px;
+  margin:0 auto;
+  padding:20px 40px;
+}
+
+.poster-row{
+  display:flex;
+  justify-content:center;
+  align-items:flex-start;
+  gap:50px;
+  margin:0 auto 40px;
+  flex-wrap:wrap;
+}
+
+.poster-row .poster-card{
+  margin:0;
+}
+
+.movie-info{
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr;
+  gap:60px;
+  max-width:1400px;
+  margin:0 auto;
+  align-items:start;
+}
+
+.info-column{
+  text-align:left;
+}
+
+.info-column h2{
+  margin:0 0 8px;
+}
+
+.info-column p,
+.info-column ul{
+  margin:0 0 20px;
+  text-align:left;
+}
+
+.movie-info .cast-list,
+.movie-info .trivia{
+  padding-left:22px;
+}
+
+.movie audio{
+  display:block;
+  margin:40px auto;
+}
+
+@media (max-width:1100px){
+  .container{
+    grid-template-columns:repeat(3, 1fr);
+  }
+
+  .movie-info{
+    grid-template-columns:1fr;
+    gap:20px;
+  }
+}
+
+@media (max-width:800px){
+  .container{
+    grid-template-columns:repeat(2, 1fr);
+  }
+}
+
+@media (max-width:500px){
+  .container{
+    grid-template-columns:1fr;
+  }
+}
+
+/* HOMEPAGE: 4 posters per row */
+body.home .container,
+body:not(.movie) .container{
+  display:grid;
+  grid-template-columns:repeat(4, minmax(0, 1fr));
+  gap:35px;
+  justify-items:center;
+  align-items:start;
+  max-width:1450px;
+  margin:0 auto;
+  padding:0 25px 35px;
+}
+
+body.home .container a,
+body:not(.movie) .container a{
+  display:flex;
+  justify-content:center;
+  width:100%;
+}
+
+body.home .container img,
+body:not(.movie) .container img{
+  width:100%;
+  max-width:300px;
+  height:auto;
+}
+
+/* MOVIE PAGES: overall page */
+body.movie{
+  max-width:1500px;
+  margin:0 auto;
+  padding:20px 40px;
+  box-sizing:border-box;
+}
+
+/* MOVIE PAGES: poster row, for pages where you added <div class="poster-row"> */
+body.movie .poster-row{
+  display:flex;
+  justify-content:center;
+  align-items:flex-start;
+  gap:55px;
+  flex-wrap:wrap;
+  margin:0 auto 45px;
+}
+
+body.movie .poster-row .poster-card{
+  margin:0;
+}
+
+/* MOVIE PAGES: info grid, for pages where you added <div class="movie-info"> */
+body.movie .movie-info{
+  display:grid;
+  grid-template-columns:1fr 1.15fr 1.45fr;
+  gap:60px;
+  max-width:1320px;
+  margin:0 auto;
+  align-items:start;
+}
+
+body.movie .info-column{
+  text-align:left;
+}
+
+body.movie .movie-info h2{
+  margin:0 0 8px;
+  text-align:left;
+}
+
+body.movie .movie-info p,
+body.movie .movie-info ul{
+  margin:0 0 22px;
+  padding-left:0;
+  text-align:left;
+}
+
+body.movie .movie-info ul{
+  padding-left:22px;
+}
+
+/* MOVIE PAGES: support old HTML pages that DON'T have poster-row/movie-info yet */
+@supports selector(body:has(.poster-card)){
+  body.movie:not(:has(.poster-row)) .poster-card{
+    margin:0 28px 45px;
+    vertical-align:top;
+  }
+
+  body.movie:not(:has(.movie-info)) > h2,
+  body.movie:not(:has(.movie-info)) > p,
+  body.movie:not(:has(.movie-info)) > ul{
+    text-align:left;
+    margin-left:0;
+  }
+
+  body.movie:not(:has(.movie-info)) > h2:nth-of-type(1),
+  body.movie:not(:has(.movie-info)) > h2:nth-of-type(1) + p,
+  body.movie:not(:has(.movie-info)) > h2:nth-of-type(2),
+  body.movie:not(:has(.movie-info)) > h2:nth-of-type(2) + p,
+  body.movie:not(:has(.movie-info)) > h2:nth-of-type(3),
+  body.movie:not(:has(.movie-info)) > h2:nth-of-type(3) + p,
+  body.movie:not(:has(.movie-info)) > h2:nth-of-type(4),
+  body.movie:not(:has(.movie-info)) > h2:nth-of-type(4) + p{
+    width:25%;
+    margin-left:4%;
+  }
+
+  body.movie:not(:has(.movie-info)) > h2:nth-of-type(5),
+  body.movie:not(:has(.movie-info)) > h2:nth-of-type(5) + ul{
+    width:30%;
+    margin-left:36%;
+  }
+
+  body.movie:not(:has(.movie-info)) > h2:nth-of-type(5){
+    margin-top:-300px;
+  }
+
+  body.movie:not(:has(.movie-info)) > h2:nth-of-type(6),
+  body.movie:not(:has(.movie-info)) > h2:nth-of-type(6) + p,
+  body.movie:not(:has(.movie-info)) > h2:nth-of-type(7),
+  body.movie:not(:has(.movie-info)) > h2:nth-of-type(7) + ul{
+    width:31%;
+    margin-left:68%;
+  }
+
+  body.movie:not(:has(.movie-info)) > h2:nth-of-type(6){
+    margin-top:-230px;
+  }
+}
+
+/* Audio */
+body.movie audio{
+  display:block;
+  margin:45px auto 35px;
+  clear:both;
+}
+
+/* Tablet */
+@media (max-width:1100px){
+  body.home .container,
+  body:not(.movie) .container{
+    grid-template-columns:repeat(3, minmax(0, 1fr));
+  }
+
+  body.movie .movie-info{
+    grid-template-columns:1fr;
+    gap:20px;
+  }
+
+  body.movie .movie-info p,
+  body.movie .movie-info ul{
+    margin-bottom:20px;
+  }
+}
+
+/* Phone */
+@media (max-width:700px){
+  body.home .container,
+  body:not(.movie) .container{
+    grid-template-columns:repeat(2, minmax(0, 1fr));
+    gap:22px;
+  }
+
+  body.movie{
+    padding:16px 18px;
+  }
+
+  body.movie .poster-row{
+    gap:25px;
+  }
+}
+
+/* Small phone */
+@media (max-width:430px){
+  body.home .container,
+  body:not(.movie) .container{
+    grid-template-columns:1fr;
+  }
+}
+body.movie .poster-row{
+  margin-bottom:90px !important;
+}
+
+body.movie .movie-info{
+  align-items:start !important;
+}
+
+body.movie .info-column{
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-start;
+}
+
+body.movie .info-column h2:first-child{
+  margin-top:0 !important;
+}
+
+/* If your movie page DOES NOT use the new wrapper divs yet */
+@supports selector(body:has(.poster-card)){
+  body.movie:not(:has(.movie-info)){
+    display:grid;
+    grid-template-columns:1fr 1.15fr 1.45fr;
+    column-gap:60px;
+    align-items:start;
+  }
+
+  body.movie:not(:has(.movie-info)) > h3,
+  body.movie:not(:has(.movie-info)) > h1,
+  body.movie:not(:has(.movie-info)) > audio{
+    grid-column:1 / -1;
+  }
+
+  body.movie:not(:has(.movie-info)) > h3{
+    grid-row:1;
+    justify-self:start;
+  }
+
+  body.movie:not(:has(.movie-info)) > h1{
+    grid-row:2;
+    justify-self:center;
+  }
+
+  body.movie:not(:has(.poster-row)) > .poster-card{
+    grid-row:3;
+    justify-self:center;
+    margin:0 0 90px !important;
+  }
+
+  body.movie:not(:has(.poster-row)) > .poster-card:nth-of-type(1){
+    grid-column:1;
+  }
+
+  body.movie:not(:has(.poster-row)) > .poster-card:nth-of-type(2){
+    grid-column:2;
+  }
+
+  body.movie:not(:has(.poster-row)) > .poster-card:nth-of-type(3){
+    grid-column:3;
+  }
+
+  body.movie:not(:has(.movie-info)) > h2,
+  body.movie:not(:has(.movie-info)) > p,
+  body.movie:not(:has(.movie-info)) > ul{
+    width:auto !important;
+    margin-left:0 !important;
+    margin-top:0 !important;
+    text-align:left;
+    justify-self:stretch;
+  }
+
+  /* Left column */
+  body.movie:not(:has(.movie-info)) > h2:nth-of-type(1){ grid-column:1; grid-row:4; }
+  body.movie:not(:has(.movie-info)) > h2:nth-of-type(1) + p{ grid-column:1; grid-row:5; }
+
+  body.movie:not(:has(.movie-info)) > h2:nth-of-type(2){ grid-column:1; grid-row:6; }
+  body.movie:not(:has(.movie-info)) > h2:nth-of-type(2) + p{ grid-column:1; grid-row:7; }
+
+  body.movie:not(:has(.movie-info)) > h2:nth-of-type(3){ grid-column:1; grid-row:8; }
+  body.movie:not(:has(.movie-info)) > h2:nth-of-type(3) + p{ grid-column:1; grid-row:9; }
+
+  body.movie:not(:has(.movie-info)) > h2:nth-of-type(4){ grid-column:1; grid-row:10; }
+  body.movie:not(:has(.movie-info)) > h2:nth-of-type(4) + p{ grid-column:1; grid-row:11; }
+
+  /* Middle column */
+  body.movie:not(:has(.movie-info)) > h2:nth-of-type(5){ grid-column:2; grid-row:4; }
+  body.movie:not(:has(.movie-info)) > h2:nth-of-type(5) + ul{ grid-column:2; grid-row:5 / span 7; }
+
+  /* Right column */
+  body.movie:not(:has(.movie-info)) > h2:nth-of-type(6){ grid-column:3; grid-row:4; }
+  body.movie:not(:has(.movie-info)) > h2:nth-of-type(6) + p{ grid-column:3; grid-row:5; }
+
+  body.movie:not(:has(.movie-info)) > h2:nth-of-type(7){ grid-column:3; grid-row:6; }
+  body.movie:not(:has(.movie-info)) > h2:nth-of-type(7) + ul{ grid-column:3; grid-row:7 / span 5; }
+
+  body.movie:not(:has(.movie-info)) > audio{
+    grid-row:12;
+    justify-self:center;
+    margin-top:50px !important;
+  }
+}
+
+/* =========================================================
+   FINAL MOVIE ALIGNMENT UPDATE
+   - Bigger space between posters and text
+   - Keeps Genre / Release Date / Runtime / Director together
+   - Lines up Genre, Main Cast, and Overview
+   ========================================================= */
+
+/* Pages using the recommended wrapper HTML */
+body.movie .poster-row{
+  margin-bottom:110px !important;
+}
+
+body.movie .movie-info{
+  display:grid !important;
+  grid-template-columns:1fr 1.15fr 1.45fr !important;
+  gap:65px !important;
+  max-width:1350px !important;
+  margin:0 auto !important;
+  align-items:start !important;
+}
+
+body.movie .info-column{
+  display:block !important;
+  text-align:left !important;
+}
+
+body.movie .info-column h2:first-child{
+  margin-top:0 !important;
+}
+
+body.movie .movie-info h2{
+  text-align:left !important;
+  margin:0 0 10px !important;
+}
+
+body.movie .movie-info p,
+body.movie .movie-info ul{
+  text-align:left !important;
+  margin:0 0 28px !important;
+}
+
+body.movie .movie-info ul{
+  padding-left:22px !important;
+}
+
+/* Pages that still use the old HTML without movie-info wrappers */
+@supports selector(body:has(.poster-card)){
+  body.movie:not(:has(.movie-info)){
+    display:grid !important;
+    grid-template-columns:1fr 1.15fr 1.45fr !important;
+    column-gap:65px !important;
+    max-width:1500px !important;
+    margin:0 auto !important;
+    padding:20px 60px !important;
+    box-sizing:border-box !important;
+    align-items:start !important;
+  }
+
+  body.movie:not(:has(.movie-info)) > h3,
+  body.movie:not(:has(.movie-info)) > h1,
+  body.movie:not(:has(.movie-info)) > audio{
+    grid-column:1 / -1 !important;
+  }
+
+  body.movie:not(:has(.movie-info)) > h3{
+    grid-row:1 !important;
+    justify-self:start !important;
+  }
+
+  body.movie:not(:has(.movie-info)) > h1{
+    grid-row:2 !important;
+    justify-self:center !important;
+  }
+
+  body.movie:not(:has(.poster-row)) > .poster-card{
+    grid-row:3 !important;
+    justify-self:center !important;
+    margin:0 0 110px !important;
+  }
+
+  body.movie:not(:has(.poster-row)) > .poster-card:nth-of-type(1){
+    grid-column:1 !important;
+  }
+
+  body.movie:not(:has(.poster-row)) > .poster-card:nth-of-type(2){
+    grid-column:2 !important;
+  }
+
+  body.movie:not(:has(.poster-row)) > .poster-card:nth-of-type(3){
+    grid-column:3 !important;
+  }
+
+  body.movie:not(:has(.movie-info)) > h2,
+  body.movie:not(:has(.movie-info)) > p,
+  body.movie:not(:has(.movie-info)) > ul{
+    width:auto !important;
+    margin-left:0 !important;
+    margin-right:0 !important;
+    text-align:left !important;
+    justify-self:stretch !important;
+    align-self:start !important;
+  }
+
+  /* Put each column's content into one visual block so the left info stays together */
+  body.movie:not(:has(.movie-info)) > h2:nth-of-type(1),
+  body.movie:not(:has(.movie-info)) > h2:nth-of-type(2),
+  body.movie:not(:has(.movie-info)) > h2:nth-of-type(3),
+  body.movie:not(:has(.movie-info)) > h2:nth-of-type(4),
+  body.movie:not(:has(.movie-info)) > h2:nth-of-type(1) + p,
+  body.movie:not(:has(.movie-info)) > h2:nth-of-type(2) + p,
+  body.movie:not(:has(.movie-info)) > h2:nth-of-type(3) + p,
+  body.movie:not(:has(.movie-info)) > h2:nth-of-type(4) + p{
+    grid-column:1 !important;
+    grid-row:4 !important;
+  }
+
+  body.movie:not(:has(.movie-info)) > h2:nth-of-type(5),
+  body.movie:not(:has(.movie-info)) > h2:nth-of-type(5) + ul{
+    grid-column:2 !important;
+    grid-row:4 !important;
+  }
+
+  body.movie:not(:has(.movie-info)) > h2:nth-of-type(6),
+  body.movie:not(:has(.movie-info)) > h2:nth-of-type(6) + p,
+  body.movie:not(:has(.movie-info)) > h2:nth-of-type(7),
+  body.movie:not(:has(.movie-info)) > h2:nth-of-type(7) + ul{
+    grid-column:3 !important;
+    grid-row:4 !important;
+  }
+
+  /* Left column spacing */
+  body.movie:not(:has(.movie-info)) > h2:nth-of-type(1){ margin-top:0 !important; }
+  body.movie:not(:has(.movie-info)) > h2:nth-of-type(1) + p{ margin-top:52px !important; }
+
+  body.movie:not(:has(.movie-info)) > h2:nth-of-type(2){ margin-top:110px !important; }
+  body.movie:not(:has(.movie-info)) > h2:nth-of-type(2) + p{ margin-top:162px !important; }
+
+  body.movie:not(:has(.movie-info)) > h2:nth-of-type(3){ margin-top:220px !important; }
+  body.movie:not(:has(.movie-info)) > h2:nth-of-type(3) + p{ margin-top:272px !important; }
+
+  body.movie:not(:has(.movie-info)) > h2:nth-of-type(4){ margin-top:330px !important; }
+  body.movie:not(:has(.movie-info)) > h2:nth-of-type(4) + p{ margin-top:382px !important; }
+
+  /* Middle column spacing */
+  body.movie:not(:has(.movie-info)) > h2:nth-of-type(5){ margin-top:0 !important; }
+  body.movie:not(:has(.movie-info)) > h2:nth-of-type(5) + ul{ margin-top:58px !important; }
+
+  /* Right column spacing */
+  body.movie:not(:has(.movie-info)) > h2:nth-of-type(6){ margin-top:0 !important; }
+  body.movie:not(:has(.movie-info)) > h2:nth-of-type(6) + p{ margin-top:58px !important; }
+
+  body.movie:not(:has(.movie-info)) > h2:nth-of-type(7){ margin-top:285px !important; }
+  body.movie:not(:has(.movie-info)) > h2:nth-of-type(7) + ul{ margin-top:340px !important; }
+
+  body.movie:not(:has(.movie-info)) > audio{
+    grid-row:5 !important;
+    justify-self:center !important;
+    margin-top:80px !important;
+  }
+}
+
+/* Responsive movie layout */
+@media (max-width:1100px){
+  body.movie .movie-info{
+    grid-template-columns:1fr !important;
+    gap:20px !important;
+  }
+
+  @supports selector(body:has(.poster-card)){
+    body.movie:not(:has(.movie-info)){
+      display:block !important;
+      padding:16px 24px !important;
+    }
+
+    body.movie:not(:has(.movie-info)) > h2,
+    body.movie:not(:has(.movie-info)) > p,
+    body.movie:not(:has(.movie-info)) > ul{
+      margin-top:initial !important;
+      margin-bottom:18px !important;
+    }
+
+    body.movie:not(:has(.poster-row)) > .poster-card{
+      margin:0 20px 45px !important;
+    }
+  }
+}
+/* #endregion */
+
+/* #region LALALAND */
+.lalaland,
+.container a[href="lalaland.html"]{
+  --background:#ece8ff;
+  --border:#3b38a2;
+  --primary:#2a288f;
+  --heading-shadow:#8d8af7;
+  --secondary:#4441ad;
+  --button:rgb(42,40,143);
+  --button-bg:rgba(68,65,173,0.37);
+  --button-hover:#6967cc;
+}
+/* #endregion */
+
+/* #region WHIPLASH */
+.whiplash,
+.container a[href="whiplash.html"]{
+  --background:#e6d6d6;
+  --border:#d3232a;
+  --primary:#d3232a;
+  --heading-shadow:#950c12;
+  --secondary:#950c12;
+  --button:#d02128;
+  --button-bg:rgba(211,35,42,0.31);
+  --button-hover:#e16b70;
+}
+/* #endregion */
+
+/* #region THE LONG WALK */
+.long-walk,
+.container a[href="long-walk.html"]{
+  --background:#f2ddc8;
+  --border:#ba4610;
+  --primary:#ba4610;
+  --heading-shadow:#762804;
+  --secondary:#762804;
+  --button:#ba4610;
+  --button-bg:rgba(206,65,0,0.25);
+  --button-hover:#e08a62;
+  --h3:#762804;
+}
+/* #endregion */
+
+/* #region HAMNET */
+.hamnet,
+.container a[href="hamnet.html"]{
+  --background:#effaf1;
+  --border:#5d896f;
+  --primary:#6d9a7f;
+  --heading-shadow:#1a4b2e;
+  --secondary:#437e5b;
+  --button:#437e5b;
+  --button-bg:rgba(93,137,111,0.35);
+  --button-hover:#6d9a7f;
+}
+/* #endregion */
+
+/* #region BABY DRIVER */
+.baby-driver,
+.container a[href="baby-driver.html"]{
+  --background:#fad8e0;
+  --border:#e14c6c;
+  --primary:#e14c6c;
+  --heading-shadow:#a81232;
+  --secondary:#d9123d;
+  --button:#e14c6c;
+  --button-bg:rgba(196,30,30,0.25);
+  --button-hover:#e9889d;
+  --h3:#e14c6c;
+}
+/* #endregion */
+
+/* #region THE SOCIAL NETWORK */
+.social-network,
+.container a[href="social-network.html"]{
+  --background:#ebf1ff;
+  --border:#5a71a5;
+  --primary:#5a71a5;
+  --heading-shadow:#102e75;
+  --secondary:#3057b0;
+  --button:#5a71a5;
+  --button-bg:rgba(90,112,165,0.27);
+  --button-hover:#8196c8;
+  --h3:#3057b0;
+}
+/* #endregion */
+
+/* #region THE HUNGER GAMES */
+.hunger-games,
+.container a[href="hunger-games.html"]{
+  --background:#f2ddc8;
+  --border:#db9e2d;
+  --primary:#db9e2d;
+  --heading-shadow:#b17504;
+  --secondary:#b17504;
+  --button:#db9e2d;
+  --button-bg:#f7d18a75;
+  --button-hover:#f6c772;
+  --h3:#b17504;
+}
+/* #endregion */
+
+/* #region 13 GOING ON 30 */
+.thirty,
+.container a[href="thirty.html"]{
+  --background:#ffd2dd;
+  --border:#de375f;
+  --primary:#de375f;
+  --heading-shadow:#9e0428;
+  --secondary:#9e0428;
+  --button:#de375f;
+  --button-bg:#de375e50;
+  --button-hover:#ff6488;
+  --h3:#9e0428;
+}
+/* #endregion */
+
+/* #region THE DEVIL WEARS PRADA */
+.devil,
+.container a[href="devil.html"]{
+  --background:#fff0ef;
+  --border:#a72717;
+  --primary:#e23c27;
+  --heading-shadow:#811c0f;
+  --secondary:#a72717;
+  --button:#a72717;
+  --button-bg:#e5614f91;
+  --button-hover:#e5614f;
+  --h3:#a72717;
+}
+/* #endregion */
+
+/* #region THE INTERN */
+.intern,
+.container a[href="intern.html"]{
+  --background:#F6F2ED;
+  --border:#1F3A5F;
+  --primary:#c81c2d;
+  --heading-shadow:#8e1521;
+  --secondary:#1F3A5F;
+  --button:#1F3A5F;
+  --button-bg:#D6E3F280;
+  --button-hover:#496a99;
+  --button-hover-color:#F6F2ED;
+  --h3:#B71C2B;
+}
+/* #endregion */
+
+/* #region NOW YOU SEE ME */
+.nysm,
+.container a[href="nysm.html"]{
+  --background:#626262;
+  --border:black;
+  --primary:#500d0f;
+  --heading-shadow:#4a4a4a;
+  --secondary:#a1191d;
+  --button:#500d0f;
+  --button-bg:#500d0f33;
+  --button-hover:#5c2527;
+}
+.nysm p, .nysm ul{
+  color:#c7c7c7;
+}
+/* #endregion */
+
+/* #region CANDY JAR */
+.candy,
+.container a[href="candy.html"]{
+  --background:#ecfdfc;
+  --border:#f2cf45;
+  --primary:#2b8c88;
+  --heading-shadow:#68c2bf;
+  --secondary:#2b8c88;
+  --button:#2b8c88;
+  --button-bg:#bfe8e4;
+  --button-hover:#88ccca;
+  --h3:#2b8c88;
+}
+/* #endregion */
+
+/* #region PROJECT HAIL MARY */
+.hail-mary,
+.container a[href="hail-mary.html"]{
+  --background:#fbecdb;
+  --border:#da6429;
+  --primary:#47b2a0;
+  --heading-shadow:#7dc8bc;
+  --secondary:#0d7866;
+  --button:#da6429;
+  --button-bg:#da642950;
+  --button-hover:#efa17a;
+  --h3:#0d7866;
+}
+/* #endregion */
+
+/* #region OBSESSION */
+.obsession,
+.container a[href="obsession.html"]{
+  --background:#151317;
+  --border:#b31217;
+  --primary:#d9181f;
+  --heading-shadow:#d1192e;
+  --secondary:#d9181f;
+  --button:#86080c;
+  --button-bg:#b3121750;
+  --button-hover:#b31217;
+  --h3:#5a8fb8;
+}
+
+.obsession p,
+.obsession li{
+  color:#c7c7c7;
+}
+/* #endregion */
+
+/* #region THE SHEEP DETECTIVES */
+.sheep,
+.container a[href="sheep.html"]{
+  --background:#dbe9b7;
+  --border:#f2c517;
+  --primary:#f2c517;
+  --heading-shadow:#8a6a08;
+  --secondary:#b9a300;
+  --button:#5d7c2d;
+  --button-bg:#5d7c2d50;
+  --button-hover:#7a9e43;
+}
+/* #endregion */
+
+/* #region BABYLON */
+.babylon,
+.container a[href="babylon.html"]{
+  --background:#2b1a10;
+  --border:#d2131d;
+  --primary:#f1c25b;
+  --heading-shadow:#8b4a11;
+  --secondary:#c57b2c;
+  --button:#9f1f26;
+  --button-bg:#9f1f2650;
+  --button-hover:#c83a42;
+  --button-hover-color:#ffffff;
+}
+
+.babylon p,
+.babylon li{
+  color:#e5d8bc;
+}
+/* #endregion */
+
+/* #region THE GRAND BUDAPEST HOTEL */
+.budapest,
+.container a[href="budapest.html"]{
+  --background:#f7dfe9;
+  --border:#ed68a4;
+  --primary:#f9c866;
+  --heading-shadow:#9c721f;
+  --secondary:#d55a91;
+  --button:#ff7eb6;
+  --button-bg:#ff7eb633;
+  --button-hover:#ffb3d4;
+  --button-hover-color:#ffffff;
+}
+/* #endregion */
+
+/* #region THE PHOENICIAN SCHEME */
+.scheme,
+.container a[href="scheme.html"]{
+  --background:#ece8d7;
+  --border:#ff4a2d;
+  --primary:#ff3b1f;
+  --heading-shadow:#c42f1d;
+  --secondary:#9158c0;
+  --button:#ff5b45;
+  --button-bg:#ff5b4533;
+  --button-hover:#ff7c69;
+  --button-hover-color:#ffffff;
+}
+/* #endregion */
+
+/* #region MR. PEABODY & SHERMAN */
+.pas,
+.container a[href="pas.html"]{
+  --background:#1e366a;
+  --border:#ffffff;
+  --primary:#ffffff;
+  --heading-shadow:#9aa5b3;
+  --secondary:#e13226;
+  --button:#e63b2e;
+  --button-bg:#e63b2e33;
+  --button-hover:#ff5a4e;
+  --button-hover-color:#ffffff;
+}
+.pas p, .pas ul{
+  color:rgb(221, 221, 221);
+}
+/* #endregion */
+
+/* #region BIRDMAN */
+.birdman,
+.container a[href="birdman.html"]{
+  --background:#cfddc2;
+  --border:#f3e7c7;
+  --primary:#ffffff;
+  --heading-shadow:#bebebe;
+  --secondary:#b07e3c;
+  --button:#6b3d2f;
+  --button-bg:#6b3d2f33;
+  --button-hover:#8b5747;
+  --button-hover-color:#ffffff;
+  --h3:#3d4c66;
+}
+/* #endregion */
+
+/* #region TO ALL THE BOYS I'VE LOVED BEFORE */
+.tatb,
+.container a[href="tatb.html"]{
+  --background:#fff0fa;
+  --border:#5470d8;
+  --primary:#5470d8;
+  --heading-shadow:#91a4e9;
+  --secondary:#f06f92;
+  --button:#f06f92;
+  --button-bg:#f49ab233;
+  --button-hover:#f49ab1;
+  --button-hover-color:#ffffff;
+  --h3:#4d5fb6;
+}
+/* #endregion */
+
+/* #region COMPANION */
+.companion,
+.container a[href="companion.html"]{
+  --background:#fbded0;
+  --border:#e7778d;
+  --primary:#e7778d;
+  --heading-shadow:#ed98a7;
+  --secondary:#d7405e;
+  --button:#d7405e;
+  --button-bg:#d7405e33;
+  --button-hover:#e78094;
+  --button-hover-color:#ffffff;
+  --h3:#f1d5d7;
+}
+/* #endregion */
+
+/* #region SINNERS */
+.sinners,
+.container a[href="sinners.html"]{
+  --background:#1a0c09;
+  --border:#f2b321;
+  --primary:#fff3dc;
+  --heading-shadow:#8f5533;
+  --secondary:#f2b321;
+  --button:#f2b321;
+  --button-bg:#f2b32133;
+  --button-hover:#c4a869;
+  --button-hover-color:#ffffff;
+}
+.sinners p, .sinners li{
+  color:#e5d8bc;
+}
+/* #endregion */
+
+/* #region SUPERBAD */
+.superbad,
+.container a[href="superbad.html"]{
+  --background:#f4f0e6;
+  --border:#ec2724;
+  --primary:#ec2724;
+  --heading-shadow:#b7afa4;
+  --secondary:#ec2724;
+  --button:#ec2724;
+  --button-bg:#ec272433;
+  --button-hover:#f67f7d;
+  --button-hover-color:#ffffff;
+}
+/* #endregion */
+
+/* #region MY GIRL */
+.my-girl,
+.container a[href="my-girl.html"]{
+  --background:#f7f1e8;
+  --border:#e35b52;
+  --primary:#e35b52;
+  --heading-shadow:#d4c2b3;
+  --secondary:#e35b52;
+  --button:#7b9c67;
+  --button-bg:#7b9c6733;
+  --button-hover:#93b37c;
+  --button-hover-color:#ffffff;
+}
+/* #endregion */
+
+/* #region HARRY POTTER */
+.hp,
+.container a[href="hp.html"]{
+  --background:#0b0b16;
+  --border:#d0a12a;
+  --primary:#e50e0e;
+  --heading-shadow:#5b4c37;
+  --secondary:#d0a12a;
+  --button:#e50e0e;
+  --button-bg:#e50e0e33;
+  --button-hover:#f66b6b;
+  --button-hover-color:#ffffff;
+}
+.hp p, .hp ul{
+  color:#f7ebd2;
+}
+/* #endregion */
+
+/* #region LITTLE MISS SUNSHINE */
+.lms,
+.container a[href="lms.html"]{
+  --background:#fff5c8;
+  --border: #000000;
+  --primary:#ffd429;
+  --heading-shadow:#b99919;
+  --secondary:#2c2c2c;
+  --button:#dfb612;
+  --button-bg:#dfb61233;
+  --button-hover:#efcd49;
+  --button-hover-color:#ffffff;
+}
+/* #endregion */
+
+/* #region RATATOUILLE */
+.rat,
+.container a[href="rat.html"]{
+  --background:#ece8e2;
+  --border:#2b4ea2;
+  --primary:#2b4ea2;
+  --heading-shadow:#88a0d9;
+  --secondary:#2b4ea2;
+  --button:#d7ac35;
+  --button-bg:#d7ac3533;
+  --button-hover:#efcf76;
+  --button-hover-color:#ffffff;
+  --h3:#4f647a;
+}
+/* #endregion */
+
+/* #region A REAL PAIN */
+.realpain,
+.container a[href="realpain.html"]{
+  --background:#c1d3d5;
+  --border:#cf6662;
+  --primary:#cf6662;
+  --heading-shadow:#b7c2c5;
+  --secondary:#cf6662;
+  --button:#4f7b84;
+  --button-bg:#4f7b8433;
+  --button-hover:#6696a0;
+  --button-hover-color:#ffffff;
+  --h3:#4d6167;
+}
+/* #endregion */
+
+/* #region PRISCILLA */
+.priscilla,
+.container a[href="priscilla.html"]{
+  --background:#e8e3da;
+  --border:#9cc9e8;
+  --primary:#9cc9e8;
+  --heading-shadow:#6792af;
+  --secondary:#5193bf;
+  --button:#5d514a;
+  --button-bg:#5d514a33;
+  --button-hover:#786960;
+  --button-hover-color:#ffffff;
+  --h3:#6d757d;
+}
+/* #endregion */
+
+/* #region THE LITTLE PRINCE */
+.tlp,
+.container a[href="tlp.html"]{
+  --background:#f8efd0;
+  --border:#d5b251;
+  --primary:#d62626;
+  --heading-shadow:#d8c58f;
+  --secondary:#d9ab2e;
+  --button:#d62626;
+  --button-bg:#d6262633;
+  --button-hover:#ea8585;
+  --button-hover-color:#ffffff;
+  --h3:#6f5a34;
+}
+/* #endregion */
+
+/* #region INTERSTELLAR */
+.interstellar,
+.container a[href="interstellar.html"]{
+  --background:#090913;
+  --border:#d55b74;
+  --primary:#f7f7f7;
+  --heading-shadow:#64657a;
+  --secondary:#d55b74;
+  --button:#3b90a8;
+  --button-bg:#3b90a833;
+  --button-hover:#54abc4;
+  --button-hover-color:#ffffff;
+}
+
+.interstellar p, .interstellar li{
+  color:#f7f7f7;
+}
+/* #endregion */
+
+/* #region CRAZY, STUPID, LOVE. */
+.csl,
+.container a[href="csl.html"]{
+  --background:#f5e3b5;
+  --border:#956b27;
+  --primary:#34b5ae;
+  --heading-shadow:#197a76;
+  --secondary:#1d918b;
+  --button:#1d918b;
+  --button-bg:#1d918b33;
+  --button-hover:#50b8b2;
+  --button-hover-color:#ffffff;
+  --h3:#3f555d;
+}
+/* #endregion */
+
+/* #region CASABLANCA */
+.casablanca,
+.container a[href="casablanca.html"]{
+  --background:#f3eee7;
+  --border:#df4a1d;
+  --primary:#df4a1d;
+  --heading-shadow:#c5b8a8;
+  --secondary:#df4a1d;
+  --button:#df4a1d;
+  --button-bg:#df4a1d33;
+  --button-hover:#e1896e;
+  --button-hover-color:#ffffff;
+  --h3:#4f3729;
+}
+/* #endregion */
+
+/* #region UPTOWN GIRLS */
+.uptown,
+.container a[href="uptown.html"]{
+  --background:#f6f2f7;
+  --border:#f29ab3;
+  --primary:#f29ab3;
+  --heading-shadow:#d2cbd4;
+  --secondary:#f29ab3;
+  --button:#9ec5e8;
+  --button-bg:#9ec5e833;
+  --button-hover:#b6d5ef;
+  --button-hover-color:#ffffff;
+}
+.uptown p, .uptown ul{
+  color:#777777;
+}
+/* #endregion */
+
+/* #region JUNO */
+.juno,
+.container a[href="juno.html"]{
+  --background:#faf6ef;
+  --border:#62c736;
+  --primary:#62c736;
+  --heading-shadow:#489427;
+  --secondary:#5bc22f;
+  --button:#f56c0d;
+  --button-bg:#f56c0d33;
+  --button-hover:#ff8731;
+  --button-hover-color:#ffffff;
+  --h3:#7d2b1d;
+}
+/* #endregion */
+
+/* #region FORD V FERRARI */
+.fvf,
+.container a[href="fvf.html"]{
+  --background:#f2eee7;
+  --border:#6ca8c6;
+  --primary:#c81f25;
+  --heading-shadow:#bcb5ab;
+  --secondary:#c81f25;
+  --button:#6ca8c6;
+  --button-bg:#6ca8c633;
+  --button-hover:#8abdd7;
+  --button-hover-color:#ffffff;
+  --h3:#7b5b3c;
+}
+/* #endregion */
+
+/* #region TOY STORY */
+.toystory,
+.container a[href="toystory.html"]{
+  --background:#bddae8;
+  --border:#f7d94c;
+  --primary:#f7d94c;
+  --heading-shadow:#6aa8d8;
+  --secondary:#db3737;
+  --button:#4caf50;
+  --button-bg:#4caf5033;
+  --button-hover:#67c96b;
+  --button-hover-color:#ffffff;
+}
+/* #endregion */
+
+/* #region SET IT UP */
+.siu,
+.container a[href="siu.html"]{
+  --background:#f8f6ef;
+  --border:#a13be6;
+  --primary:#a66de3;
+  --heading-shadow:#63309a;
+  --secondary:#a66de3;
+  --button:#a13be6;
+  --button-bg:#a13be633;
+  --button-hover:#c067ff;
+  --button-hover-color:#ffffff;
+}
+/* #endregion */
+
+/* #region KINGSMAN */
+.kingsman,
+.container a[href="kingsman.html"]{
+  --background:#0d0d0d;
+  --border:#c7a25a;
+  --primary:#c7a25a;
+  --heading-shadow:#dbbf87;
+  --secondary:#a37c2e;
+  --button:#c7a25a;
+  --button-bg:#c7a25a33;
+  --button-hover:#e0bb6f;
+}
+.kingsman p, .kingsman li{
+  color:#dfdcda;
+}
+/* #endregion */
+
+/* #region MR. & MRS. SMITH */
+.mams,
+.container a[href="mams.html"]{
+  --background:#e6cccc;
+  --border:#d23d3d;
+  --primary:#d23d3d;
+  --heading-shadow:#7a7a7a;
+  --secondary:#d23d3d;
+  --button:#1f1f1f;
+  --button-bg:#1f1f1f33;
+  --button-hover:#444444;
+  --button-hover-color:#ffffff;
+}
+/* #endregion */
+
+/* #region SCOTT PILGRIM */
+.scott,
+.container a[href="scott.html"]{
+  --background:hsl(3, 62%, 40%);
+  --border:#ffffff;
+  --primary:#ffffff;
+  --heading-shadow:#f7bcb8;
+  --secondary:#ffffff;
+  --button:#ffffff;
+  --button-bg:#ffffff33;
+  --button-hover:#cbcbcb;
+  --button-hover-color:#ffffff;
+}
+.scott p, .scott ul{
+  color:#ffd9d9;
+}
+/* #endregion */
+
+/* #region THE HATING GAME */
+.hatinggame,
+.container a[href="hatinggame.html"]{
+  --background:#f6f2ef;
+  --border:#d84545;
+  --primary:#d84545;
+  --heading-shadow:#8b8b8b;
+  --secondary:#d84545;
+  --button:#d84545;
+  --button-bg:#d8454533;
+  --button-hover:#ef5c5c;
+  --button-hover-color:#ffffff;
+}
+/* #endregion */
+
+/* #region DESCENDANTS */
+.descendants,
+.container a[href="descendants.html"]{
+  --background:#2a2836;
+  --border:#b88d2c;
+  --primary:#b88d2c;
+  --heading-shadow:#d6ac44;
+  --secondary:#895abe;
+  --button:#6c3bb8;
+  --button-bg:#6c3bb833;
+  --button-hover:#8b5be2;
+  --button-hover-color:#ffffff;
+}
+.descendants p, .descendants li{
+  color:#dfdcda;
+}
+/* #endregion */
+
+/* #region FLIPPED */
+.flipped,
+.container a[href="flipped.html"]{
+  --background:#f4efe4;
+  --border:#537927;
+  --primary:#537927;
+  --heading-shadow:#2c460e;
+  --secondary:#537927;
+  --button:#537927;
+  --button-bg:#53792733;
+  --button-hover:#6b9a34;
+  --button-hover-color:#ffffff;
+}
+/* #endregion */
+
+/* #region THE PROPOSAL */
+.proposal,
+.container a[href="proposal.html"]{
+  --background:#f8f5f2;
+  --border:#e53935;
+  --primary:#e53935;
+  --heading-shadow:#8d8d8d;
+  --secondary:#e53935;
+  --button:#e53935;
+  --button-bg:#e5393533;
+  --button-hover:#ff5a5a;
+  --button-hover-color:#ffffff;
+}
+/* #endregion */
+
+/* #region 500 DAYS OF SUMMER */
+.fivehundred,
+.container a[href="fivehundred.html"]{
+  --background:#eef8ff;
+  --border:#42a5f5;
+  --primary:#42a5f5;
+  --heading-shadow:#0e3c62;
+  --secondary:#42a5f5;
+  --button:#42a5f5;
+  --button-bg:#42a5f533;
+  --button-hover:#64b5f6;
+  --button-hover-color:#ffffff;
+}
+/* #endregion */
+
+/* #region BARBIE: PRINCESS CHARM SCHOOL */
+.charmschool,
+.container a[href="charmschool.html"]{
+  --background:#fff0f8;
+  --border:#ff69b4;
+  --primary:#ff69b4;
+  --heading-shadow:#8c1e55;
+  --secondary:#ff69b4;
+  --button:#ff69b4;
+  --button-bg:#ff69b433;
+  --button-hover:#ff85c2;
+  --button-hover-color:#ffffff;
+}
+.charmschool p, .charmschool ul{
+  color:#6a6a6a;
+}
+/* #endregion */
+
+/* #region 27 DRESSES */
+.dresses,
+.container a[href="dresses.html"]{
+  --background:#fff8fc;
+  --border:#d84ab7;
+  --primary:#d84ab7;
+  --heading-shadow:#9c1e7f;
+  --secondary:#e363c5;
+  --button:#d84ab7;
+  --button-bg:#d84ab733;
+  --button-hover:#ee69ca;
+  --button-hover-color:#ffffff;
+}
+/* #endregion */
+
+/* #region IF I HAD LEGS I'D KICK YOU */
+.legs,
+.container a[href="legs.html"]{
+  --background:#1f2324;
+  --border:#e6dbc5;
+  --primary:#e6dbc5;
+  --heading-shadow:#6ea7a5;
+  --secondary:#b8b0a3;
+  --button:#6ea7a5;
+  --button-bg: #6ea7a533;
+  --button-hover:#337370;
+  --button-hover-color:#ffffff;
+}
+.legs p, .legs ul{
+  color:#666666;
+}
+/* #endregion */
+
+/* #region SATURDAY NIGHT */
+.snl,
+.container a[href="snl.html"]{
+  --background:#8f8779;
+  --border:#2d2d2d;
+  --primary:#2d2d2d;
+  --heading-shadow:#101010;
+  --secondary:#4b3929;
+  --button:#2d2d2d;
+  --button-bg:#2d2d2d33;
+  --button-hover:#4a4a4a;
+  --button-hover-color:#ffffff;
+}
+.snl p, .snl li{
+  color:#302a27;
+}
+/* #endregion */
+
+/* #region THE MAZE RUNNER */
+.mazerunner,
+.container a[href="tmr.html"]{
+  --background:#202823;
+  --border:#8ca08c;
+  --primary:#c7d0c7;
+  --heading-shadow:#4f6f5a;
+  --secondary:#b5c2a8;
+  --button:#4f6f5a;
+  --button-bg:#4f6f5a33;
+  --button-hover:#688b73;
+  --button-hover-color:#ffffff;
+}
+.mazerunner p, .mazerunner ul{
+  color:#c7d0c7;
+}
+/* #endregion */
+
+/* #region THE FAST AND THE FURIOUS */
+.fast,
+.container a[href="fast.html"]{
+  --background:#181411;
+  --border:#f4c542;
+  --primary:#f4c542;
+  --heading-shadow:#f4dfa5;
+  --secondary:#906d0c;
+  --button:#f4c542;
+  --button-bg:#f4c54233;
+  --button-hover:#ffe9a7;
+  --button-hover-color:#000000;
+}
+.fast p, .fast ul{
+  color:#e8e8e8;
+}
+/* #endregion */
+
+/* #region THE TRUMAN SHOW */
+.truman,
+.container a[href="truman.html"]{
+  --background:#eef8ff;
+  --border:#4aa3df;
+  --primary:#4aa3df;
+  --heading-shadow:#0c3f61;
+  --secondary:#2c4f73;
+  --button:#4aa3df;
+  --button-bg:#4aa3df33;
+  --button-hover:#69b8ec;
+  --button-hover-color:#ffffff;
+}
+/* #endregion */
+
+/* #region THE PRINCESS DIARIES */
+.princess,
+.container a[href="princess.html"]{
+  --background:#eef7ff;
+  --border:#2a359a;
+  --primary:#2a359a;
+  --heading-shadow:#04082d;
+  --secondary:#4d5d7c;
+  --button:#2a359a;
+  --button-bg:#2a359a33;
+  --button-hover:#737bc1;
+  --button-hover-color:#ffffff;
+}
+/* #endregion */
+
+/* #region INGLORIOUS BASTERDS */
+.basterds,
+.container a[href="basterds.html"]{
+  --background:#d8d5cb;
+  --border:#6b1f1f;
+  --primary:#5a0e0e;
+  --heading-shadow:#2b0000;
+  --secondary:#7b1f1f;
+  --button:#5a0e0e;
+  --button-bg:#5a0e0e33;
+  --button-hover:#8b2d2d;
+  --button-hover-color:#ffffff;
+}
+
+.basterds p,
+.basterds li{
+  color:#444444;
+}
+/* #endregion */
+
+/* #region MARRIAGE STORY */
+.marriage,
+.container a[href="marriage.html"]{
+  --background:#f6e6d6;
+  --border:#8f6b4f;
+  --primary:#dec4b5;
+  --heading-shadow:#7a5a46;
+  --secondary:#7a5a46;
+  --button:#8f6b4f;
+  --button-bg:#8f6b4f33;
+  --button-hover:#b28868;
+  --button-hover-color:#ffffff;
+  --h3:#6d5443;
+}
+/* #endregion */
+
+/* #region EASY A */
+.easya,
+.container a[href="easya.html"]{
+  --background:#fff4dc;
+  --border:#d64541;
+  --primary:#d64541;
+  --heading-shadow:#651616;
+  --secondary:#d64541;
+  --button:#d64541;
+  --button-bg:#d6454133;
+  --button-hover:#ef6c68;
+  --button-hover-color:#ffffff;
+}
+
+/* #endregion */
+
+/* #region HAMILTON */
+.hamilton,
+.container a[href="hamilton.html"]{
+  --background:#2f2f2c;
+  --border:#000000;
+  --primary:#d4af37;
+  --heading-shadow:#7a5b15;
+  --secondary:#d4af37;
+  --button:#d4af37;
+  --button-bg:#d4af3733;
+  --button-hover:#e7c95d;
+  --button-hover-color:#ffffff;
+}
+
+.hamilton p,
+.hamilton li{
+  color:#ece3c3;
+}
+/* #endregion */
+
+/* #region HADESTOWN */
+.hadestown,
+.container a[href="hadestown.html"]{
+  --background:#171312;
+  --border:#c21d1d;
+  --primary:#efe4c4;
+  --heading-shadow:#7a0f0f;
+  --secondary:#c21d1d;
+  --button:#c21d1d;
+  --button-bg:#c21d1d33;
+  --button-hover:#e23b3b;
+  --button-hover-color:#ffffff;
+}
+
+.hadestown p,
+.hadestown li{
+  color:#e7dcc7;
+}
+/* #endregion */
+

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Long Walk</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body class="movie long-walk">
+    <h3><a href="index.html">Back to Home</a></h3>
+
+    <!-- HEADING -->
+    <h1>THE LONG WALK</h1>
+
+    <div class="poster-row">
+      <div class="poster-card">
+        <img src="images/long-walk.jpg" alt="The Long Walk" loading="lazy">
+        <div class="poster-overlay">
+          <p>"The short friendship is better than no friendship, right?"</p>
+        </div>
+      </div>
+
+      <div class="poster-card">
+        <img src="images/long-walk-1.jpg" alt="The Long Walk" loading="lazy">
+        <div class="poster-overlay">
+          <p>"They say you shouldn't make friends on a long walk."</p>
+        </div>
+      </div>
+
+      <div class="poster-card">
+        <img src="images/long-walk-2.jpg" alt="The Long Walk" loading="lazy">
+        <div class="poster-overlay">
+          <p>"No. I want that carbine. To give to my kids one day."</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- DESCRIPTION -->
+    <div class="movie-info">
+
+      <div class="info-column">
+        <h2>Genre</h2>
+        <p>Dystopian, Thriller</p>
+
+        <h2>Release Date</h2>
+        <p>2025</p>
+
+        <h2>Runtime</h2>
+        <p>108 minutes</p>
+
+        <h2>Director</h2>
+        <p>Francis Lawrence</p>
+      </div>
+
+      <div class="info-column">
+        <h2>Main Cast</h2>
+        <ul class="cast-list">
+          <li>Cooper Hoffman - Ray Garraty</li>
+          <li>David Jonsson - Peter McVries</li>
+        </ul>
+      </div>
+
+      <div class="info-column">
+        <h2>Overview</h2>
+        <p>
+          <em>The Long Walk</em> is set in a dystopian future where 50 teenage
+          boys participate in a brutal walking contest. They must maintain a
+          minimum speed while walking nonstop. If they slow down or stop too
+          many times, they are eliminated from the competition in deadly
+          fashion.
+        </p>
+
+        <h2>Trivia</h2>
+        <ul class="trivia">
+          <li>The novel was written by Stephen King under the pen name Richard Bachman.</li>
+          <li>It was one of Stephen King's earliest stories.</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <audio id="bgMusic" autoplay loop controls>
+      <source src="audio/long-walk.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+      const audio = document.getElementById("bgMusic");
+
+      audio.addEventListener("loadedmetadata", function () {
+        audio.currentTime = 0;
+      });
+    </script>
+
+  </body>
+</html>

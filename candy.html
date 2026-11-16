@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Candy Jar</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body class="movie candy">
+    <h3><a href="index.html">Back to Home</a></h3>
+
+    <!-- HEADING -->
+    <h1>CANDY JAR</h1>
+
+    <div class="poster-row">
+      <div class="poster-card">
+        <img src="images/candy.jpg" alt="Candy Jar" loading="lazy">
+        <div class="poster-overlay">
+          <p>"Sometimes you lose."</p>
+        </div>
+      </div>
+
+      <div class="poster-card">
+        <img src="images/candy-1.jpg" alt="Candy Jar" loading="lazy">
+        <div class="poster-overlay">
+          <p>"Have fun, no matter where you end up."</p>
+        </div>
+      </div>
+
+      <div class="poster-card">
+        <img src="images/candy-2.jpg" alt="Candy Jar" loading="lazy">
+        <div class="poster-overlay">
+          <p>"What is success?"</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- DESCRIPTION -->
+    <div class="movie-info">
+
+      <div class="info-column">
+        <h2>Genre</h2>
+        <p>Comedy, Drama, Romance</p>
+
+        <h2>Release Date</h2>
+        <p>2018</p>
+
+        <h2>Runtime</h2>
+        <p>92 minutes</p>
+
+        <h2>Director</h2>
+        <p>Ben Shelton</p>
+      </div>
+
+      <div class="info-column">
+        <h2>Main Cast</h2>
+        <ul class="cast-list">
+          <li>Jacob Latimore - Bennett Russell</li>
+          <li>Sami Gayle - Lona Skinner</li>
+        </ul>
+      </div>
+
+      <div class="info-column">
+        <h2>Overview</h2>
+        <p>
+          Candy Jar follows Bennett Russell and Lona Skinner, two ambitious
+          high school debate champions who are fierce academic rivals. Despite
+          their constant competition and clashing personalities, they must work
+          together to achieve their shared goal of getting into their dream colleges.
+          Along the way, they discover unexpected friendship and romance.
+        </p>
+
+        <h2>Trivia</h2>
+        <ul class="trivia">
+          <li>The film was released on Netflix in 2018.</li>
+          <li>The story centers around competitive high school debate.</li>
+          <li>Jacob Latimore and Sami Gayle play academic rivals who become partners.</li>
+        </ul>
+      </div>
+
+    </div>
+    <audio id="bgMusic" autoplay loop controls>
+      <source src="audio/candy.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+      const audio = document.getElementById("bgMusic");
+
+      audio.addEventListener("loadedmetadata", function () {
+        audio.currentTime = 30;
+      });
+    </script>
+
+  </body>
+</html>

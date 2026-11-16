@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Hail Mary</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body class="movie hail-mary">
+    <h3><a href="index.html">Back to Home</a></h3>
+
+    <!-- HEADING -->
+    <h1>PROJECT HAIL MARY</h1>
+
+    <div class="poster-row">
+      <div class="poster-card">
+        <img src="images/hail-mary.jpg" alt="Project Hail Mary" loading="lazy">
+        <div class="poster-overlay">
+          <p>"Jazz hands!"</p>
+        </div>
+      </div>
+
+      <div class="poster-card">
+        <img src="images/hail-mary-1.jpg" alt="Project Hail Mary" loading="lazy">
+        <div class="poster-overlay">
+          <p>"Amaze.<br>Amaze.<br>Amaze."</p>
+        </div>
+      </div>
+
+      <div class="poster-card">
+        <img src="images/hail-mary-2.jpg" alt="Project Hail Mary" loading="lazy">
+        <div class="poster-overlay">
+          <p>"You sleep. I watch."</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- DESCRIPTION -->
+    <div class="movie-info">
+
+      <div class="info-column">
+        <h2>Genre</h2>
+        <p>Science Fiction</p>
+
+        <h2>Release Date</h2>
+        <p>2026</p>
+
+        <h2>Runtime</h2>
+        <p>156 minutes</p>
+
+        <h2>Director</h2>
+        <p>Phil Lord & Christopher Miller</p>
+      </div>
+
+      <div class="info-column">
+        <h2>Main Cast</h2>
+        <ul class="cast-list">
+          <li>Ryan Gosling - Ryland Grace</li>
+          <li>James Ortiz - Rocky</li>
+        </ul>
+      </div>
+
+      <div class="info-column">
+        <h2>Overview</h2>
+        <p>
+          A science fiction adventure following Ryland Grace, a former science
+          teacher who awakens alone aboard a spacecraft with no memory of his
+          mission. As his memories return, he realizes he must solve an
+          interstellar mystery to save humanity from an extinction-level
+          threat—with unexpected help from an unlikely alien ally.
+        </p>
+
+        <h2>Trivia</h2>
+        <ul class="trivia">
+          <li>The movie is based on the novel <em>Project Hail Mary</em> by Andy Weir.</li>
+          <li>Ryan Gosling also serves as a producer on the film.</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <audio id="bgMusic" autoplay loop controls>
+      <source src="audio/hail-mary.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+      const audio = document.getElementById("bgMusic");
+
+      audio.addEventListener("loadedmetadata", function () {
+        audio.currentTime = 0;
+      });
+    </script>
+
+  </body>
+</html>

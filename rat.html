@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ratatouille</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body class="movie rat">
+    <h3><a href="index.html">Back to Home</a></h3>
+
+    <!-- HEADING -->
+    <h1>RATATOUILLE</h1>
+
+    <div class="poster-row">
+      <div class="poster-card">
+        <img src="images/rat.jpg" alt="Ratatouille" loading="lazy">
+        <div class="poster-overlay">
+          <p>"Not everyone can become a great artist, but a great artist can come from anywhere."</p>
+        </div>
+      </div>
+
+      <div class="poster-card">
+        <img src="images/rat-1.jpg" alt="Ratatouille" loading="lazy">
+        <div class="poster-overlay">
+          <p>"Anyone can cook."</p>
+        </div>
+      </div>
+
+      <div class="poster-card">
+        <img src="images/rat-2.jpg" alt="Ratatouille" loading="lazy">
+        <div class="poster-overlay">
+          <p>"The only thing predictable about life is its unpredictability."</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- DESCRIPTION -->
+    <div class="movie-info">
+
+      <div class="info-column">
+        <h2>Genre</h2>
+        <p>Animation, Adventure, Comedy</p>
+
+        <h2>Release Date</h2>
+        <p>2007</p>
+
+        <h2>Runtime</h2>
+        <p>111 minutes</p>
+
+        <h2>Director</h2>
+        <p>Brad Bird</p>
+      </div>
+
+      <div class="info-column">
+        <h2>Main Cast</h2>
+        <ul class="cast-list">
+          <li>Patton Oswalt - Remy</li>
+          <li>Lou Romano - Alfredo Linguini</li>
+          <li>Ian Holm - Skinner</li>
+        </ul>
+      </div>
+
+      <div class="info-column">
+        <h2>Overview</h2>
+        <p>
+          <em>Ratatouille</em> follows Remy, a talented young rat with dreams
+          of becoming a great French chef despite society's expectations.
+          After forming an unlikely partnership with kitchen worker Alfredo
+          Linguini, Remy secretly helps create extraordinary dishes that
+          transform one of Paris's most famous restaurants.
+        </p>
+
+        <h2>Trivia</h2>
+        <ul class="trivia">
+          <li>Ratatouille won the Academy Award for Best Animated Feature.</li>
+          <li>Pixar consulted renowned French chefs to ensure the film's food and kitchen techniques looked authentic.</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <audio id="bgMusic" autoplay loop controls>
+      <source src="audio/rat.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+      const audio = document.getElementById("bgMusic");
+
+      audio.addEventListener("loadedmetadata", function () {
+        audio.currentTime = 22;
+      });
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Easy A</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body class="movie easya">
+    <h3><a href="index.html">Back to Home</a></h3>
+
+    <!-- HEADING -->
+    <h1>EASY A</h1>
+
+    <div class="poster-row">
+      <div class="poster-card">
+        <img src="images/easya.jpg" alt="Easy A" loading="lazy">
+        <div class="poster-overlay">
+          <p>"Let's not and say we did."</p>
+        </div>
+      </div>
+
+      <div class="poster-card">
+        <img src="images/easya-1.jpg" alt="Easy A" loading="lazy">
+        <div class="poster-overlay">
+          <p>"A little white lie never hurt anyone... right?"</p>
+        </div>
+      </div>
+
+      <div class="poster-card">
+        <img src="images/easya-2.jpg" alt="Easy A" loading="lazy">
+        <div class="poster-overlay">
+          <p>"No one knows the real story."</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- DESCRIPTION -->
+    <div class="movie-info">
+
+      <div class="info-column">
+        <h2>Genre</h2>
+        <p>Comedy, Romance</p>
+
+        <h2>Release Date</h2>
+        <p>2010</p>
+
+        <h2>Runtime</h2>
+        <p>92 minutes</p>
+
+        <h2>Director</h2>
+        <p>Will Gluck</p>
+      </div>
+
+      <div class="info-column">
+        <h2>Main Cast</h2>
+        <ul class="cast-list">
+          <li>Emma Stone - Olive Penderghast</li>
+          <li>Penn Badgley - Todd</li>
+          <li>Amanda Bynes - Marianne Bryant</li>
+          <li>Dan Byrd - Brandon</li>
+          <li>Patricia Clarkson - Rosemary Penderghast</li>
+        </ul>
+      </div>
+
+      <div class="info-column">
+        <h2>Overview</h2>
+        <p>
+          <em>Easy A</em> follows Olive Penderghast, a high school student
+          whose little white lie about her dating life quickly spreads through
+          school. As rumors grow, Olive uses her new reputation to help her
+          classmates while learning valuable lessons about honesty, friendship,
+          and staying true to herself.
+        </p>
+
+        <h2>Trivia</h2>
+        <ul class="trivia">
+          <li>The film is loosely inspired by the novel <em>The Scarlet Letter</em>.</li>
+          <li>Emma Stone received a Golden Globe nomination for her performance.</li>
+          <li><em>Easy A</em> became one of the most popular teen comedy films of the 2010s.</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <audio id="bgMusic" autoplay loop controls>
+      <source src="audio/easya.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+      const audio = document.getElementById("bgMusic");
+
+      audio.addEventListener("loadedmetadata", function () {
+        audio.currentTime = 6.8;
+      });
+    </script>
+
+  </body>
+</html>

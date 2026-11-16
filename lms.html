@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Little Miss Sunshine</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body class="movie lms">
+    <h3><a href="index.html">Back to Home</a></h3>
+
+    <!-- HEADING -->
+    <h1>LITTLE MISS SUNSHINE</h1>
+
+    <div class="poster-card">
+      <img src="images/lms.jpg" alt="Little Miss Sunshine" loading="lazy">
+      <div class="poster-overlay">
+        <p>"A real loser is somebody that's so afraid of not winning, they don't even try."</p>
+      </div>
+    </div>
+
+    <div class="poster-card">
+      <img src="images/lms-1.jpg" alt="Little Miss Sunshine" loading="lazy">
+      <div class="poster-overlay">
+        <p>"Do what you love, and fuck the rest."</p>
+      </div>
+    </div>
+
+    <div class="poster-card">
+      <img src="images/lms-2.jpg" alt="Little Miss Sunshine" loading="lazy">
+      <div class="poster-overlay">
+        <p>"You are not a loser."</p>
+      </div>
+    </div>
+
+    <!-- DESCRIPTION -->
+    <h2>Genre</h2>
+    <p>Comedy, Drama, Road Trip</p>
+
+    <h2>Release Date</h2>
+    <p>2006</p>
+
+    <h2>Runtime</h2>
+    <p>101 minutes</p>
+
+    <h2>Director</h2>
+    <p>Jonathan Dayton &amp; Valerie Faris</p>
+
+    <h2>Main Cast</h2>
+    <ul class="cast-list">
+      <li>Abigail Breslin - Olive Hoover</li>
+      <li>Greg Kinnear - Richard Hoover</li>
+      <li>Toni Collette - Sheryl Hoover</li>
+      <li>Alan Arkin - Edwin Hoover</li>
+      <li>Steve Carell - Frank Ginsberg</li>
+    </ul>
+
+    <h2>Overview</h2>
+    <p>
+      Little Miss Sunshine follows the quirky Hoover family as they embark on a
+      cross-country road trip in their aging Volkswagen bus to support young
+      Olive's dream of competing in the Little Miss Sunshine beauty pageant.
+      Along the way, each family member confronts personal struggles while
+      discovering the importance of love, resilience, and embracing imperfection.
+    </p>
+
+    <h2>Trivia</h2>
+    <ul class="trivia">
+      <li>The film won two Academy Awards, including Best Supporting Actor for Alan Arkin and Best Original Screenplay.</li>
+      <li>The iconic yellow Volkswagen Type 2 bus became one of the film's most recognizable symbols.</li>
+    </ul>
+
+    <audio id="bgMusic" autoplay loop controls>
+      <source src="audio/lms.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+      const audio = document.getElementById("bgMusic");
+
+      audio.addEventListener("loadedmetadata", function () {
+        audio.currentTime = 0;
+      });
+    </script>
+
+  </body>
+</html>

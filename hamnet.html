@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamnet</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body class="movie hamnet">
+    <h3><a href="index.html">Back to Home</a></h3>
+
+    <!-- HEADING -->
+    <h1>HAMNET</h1>
+
+    <div class="poster-row">
+      <div class="poster-card">
+        <img src="images/hamnet.jpg" alt="Hamnet" loading="lazy">
+        <div class="poster-overlay">
+          <p>"The lost are never truly gone."</p>
+        </div>
+      </div>
+
+      <div class="poster-card">
+        <img src="images/hamnet-1.jpg" alt="Hamnet" loading="lazy">
+        <div class="poster-overlay">
+          <p>"Grief has its own language."</p>
+        </div>
+      </div>
+
+      <div class="poster-card">
+        <img src="images/hamnet-2.jpg" alt="Hamnet" loading="lazy">
+        <div class="poster-overlay">
+          <p>"What is given may be taken away at any time."</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- DESCRIPTION -->
+    <div class="movie-info">
+
+      <div class="info-column">
+        <h2>Genre</h2>
+        <p>Historical Drama</p>
+
+        <h2>Release Date</h2>
+        <p>2025</p>
+
+        <h2>Runtime</h2>
+        <p>113 minutes</p>
+
+        <h2>Director</h2>
+        <p>Chloé Zhao</p>
+      </div>
+
+      <div class="info-column">
+        <h2>Main Cast</h2>
+        <ul class="cast-list">
+          <li>Paul Mescal - William Shakespeare</li>
+          <li>Jessie Buckley - Agnes Shakespeare</li>
+          <li>Jacobi Jupe - Hamnet Shakespeare</li>
+          <li>Noah Jupe - Hamlet</li>
+        </ul>
+      </div>
+
+      <div class="info-column">
+        <h2>Overview</h2>
+        <p>
+          A historical drama about William Shakespeare and his wife Agnes as
+          they deal with the loss of their son Hamnet, exploring grief and the
+          inspiration behind Shakespeare's play <em>Hamlet</em>.
+        </p>
+
+        <h2>Trivia</h2>
+        <ul class="trivia">
+          <li>The movie is based on the novel <em>Hamnet</em> by Maggie O'Farrell.</li>
+          <li>The story focuses on Shakespeare's family rather than his plays.</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <audio id="bgMusic" autoplay loop controls>
+      <source src="audio/hamnet.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+      const audio = document.getElementById("bgMusic");
+
+      audio.addEventListener("loadedmetadata", function () {
+        audio.currentTime = 0;
+      });
+    </script>
+
+  </body>
+</html>

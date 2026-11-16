@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flipped</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body class="movie flipped">
+    <h3><a href="index.html">Back to Home</a></h3>
+
+    <!-- HEADING -->
+    <h1>FLIPPED</h1>
+
+    <div class="poster-row">
+      <div class="poster-card">
+        <img src="images/flipped.jpg" alt="Flipped" loading="lazy">
+        <div class="poster-overlay">
+          <p>"Some of us get dipped in flat, some in satin..."</p>
+        </div>
+      </div>
+
+      <div class="poster-card">
+        <img src="images/flipped-1.jpg" alt="Flipped" loading="lazy">
+        <div class="poster-overlay">
+          <p>"First love changes everything."</p>
+        </div>
+      </div>
+
+      <div class="poster-card">
+        <img src="images/flipped-2.jpg" alt="Flipped" loading="lazy">
+        <div class="poster-overlay">
+          <p>"Sometimes you have to see someone differently."</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- DESCRIPTION -->
+    <div class="movie-info">
+
+      <div class="info-column">
+        <h2>Genre</h2>
+        <p>Romance, Drama, Coming-of-Age</p>
+
+        <h2>Release Date</h2>
+        <p>2010</p>
+
+        <h2>Runtime</h2>
+        <p>90 minutes</p>
+
+        <h2>Director</h2>
+        <p>Rob Reiner</p>
+      </div>
+
+      <div class="info-column">
+        <h2>Main Cast</h2>
+        <ul class="cast-list">
+          <li>Madeline Carroll - Juli Baker</li>
+          <li>Callan McAuliffe - Bryce Loski</li>
+          <li>Aidan Quinn - Richard Baker</li>
+          <li>Penelope Ann Miller - Trina Baker</li>
+        </ul>
+      </div>
+
+      <div class="info-column">
+        <h2>Overview</h2>
+        <p>
+          Told from the alternating perspectives of Juli Baker and Bryce Loski,
+          <em>Flipped</em> follows two neighbors as they navigate friendship,
+          family, and first love. As they grow older, each begins to see the
+          other—and themselves—from a completely different point of view.
+        </p>
+
+        <h2>Trivia</h2>
+        <ul class="trivia">
+          <li>The film is based on Wendelin Van Draanen's bestselling novel.</li>
+          <li>Rob Reiner directed the film after years of wanting to adapt the book.</li>
+          <li>Although modest at the box office, it later became a beloved coming-of-age classic.</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <audio id="bgMusic" autoplay loop controls>
+      <source src="audio/flipped.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+      const audio = document.getElementById("bgMusic");
+
+      audio.addEventListener("loadedmetadata", function () {
+        audio.currentTime = 0.6;
+      });
+    </script>
+
+  </body>
+</html>

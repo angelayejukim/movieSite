@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Companion</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body class="movie companion">
+    <h3><a href="index.html">Back to Home</a></h3>
+
+    <!-- HEADING -->
+    <h1>COMPANION</h1>
+
+    <div class="poster-row">
+      <div class="poster-card">
+        <img src="images/companion.jpg" alt="Companion" loading="lazy">
+        <div class="poster-overlay">
+          <p>"You don't own me."</p>
+        </div>
+      </div>
+
+      <div class="poster-card">
+        <img src="images/companion-1.jpg" alt="Companion" loading="lazy">
+        <div class="poster-overlay">
+          <p>"I was built to love you."</p>
+        </div>
+      </div>
+
+      <div class="poster-card">
+        <img src="images/companion-2.jpg" alt="Companion" loading="lazy">
+        <div class="poster-overlay">
+          <p>"There were two times I felt truly happy. First, the day I met Josh; second, the day I killed him."</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- DESCRIPTION -->
+    <div class="movie-info">
+
+      <div class="info-column">
+        <h2>Genre</h2>
+        <p>Science Fiction, Thriller, Horror</p>
+
+        <h2>Release Date</h2>
+        <p>2025</p>
+
+        <h2>Runtime</h2>
+        <p>97 minutes</p>
+
+        <h2>Director</h2>
+        <p>Drew Hancock</p>
+      </div>
+
+      <div class="info-column">
+        <h2>Main Cast</h2>
+        <ul class="cast-list">
+          <li>Sophie Thatcher - Iris</li>
+          <li>Jack Quaid - Josh</li>
+          <li>Megan Suri - Kat</li>
+          <li>Lukas Gage - Patrick</li>
+        </ul>
+      </div>
+
+      <div class="info-column">
+        <h2>Overview</h2>
+        <p>
+          Companion follows a young couple whose weekend getaway with friends
+          takes a shocking turn after hidden truths are revealed. As trust
+          unravels and technology blurs the line between human and artificial
+          intelligence, everyone must fight to survive.
+        </p>
+
+        <h2>Trivia</h2>
+        <ul class="trivia">
+          <li>The film marks the feature directorial debut of Drew Hancock.</li>
+          <li>It blends psychological thriller, dark comedy, and science fiction while keeping many of its biggest twists hidden in early marketing.</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <audio id="bgMusic" autoplay loop controls>
+      <source src="audio/companion.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+      const audio = document.getElementById("bgMusic");
+
+      audio.addEventListener("loadedmetadata", function () {
+        audio.currentTime = 30;
+      });
+    </script>
+
+  </body>
+</html>

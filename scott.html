@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scott Pilgrim vs. the World</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body class="movie scott">
+    <h3><a href="index.html">Back to Home</a></h3>
+
+    <!-- HEADING -->
+    <h1>SCOTT PILGRIM <br>VS. THE WORLD</h1>
+
+    <div class="poster-row">
+      <div class="poster-card">
+        <img src="images/scott.jpg" alt="Scott Pilgrim vs. the World" loading="lazy">
+        <div class="poster-overlay">
+          <p>"Love is worth fighting for."</p>
+        </div>
+      </div>
+
+      <div class="poster-card">
+        <img src="images/scott-1.jpg" alt="Scott Pilgrim vs. the World" loading="lazy">
+        <div class="poster-overlay">
+          <p>"An epic of epic epicness."</p>
+        </div>
+      </div>
+
+      <div class="poster-card">
+        <img src="images/scott-2.jpg" alt="Scott Pilgrim vs. the World" loading="lazy">
+        <div class="poster-overlay">
+          <p>"Level up."</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- DESCRIPTION -->
+    <div class="movie-info">
+
+      <div class="info-column">
+        <h2>Genre</h2>
+        <p>Action, Comedy, Fantasy</p>
+
+        <h2>Release Date</h2>
+        <p>2010</p>
+
+        <h2>Runtime</h2>
+        <p>112 minutes</p>
+
+        <h2>Director</h2>
+        <p>Edgar Wright</p>
+      </div>
+
+      <div class="info-column">
+        <h2>Main Cast</h2>
+        <ul class="cast-list">
+          <li>Michael Cera - Scott Pilgrim</li>
+          <li>Mary Elizabeth Winstead - Ramona Flowers</li>
+          <li>Kieran Culkin - Wallace Wells</li>
+          <li>Chris Evans - Lucas Lee</li>
+          <li>Brie Larson - Envy Adams</li>
+        </ul>
+      </div>
+
+      <div class="info-column">
+        <h2>Overview</h2>
+        <p>
+          <em>Scott Pilgrim vs. the World</em> follows Scott Pilgrim, a bass
+          guitarist in a garage band, who falls in love with the mysterious
+          Ramona Flowers. To win her heart, he must battle and defeat her
+          seven evil exes in a series of over-the-top, video game-inspired
+          fights.
+        </p>
+
+        <h2>Trivia</h2>
+        <ul class="trivia">
+          <li>The film is based on Bryan Lee O'Malley's graphic novel series.</li>
+          <li>Its visual style combines comic book effects with classic video game references.</li>
+          <li>Although modest at the box office, it became a major cult classic.</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <audio id="bgMusic" autoplay loop controls>
+      <source src="audio/scott.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+      const audio = document.getElementById("bgMusic");
+
+      audio.addEventListener("loadedmetadata", function () {
+        audio.currentTime = 1;
+      });
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Real Pain</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body class="movie realpain">
+    <h3><a href="index.html">Back to Home</a></h3>
+
+    <!-- HEADING -->
+    <h1>A REAL PAIN</h1>
+
+    <div class="poster-card">
+      <img src="images/realpain.jpg" alt="A Real Pain" loading="lazy">
+      <div class="poster-overlay">
+        <p>"People are complicated."</p>
+      </div>
+    </div>
+
+    <div class="poster-card">
+      <img src="images/realpain-1.jpg" alt="A Real Pain" loading="lazy">
+      <div class="poster-overlay">
+        <p>"We're all carrying something."</p>
+      </div>
+    </div>
+
+    <div class="poster-card">
+      <img src="images/realpain-2.jpg" alt="A Real Pain" loading="lazy">
+      <div class="poster-overlay">
+        <p>"Grief doesn't care if you're ready."</p>
+      </div>
+    </div>
+
+    <!-- DESCRIPTION -->
+    <h2>Genre</h2>
+    <p>Comedy, Drama</p>
+
+    <h2>Release Date</h2>
+    <p>2024</p>
+
+    <h2>Runtime</h2>
+    <p>90 minutes</p>
+
+    <h2>Director</h2>
+    <p>Jesse Eisenberg</p>
+
+    <h2>Main Cast</h2>
+    <ul class="cast-list">
+      <li>Jesse Eisenberg - David Kaplan</li>
+      <li>Kieran Culkin - Benji Kaplan</li>
+    </ul>
+
+    <h2>Overview</h2>
+    <p>
+      A Real Pain follows cousins David and Benji as they travel through Poland
+      to honor their late grandmother. What begins as a heritage tour soon
+      becomes an emotional journey as old tensions, family history, and personal
+      grief resurface, forcing the pair to reconnect in unexpected ways.
+    </p>
+
+    <h2>Trivia</h2>
+    <ul class="trivia">
+      <li>Jesse Eisenberg wrote, directed, and co-starred in the film.</li>
+      <li>Kieran Culkin received widespread acclaim for his performance, earning multiple major acting awards during the 2024–25 awards season.</li>
+    </ul>
+
+    <audio id="bgMusic" autoplay loop controls>
+      <source src="audio/realpain.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+      const audio = document.getElementById("bgMusic");
+
+      audio.addEventListener("loadedmetadata", function () {
+        audio.currentTime = 3;
+      });
+    </script>
+  </body>
+</html>

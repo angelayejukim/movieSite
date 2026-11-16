@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Princess Diaries</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body class="movie princess">
+    <h3><a href="index.html">Back to Home</a></h3>
+
+    <!-- HEADING -->
+    <h1>THE PRINCESS DIARIES</h1>
+
+    <div class="poster-row">
+      <div class="poster-card">
+        <img src="images/princess.jpg" alt="The Princess Diaries" loading="lazy">
+        <div class="poster-overlay">
+          <p>"A girl can dream."</p>
+        </div>
+      </div>
+
+      <div class="poster-card">
+        <img src="images/princess-1.jpg" alt="The Princess Diaries" loading="lazy">
+        <div class="poster-overlay">
+          <p>"Every princess starts somewhere."</p>
+        </div>
+      </div>
+
+      <div class="poster-card">
+        <img src="images/princess-2.jpg" alt="The Princess Diaries" loading="lazy">
+        <div class="poster-overlay">
+          <p>"Discover the princess within."</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- DESCRIPTION -->
+    <div class="movie-info">
+
+      <div class="info-column">
+        <h2>Genre</h2>
+        <p>Comedy, Family, Romance</p>
+
+        <h2>Release Date</h2>
+        <p>2001</p>
+
+        <h2>Runtime</h2>
+        <p>115 minutes</p>
+
+        <h2>Director</h2>
+        <p>Garry Marshall</p>
+      </div>
+
+      <div class="info-column">
+        <h2>Main Cast</h2>
+        <ul class="cast-list">
+          <li>Anne Hathaway - Mia Thermopolis</li>
+          <li>Julie Andrews - Queen Clarisse Renaldi</li>
+          <li>Héctor Elizondo - Joe</li>
+          <li>Heather Matarazzo - Lilly Moscovitz</li>
+        </ul>
+      </div>
+
+      <div class="info-column">
+        <h2>Overview</h2>
+        <p>
+          <em>The Princess Diaries</em> follows shy teenager Mia Thermopolis,
+          who discovers she is the heir to the throne of the European kingdom
+          of Genovia. Guided by her elegant grandmother, Queen Clarisse, Mia
+          must learn what it truly means to become a princess while staying
+          true to herself.
+        </p>
+
+        <h2>Trivia</h2>
+        <ul class="trivia">
+          <li>The film is based on Meg Cabot's bestselling novel.</li>
+          <li>It marked Anne Hathaway's feature film debut.</li>
+          <li>The movie became a beloved Disney classic and inspired a sequel.</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <audio id="bgMusic" autoplay loop controls>
+      <source src="audio/princess.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+      const audio = document.getElementById("bgMusic");
+
+      audio.addEventListener("loadedmetadata", function () {
+        audio.currentTime = 0;
+      });
+    </script>
+
+  </body>
+</html>

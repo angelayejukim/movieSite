@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>500 Days of Summer</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body class="movie fivehundred">
+    <h3><a href="index.html">Back to Home</a></h3>
+
+    <!-- HEADING -->
+    <h1>500 DAYS OF SUMMER</h1>
+
+    <div class="poster-row">
+      <div class="poster-card">
+        <img src="images/fivehundred.jpg" alt="500 Days of Summer" loading="lazy">
+        <div class="poster-overlay">
+          <p>"Most days of the year are unremarkable. They begin and they end with no lasting memories."</p>
+        </div>
+      </div>
+
+      <div class="poster-card">
+        <img src="images/fivehundred-1.jpg" alt="500 Days of Summer" loading="lazy">
+        <div class="poster-overlay">
+          <p>"But you should know upfront, this is not a love story."</p>
+        </div>
+      </div>
+
+      <div class="poster-card">
+        <img src="images/fivehundred-2.jpg" alt="500 Days of Summer" loading="lazy">
+        <div class="poster-overlay">
+          <p>"Expectations meet reality."</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- DESCRIPTION -->
+    <div class="movie-info">
+
+      <div class="info-column">
+        <h2>Genre</h2>
+        <p>Romance, Comedy, Drama</p>
+
+        <h2>Release Date</h2>
+        <p>2009</p>
+
+        <h2>Runtime</h2>
+        <p>95 minutes</p>
+
+        <h2>Director</h2>
+        <p>Marc Webb</p>
+      </div>
+
+      <div class="info-column">
+        <h2>Main Cast</h2>
+        <ul class="cast-list">
+          <li>Joseph Gordon-Levitt - Tom Hansen</li>
+          <li>Zooey Deschanel - Summer Finn</li>
+          <li>Geoffrey Arend - McKenzie</li>
+          <li>Chloë Grace Moretz - Rachel Hansen</li>
+        </ul>
+      </div>
+
+      <div class="info-column">
+        <h2>Overview</h2>
+        <p>
+          500 Days of Summer follows Tom Hansen as he reflects on his relationship
+          with Summer Finn, a woman who does not believe in true love. Told out of
+          order across 500 days, the film explores heartbreak, memory, expectations,
+          and the difference between love and idealization.
+        </p>
+
+        <h2>Trivia</h2>
+        <ul class="trivia">
+          <li>The film is known for its non-linear storytelling structure.</li>
+          <li>It was Marc Webb's feature film directorial debut.</li>
+          <li>The movie became a modern indie romance classic.</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <audio id="bgMusic" autoplay loop controls>
+      <source src="audio/fivehundred.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+      const audio = document.getElementById("bgMusic");
+
+      audio.addEventListener("loadedmetadata", function () {
+        audio.currentTime = 0;
+      });
+    </script>
+
+  </body>
+</html>

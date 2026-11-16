@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Phoenician Scheme</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body class="movie scheme">
+    <h3><a href="index.html">Back to Home</a></h3>
+
+    <!-- HEADING -->
+    <h1>THE PHOENICIAN SCHEME</h1>
+
+    <div class="poster-row">
+      <div class="poster-card">
+        <img src="images/scheme.jpg" alt="The Phoenician Scheme" loading="lazy">
+        <div class="poster-overlay">
+          <p>"Business is the closest thing to war in peacetime."</p>
+        </div>
+      </div>
+
+      <div class="poster-card">
+        <img src="images/scheme-1.jpg" alt="The Phoenician Scheme" loading="lazy">
+        <div class="poster-overlay">
+          <p>"Every scheme has a flaw."</p>
+        </div>
+      </div>
+
+      <div class="poster-card">
+        <img src="images/scheme-2.jpg" alt="The Phoenician Scheme" loading="lazy">
+        <div class="poster-overlay">
+          <p>"You cannot plan for everything."</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- DESCRIPTION -->
+    <div class="movie-info">
+
+      <div class="info-column">
+        <h2>Genre</h2>
+        <p>Comedy, Crime, Drama</p>
+
+        <h2>Release Date</h2>
+        <p>2025</p>
+
+        <h2>Runtime</h2>
+        <p>101 minutes</p>
+
+        <h2>Director</h2>
+        <p>Wes Anderson</p>
+      </div>
+
+      <div class="info-column">
+        <h2>Main Cast</h2>
+        <ul class="cast-list">
+          <li>Benicio del Toro - Zsa-zsa Korda</li>
+          <li>Mia Threapleton - Sister Liesl</li>
+          <li>Michael Cera - Bjorn</li>
+        </ul>
+      </div>
+
+      <div class="info-column">
+        <h2>Overview</h2>
+        <p>
+          <em>The Phoenician Scheme</em> follows wealthy businessman Zsa-zsa
+          Korda as he embarks on a dangerous mission to secure his ambitious
+          financial empire. Joined by his estranged daughter, Sister Liesl,
+          and an eccentric tutor, the trio navigates assassination attempts,
+          political intrigue, and unexpected family bonds in Wes Anderson's
+          signature whimsical style.
+        </p>
+
+        <h2>Trivia</h2>
+        <ul class="trivia">
+          <li>The film was directed by Wes Anderson and released in 2025.</li>
+          <li>Benicio del Toro stars alongside Mia Threapleton and Michael Cera.</li>
+          <li>The story blends espionage, family drama, and Anderson's distinctive visual style.</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <audio id="bgMusic" autoplay loop controls>
+      <source src="audio/scheme.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+      const audio = document.getElementById("bgMusic");
+
+      audio.addEventListener("loadedmetadata", function () {
+        audio.currentTime = 0;
+      });
+    </script>
+
+  </body>
+</html>

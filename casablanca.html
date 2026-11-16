@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casablanca</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body class="movie casablanca">
+    <h3><a href="index.html">Back to Home</a></h3>
+
+    <!-- HEADING -->
+    <h1>CASABLANCA</h1>
+
+    <div class="poster-row">
+      <div class="poster-card">
+        <img src="images/casablanca.jpg" alt="Casablanca" loading="lazy">
+        <div class="poster-overlay">
+          <p>"Here's looking at you, kid."</p>
+        </div>
+      </div>
+
+      <div class="poster-card">
+        <img src="images/casablanca-1.jpg" alt="Casablanca" loading="lazy">
+        <div class="poster-overlay">
+          <p>"We'll always have Paris."</p>
+        </div>
+      </div>
+
+      <div class="poster-card">
+        <img src="images/casablanca-2.jpg" alt="Casablanca" loading="lazy">
+        <div class="poster-overlay">
+          <p>"Kiss me. Kiss me as if it were the last time."</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- DESCRIPTION -->
+    <div class="movie-info">
+
+      <div class="info-column">
+        <h2>Genre</h2>
+        <p>Drama, Romance, War</p>
+
+        <h2>Release Date</h2>
+        <p>1942</p>
+
+        <h2>Runtime</h2>
+        <p>102 minutes</p>
+
+        <h2>Director</h2>
+        <p>Michael Curtiz</p>
+      </div>
+
+      <div class="info-column">
+        <h2>Main Cast</h2>
+        <ul class="cast-list">
+          <li>Humphrey Bogart - Rick Blaine</li>
+          <li>Ingrid Bergman - Ilsa Lund</li>
+        </ul>
+      </div>
+
+      <div class="info-column">
+        <h2>Overview</h2>
+        <p>
+          Casablanca follows American expatriate Rick Blaine, the owner of a
+          nightclub in wartime Morocco, whose life is upended when his former
+          lover Ilsa unexpectedly reappears with her husband, resistance leader
+          Victor Laszlo. Forced to choose between love and sacrifice, Rick must
+          decide where his loyalties truly lie.
+        </p>
+
+        <h2>Trivia</h2>
+        <ul class="trivia">
+          <li>The film won three Academy Awards, including Best Picture, Best Director, and Best Adapted Screenplay.</li>
+          <li>Iconic lines such as "Here's looking at you, kid" and "We'll always have Paris" have become some of the most famous quotes in cinema history.</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <audio id="bgMusic" autoplay loop controls>
+      <source src="audio/casablanca.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+      const audio = document.getElementById("bgMusic");
+
+      audio.addEventListener("loadedmetadata", function () {
+        audio.currentTime = 0;
+      });
+    </script>
+
+  </body>
+</html>

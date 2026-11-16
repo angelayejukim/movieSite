@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mr. Peabody & Sherman</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body class="movie pas">
+    <h3><a href="index.html">Back to Home</a></h3>
+
+    <!-- HEADING -->
+    <h1>MR. PEABODY & SHERMAN</h1>
+
+    <div class="poster-row">
+      <div class="poster-card">
+        <img src="images/pas.jpg" alt="Mr. Peabody & Sherman" loading="lazy">
+        <div class="poster-overlay">
+          <p>"If you don't learn from history, you're doomed to repeat it."</p>
+        </div>
+      </div>
+
+      <div class="poster-card">
+        <img src="images/pas-1.jpg" alt="Mr. Peabody & Sherman" loading="lazy">
+        <div class="poster-overlay">
+          <p>"Every dog should have a boy."</p>
+        </div>
+      </div>
+
+      <div class="poster-card">
+        <img src="images/pas-2.jpg" alt="Mr. Peabody & Sherman" loading="lazy">
+        <div class="poster-overlay">
+          <p>"Success is determined by how we face failure."</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- DESCRIPTION -->
+    <div class="movie-info">
+
+      <div class="info-column">
+        <h2>Genre</h2>
+        <p>Animation, Adventure, Comedy</p>
+
+        <h2>Release Date</h2>
+        <p>2014</p>
+
+        <h2>Runtime</h2>
+        <p>92 minutes</p>
+
+        <h2>Director</h2>
+        <p>Rob Minkoff</p>
+      </div>
+
+      <div class="info-column">
+        <h2>Main Cast</h2>
+        <ul class="cast-list">
+          <li>Ty Burrell - Mr. Peabody</li>
+          <li>Max Charles - Sherman</li>
+          <li>Ariel Winter - Penny Peterson</li>
+        </ul>
+      </div>
+
+      <div class="info-column">
+        <h2>Overview</h2>
+        <p>
+          <em>Mr. Peabody &amp; Sherman</em> follows the world's smartest dog,
+          Mr. Peabody, and his adopted son Sherman as they travel through
+          history using the WABAC machine. When Sherman accidentally alters
+          the past, the duo must repair the timeline before history is changed
+          forever.
+        </p>
+
+        <h2>Trivia</h2>
+        <ul class="trivia">
+          <li>The film is based on the classic "Peabody's Improbable History" segments from <em>The Rocky and Bullwinkle Show</em>.</li>
+          <li>It was directed by Rob Minkoff, co-director of Disney's <em>The Lion King</em>.</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <audio id="bgMusic" autoplay loop controls>
+      <source src="audio/pas.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+      const audio = document.getElementById("bgMusic");
+
+      audio.addEventListener("loadedmetadata", function () {
+        audio.currentTime = 0;
+      });
+    </script>
+
+  </body>
+</html>

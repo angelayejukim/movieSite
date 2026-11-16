@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>13 Going on 30</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body class="movie thirty">
+    <h3><a href="index.html">Back to Home</a></h3>
+
+    <!-- HEADING -->
+    <h1>13 GOING ON 30</h1>
+
+    <div class="poster-row">
+      <div class="poster-card">
+        <img src="images/thirty.jpg" alt="13 Going on 30" loading="lazy">
+        <div class="poster-overlay">
+          <p>"Thirty, flirty, and thriving."</p>
+        </div>
+      </div>
+
+      <div class="poster-card">
+        <img src="images/thirty-1.jpg" alt="13 Going on 30" loading="lazy">
+        <div class="poster-overlay">
+          <p>"Arrivederci."<br><br>"Au revoir."</p>
+        </div>
+      </div>
+
+      <div class="poster-card">
+        <img src="images/thirty-2.jpg" alt="13 Going on 30" loading="lazy">
+        <div class="poster-overlay">
+          <p>"You should always have enough money to buy yourself a fabulous pair of shoes."</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- DESCRIPTION -->
+    <div class="movie-info">
+
+      <div class="info-column">
+        <h2>Genre</h2>
+        <p>Romantic Comedy, Fantasy</p>
+
+        <h2>Release Date</h2>
+        <p>2004</p>
+
+        <h2>Runtime</h2>
+        <p>98 minutes</p>
+
+        <h2>Director</h2>
+        <p>Gary Winick</p>
+      </div>
+
+      <div class="info-column">
+        <h2>Main Cast</h2>
+        <ul class="cast-list">
+          <li>Jennifer Garner - Jenna Rink</li>
+          <li>Mark Ruffalo - Matt Flamhaff</li>
+        </ul>
+      </div>
+
+      <div class="info-column">
+        <h2>Overview</h2>
+        <p>
+          <em>13 Going on 30</em> follows Jenna Rink, a 13-year-old girl who
+          wishes she could be thirty and successful. After making a birthday
+          wish, she magically wakes up as her 30-year-old self living in New
+          York City. While enjoying her new adult life, Jenna realizes that
+          growing up isn't exactly what she imagined and learns what truly
+          matters.
+        </p>
+
+        <h2>Trivia</h2>
+        <ul class="trivia">
+          <li>The famous dance scene features the song "Thriller" by Michael Jackson.</li>
+          <li>The movie later became a popular Broadway musical.</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <audio id="bgMusic" autoplay loop controls>
+      <source src="audio/thirty.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+      const audio = document.getElementById("bgMusic");
+
+      audio.addEventListener("loadedmetadata", function () {
+        audio.currentTime = 33;
+      });
+    </script>
+
+  </body>
+</html>

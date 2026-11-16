@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set It Up</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body class="movie siu">
+    <h3><a href="index.html">Back to Home</a></h3>
+
+    <!-- HEADING -->
+    <h1>SET IT UP</h1>
+
+    <div class="poster-row">
+      <div class="poster-card">
+        <img src="images/siu.jpg" alt="Set It Up" loading="lazy">
+        <div class="poster-overlay">
+          <p>"Love is all about timing."</p>
+        </div>
+      </div>
+
+      <div class="poster-card">
+        <img src="images/siu-1.jpg" alt="Set It Up" loading="lazy">
+        <div class="poster-overlay">
+          <p>"Sometimes playing matchmaker changes everything."</p>
+        </div>
+      </div>
+
+      <div class="poster-card">
+        <img src="images/siu-2.jpg" alt="Set It Up" loading="lazy">
+        <div class="poster-overlay">
+          <p>"The best plans have unexpected endings."</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- DESCRIPTION -->
+    <div class="movie-info">
+
+      <div class="info-column">
+        <h2>Genre</h2>
+        <p>Romantic Comedy</p>
+
+        <h2>Release Date</h2>
+        <p>2018</p>
+
+        <h2>Runtime</h2>
+        <p>105 minutes</p>
+
+        <h2>Director</h2>
+        <p>Claire Scanlon</p>
+      </div>
+
+      <div class="info-column">
+        <h2>Main Cast</h2>
+        <ul class="cast-list">
+          <li>Zoey Deutch - Harper Moore</li>
+          <li>Glen Powell - Charlie Young</li>
+          <li>Lucy Liu - Kirsten Stevens</li>
+          <li>Taye Diggs - Rick Otis</li>
+        </ul>
+      </div>
+
+      <div class="info-column">
+        <h2>Overview</h2>
+        <p>
+          <em>Set It Up</em> follows two overworked assistants, Harper and
+          Charlie, who devise a plan to set up their demanding bosses in hopes
+          of getting some free time. As their matchmaking scheme unfolds, they
+          unexpectedly develop feelings for each other, discovering that love
+          can appear when least expected.
+        </p>
+
+        <h2>Trivia</h2>
+        <ul class="trivia">
+          <li>The film premiered on Netflix in 2018 and became one of its most popular romantic comedies.</li>
+          <li>Zoey Deutch and Glen Powell received praise for their on-screen chemistry.</li>
+          <li>The movie helped revive interest in classic romantic comedy films.</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <audio id="bgMusic" autoplay loop controls>
+      <source src="audio/siu.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+      const audio = document.getElementById("bgMusic");
+
+      audio.addEventListener("loadedmetadata", function () {
+        audio.currentTime = 17.2;
+      });
+    </script>
+
+  </body>
+</html>

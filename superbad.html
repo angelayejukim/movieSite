@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Superbad</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body class="movie superbad">
+    <h3><a href="index.html">Back to Home</a></h3>
+
+    <!-- HEADING -->
+    <h1>SUPERBAD</h1>
+
+    <div class="poster-row">
+      <div class="poster-card">
+        <img src="images/superbad.jpg" alt="Superbad" loading="lazy">
+        <div class="poster-overlay">
+          <p>"We shouldn't be cock-blocking McLovin, we should be guiding his cock."</p>
+        </div>
+      </div>
+
+      <div class="poster-card">
+        <img src="images/superbad-1.jpg" alt="Superbad" loading="lazy">
+        <div class="poster-overlay">
+          <p>"My name is McLovin."</p>
+        </div>
+      </div>
+
+      <div class="poster-card">
+        <img src="images/superbad-2.jpg" alt="Superbad" loading="lazy">
+        <div class="poster-overlay">
+          <p>"Prepare to be fucked by the long dick of the law!"</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- DESCRIPTION -->
+    <div class="movie-info">
+
+      <div class="info-column">
+        <h2>Genre</h2>
+        <p>Comedy</p>
+
+        <h2>Release Date</h2>
+        <p>2007</p>
+
+        <h2>Runtime</h2>
+        <p>113 minutes</p>
+
+        <h2>Director</h2>
+        <p>Greg Mottola</p>
+      </div>
+
+      <div class="info-column">
+        <h2>Main Cast</h2>
+        <ul class="cast-list">
+          <li>Jonah Hill - Seth</li>
+          <li>Michael Cera - Evan</li>
+          <li>Christopher Mintz-Plasse - Fogell (McLovin)</li>
+        </ul>
+      </div>
+
+      <div class="info-column">
+        <h2>Overview</h2>
+        <p>
+          <em>Superbad</em> follows best friends Seth and Evan as they set out
+          on one unforgettable night before graduating high school. Their
+          mission to score alcohol for a party quickly spirals into a series of
+          outrageous mishaps, testing their friendship and forcing them to face
+          the uncertainty of growing up.
+        </p>
+
+        <h2>Trivia</h2>
+        <ul class="trivia">
+          <li>The screenplay was written by Seth Rogen and Evan Goldberg, who based many events on their own teenage experiences.</li>
+          <li>Christopher Mintz-Plasse's fake ID character, "McLovin," became one of the most iconic comedy characters of the 2000s.</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <audio id="bgMusic" autoplay loop controls>
+      <source src="audio/superbad.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+      const audio = document.getElementById("bgMusic");
+
+      audio.addEventListener("loadedmetadata", function () {
+        audio.currentTime = 0;
+      });
+    </script>
+
+  </body>
+</html>

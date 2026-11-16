@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obsession</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body class="movie obsession">
+    <h3><a href="index.html">Back to Home</a></h3>
+
+    <!-- HEADING -->
+    <h1>OBSESSION</h1>
+
+    <div class="poster-row">
+      <div class="poster-card">
+        <img src="images/obsession.jpg" alt="Obsession" loading="lazy">
+        <div class="poster-overlay">
+          <p>"Just because you chose this for her doesn't make it less real."</p>
+        </div>
+      </div>
+
+      <div class="poster-card">
+        <img src="images/obsession-1.jpg" alt="Obsession" loading="lazy">
+        <div class="poster-overlay">
+          <p>"You wished for this."</p>
+        </div>
+      </div>
+
+      <div class="poster-card">
+        <img src="images/obsession-2.jpg" alt="Obsession" loading="lazy">
+        <div class="poster-overlay">
+          <p>"A love only the branch of a willow tree could conjure."</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- DESCRIPTION -->
+    <div class="movie-info">
+
+      <div class="info-column">
+        <h2>Genre</h2>
+        <p>Horror, Psychological Thriller</p>
+
+        <h2>Release Date</h2>
+        <p>2026</p>
+
+        <h2>Runtime</h2>
+        <p>109 minutes</p>
+
+        <h2>Director</h2>
+        <p>Curry Barker</p>
+      </div>
+
+      <div class="info-column">
+        <h2>Main Cast</h2>
+        <ul class="cast-list">
+          <li>Inde Navarrette - Nikki</li>
+          <li>Michael Johnston - Bear</li>
+          <li>Megan Lawless - Sarah Harper</li>
+          <li>Cooper Tomlinson - Ian</li>
+        </ul>
+      </div>
+
+      <div class="info-column">
+        <h2>Overview</h2>
+        <p>
+          <em>Obsession</em> follows Bear, a lonely young man who makes a wish
+          for his longtime crush, Nikki, to finally fall in love with him. When
+          the wish comes true through a mysterious supernatural force, Bear soon
+          discovers that getting exactly what he wanted comes at a terrifying
+          cost, leading to deadly consequences and forcing him to confront the
+          true nature of obsession.
+        </p>
+
+        <h2>Trivia</h2>
+        <ul class="trivia">
+          <li><em>Obsession</em> is Curry Barker's feature film debut after gaining a following on YouTube for his horror shorts and sketches.</li>
+          <li>It was made for under $1 million and was acquired by Focus Features after a multimillion-dollar bidding war following its TIFF premiere.</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <audio id="bgMusic" autoplay loop controls>
+      <source src="audio/obsession.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+      const audio = document.getElementById("bgMusic");
+
+      audio.addEventListener("loadedmetadata", function () {
+        audio.currentTime = 0;
+      });
+    </script>
+
+  </body>
+</html>

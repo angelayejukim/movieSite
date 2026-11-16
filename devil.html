@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Devil Wears Prada</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body class="movie devil">
+    <h3><a href="index.html">Back to Home</a></h3>
+
+    <!-- HEADING -->
+    <h1>THE DEVIL WEARS PRADA</h1>
+
+    <div class="poster-row">
+      <div class="poster-card">
+        <img src="images/devil.jpg" alt="The Devil Wears Prada" loading="lazy">
+        <div class="poster-overlay">
+          <p>"Florals? For spring?<br>Groundbreaking."</p>
+        </div>
+      </div>
+
+      <div class="poster-card">
+        <img src="images/devil-1.jpg" alt="The Devil Wears Prada" loading="lazy">
+        <div class="poster-overlay">
+          <p>"That's all."</p>
+        </div>
+      </div>
+
+      <div class="poster-card">
+        <img src="images/devil-2.jpg" alt="The Devil Wears Prada" loading="lazy">
+        <div class="poster-overlay">
+          <p>"Everybody wants to be us."</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- DESCRIPTION -->
+    <div class="movie-info">
+
+      <div class="info-column">
+        <h2>Genre</h2>
+        <p>Comedy, Drama</p>
+
+        <h2>Release Date</h2>
+        <p>2006</p>
+
+        <h2>Runtime</h2>
+        <p>109 minutes</p>
+
+        <h2>Director</h2>
+        <p>David Frankel</p>
+      </div>
+
+      <div class="info-column">
+        <h2>Main Cast</h2>
+        <ul class="cast-list">
+          <li>Meryl Streep - Miranda Priestly</li>
+          <li>Anne Hathaway - Andrea "Andy" Sachs</li>
+          <li>Emily Blunt - Emily Charlton</li>
+          <li>Stanley Tucci - Nigel Kipling</li>
+        </ul>
+      </div>
+
+      <div class="info-column">
+        <h2>Overview</h2>
+        <p>
+          The Devil Wears Prada follows aspiring journalist Andy Sachs,
+          who lands a job as the assistant to Miranda Priestly, the powerful
+          editor-in-chief of a leading fashion magazine. As Andy adapts to
+          the demanding world of high fashion, she faces challenges that test
+          her values, ambitions, and relationships.
+        </p>
+
+        <h2>Trivia</h2>
+        <ul class="trivia">
+          <li>Meryl Streep received an Academy Award nomination for her role as Miranda Priestly.</li>
+          <li>The character Miranda Priestly is widely believed to be inspired by Vogue editor Anna Wintour.</li>
+        </ul>
+      </div>
+
+    </div>
+    <audio id="bgMusic" autoplay loop controls>
+      <source src="audio/devil.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+      const audio = document.getElementById("bgMusic");
+
+      audio.addEventListener("loadedmetadata", function () {
+        audio.currentTime = 30;
+      });
+    </script>
+
+
+  </body>
+</html>

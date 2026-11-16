@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marriage Story</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body class="movie marriage">
+    <h3><a href="index.html">Back to Home</a></h3>
+
+    <!-- HEADING -->
+    <h1>MARRIAGE STORY</h1>
+
+    <div class="poster-row">
+      <div class="poster-card">
+        <img src="images/marriage.jpg" alt="Marriage Story Poster" loading="lazy">
+        <div class="poster-overlay">
+          <p>"I didn't belong to myself."</p>
+        </div>
+      </div>
+
+      <div class="poster-card">
+        <img src="images/marriage-1.jpg" alt="Charlie and Nicole" loading="lazy">
+        <div class="poster-overlay">
+          <p>"It's not as simple as not being in love anymore."</p>
+        </div>
+      </div>
+
+      <div class="poster-card">
+        <img src="images/marriage-2.jpg" alt="Charlie Barber" loading="lazy">
+        <div class="poster-overlay">
+          <p>"The hardest endings can still be full of love."</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- DESCRIPTION -->
+    <div class="movie-info">
+
+      <div class="info-column">
+        <h2>Genre</h2>
+        <p>Drama, Romance</p>
+
+        <h2>Release Date</h2>
+        <p>2019</p>
+
+        <h2>Runtime</h2>
+        <p>137 minutes</p>
+
+        <h2>Director</h2>
+        <p>Noah Baumbach</p>
+      </div>
+
+      <div class="info-column">
+        <h2>Main Cast</h2>
+        <ul class="cast-list">
+          <li>Adam Driver - Charlie Barber</li>
+          <li>Scarlett Johansson - Nicole Barber</li>
+          <li>Laura Dern - Nora Fanshaw</li>
+          <li>Ray Liotta - Jay Marotta</li>
+          <li>Alan Alda - Bert Spitz</li>
+        </ul>
+      </div>
+
+      <div class="info-column">
+        <h2>Overview</h2>
+        <p>
+          A stage director and an actress navigate a painful coast-to-coast
+          divorce that pushes them to their emotional limits while trying to
+          remain devoted parents to their young son. Through heartbreak,
+          conflict, and compassion, they discover that love can endure even
+          when a marriage cannot.
+        </p>
+
+        <h2>Trivia</h2>
+        <ul class="trivia">
+          <li>Laura Dern won the Academy Award for Best Supporting Actress for her performance.</li>
+          <li>Noah Baumbach drew inspiration from his own experiences while writing the screenplay.</li>
+          <li>Adam Driver's emotional argument scene was filmed over multiple days with minimal cuts.</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <audio id="bgMusic" autoplay loop controls>
+      <source src="audio/marriage.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+      const audio = document.getElementById("bgMusic");
+
+      audio.addEventListener("loadedmetadata", function () {
+        audio.currentTime = 0;
+      });
+    </script>
+
+  </body>
+</html>

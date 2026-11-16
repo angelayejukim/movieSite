@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sinners</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body class="movie sinners">
+    <h3><a href="index.html">Back to Home</a></h3>
+
+    <!-- HEADING -->
+    <h1>SINNERS</h1>
+
+    <div class="poster-row">
+      <div class="poster-card">
+        <img src="images/sinners.jpg" alt="Sinners" loading="lazy">
+        <div class="poster-overlay">
+          <p>"No doubt about it. Last time I seen my brother. Last time I seen the sun. And just for a few hours, we was free."</p>
+        </div>
+      </div>
+
+      <div class="poster-card">
+        <img src="images/sinners-1.jpg" alt="Sinners" loading="lazy">
+        <div class="poster-overlay">
+          <p>"Dance with the devil."</p>
+        </div>
+      </div>
+
+      <div class="poster-card">
+        <img src="images/sinners-2.jpg" alt="Sinners" loading="lazy">
+        <div class="poster-overlay">
+          <p>"No miseries worth complaining about."</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- DESCRIPTION -->
+    <div class="movie-info">
+
+      <div class="info-column">
+        <h2>Genre</h2>
+        <p>Horror, Action, Thriller</p>
+
+        <h2>Release Date</h2>
+        <p>2025</p>
+
+        <h2>Runtime</h2>
+        <p>137 minutes</p>
+
+        <h2>Director</h2>
+        <p>Ryan Coogler</p>
+      </div>
+
+      <div class="info-column">
+        <h2>Main Cast</h2>
+        <ul class="cast-list">
+          <li>Michael B. Jordan - Smoke / Stack</li>
+          <li>Miles Caton - Sammie Moore</li>
+          <li>Hailee Steinfeld - Mary</li>
+          <li>Wunmi Mosaku - Annie</li>
+          <li>Delroy Lindo - Slim</li>
+        </ul>
+      </div>
+
+      <div class="info-column">
+        <h2>Overview</h2>
+        <p>
+          <em>Sinners</em> follows twin brothers Smoke and Stack as they return
+          to their hometown hoping to leave their troubled past behind. Their
+          fresh start quickly descends into terror when they encounter a
+          sinister supernatural force that transforms their homecoming into a
+          desperate fight for survival.
+        </p>
+
+        <h2>Trivia</h2>
+        <ul class="trivia">
+          <li>The film reunites director Ryan Coogler with longtime collaborator Michael B. Jordan.</li>
+          <li>Michael B. Jordan plays dual roles as the twin brothers Smoke and Stack.</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <audio id="bgMusic" autoplay loop controls>
+      <source src="audio/sinners.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+      const audio = document.getElementById("bgMusic");
+
+      audio.addEventListener("loadedmetadata", function () {
+        audio.currentTime = 0;
+      });
+    </script>
+
+  </body>
+</html>

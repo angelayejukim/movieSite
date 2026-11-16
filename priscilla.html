@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Priscilla</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body class="movie priscilla">
+    <h3><a href="index.html">Back to Home</a></h3>
+
+    <!-- HEADING -->
+    <h1>PRISCILLA</h1>
+
+    <div class="poster-row">
+      <div class="poster-card">
+        <img src="images/priscilla.jpg" alt="Priscilla" loading="lazy">
+        <div class="poster-overlay">
+          <p>"Sometimes love isn't enough."</p>
+        </div>
+      </div>
+
+      <div class="poster-card">
+        <img src="images/priscilla-1.jpg" alt="Priscilla" loading="lazy">
+        <div class="poster-overlay">
+          <p>"I'm finally getting to know who I am."</p>
+        </div>
+      </div>
+
+      <div class="poster-card">
+        <img src="images/priscilla-2.jpg" alt="Priscilla" loading="lazy">
+        <div class="poster-overlay">
+          <p>"I was living someone else's dream."</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- DESCRIPTION -->
+    <div class="movie-info">
+
+      <div class="info-column">
+        <h2>Genre</h2>
+        <p>Biography, Drama, Romance</p>
+
+        <h2>Release Date</h2>
+        <p>2023</p>
+
+        <h2>Runtime</h2>
+        <p>113 minutes</p>
+
+        <h2>Director</h2>
+        <p>Sofia Coppola</p>
+      </div>
+
+      <div class="info-column">
+        <h2>Main Cast</h2>
+        <ul class="cast-list">
+          <li>Cailee Spaeny - Priscilla Presley</li>
+          <li>Jacob Elordi - Elvis Presley</li>
+        </ul>
+      </div>
+
+      <div class="info-column">
+        <h2>Overview</h2>
+        <p>
+          <em>Priscilla</em> chronicles the life of Priscilla Presley, tracing
+          her relationship with Elvis Presley from their first meeting through
+          the challenges of life inside Graceland. Told from Priscilla's
+          perspective, the film explores identity, love, fame, and the search
+          for independence.
+        </p>
+
+        <h2>Trivia</h2>
+        <ul class="trivia">
+          <li>The film is based on Priscilla Presley's 1985 memoir <em>Elvis and Me</em>.</li>
+          <li>Cailee Spaeny won the Volpi Cup for Best Actress at the 2023 Venice International Film Festival for her performance.</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <audio id="bgMusic" autoplay loop controls>
+      <source src="audio/priscilla.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+      const audio = document.getElementById("bgMusic");
+
+      audio.addEventListener("loadedmetadata", function () {
+        audio.currentTime = 0;
+      });
+    </script>
+
+  </body>
+</html>

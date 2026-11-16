@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mr. & Mrs. Smith</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body class="movie mams">
+    <h3><a href="index.html">Back to Home</a></h3>
+
+    <!-- HEADING -->
+    <h1>MR. & MRS. SMITH</h1>
+
+    <div class="poster-row">
+      <div class="poster-card">
+        <img src="images/mams.jpg" alt="Mr. & Mrs. Smith" loading="lazy">
+        <div class="poster-overlay">
+          <p>"Marriage is the ultimate undercover mission."</p>
+        </div>
+      </div>
+
+      <div class="poster-card">
+        <img src="images/mams-1.jpg" alt="Mr. & Mrs. Smith" loading="lazy">
+        <div class="poster-overlay">
+          <p>"Love is dangerous."</p>
+        </div>
+      </div>
+
+      <div class="poster-card">
+        <img src="images/mams-2.jpg" alt="Mr. & Mrs. Smith" loading="lazy">
+        <div class="poster-overlay">
+          <p>"Till death do us part... maybe."</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- DESCRIPTION -->
+    <div class="movie-info">
+
+      <div class="info-column">
+        <h2>Genre</h2>
+        <p>Action, Comedy, Romance</p>
+
+        <h2>Release Date</h2>
+        <p>2005</p>
+
+        <h2>Runtime</h2>
+        <p>120 minutes</p>
+
+        <h2>Director</h2>
+        <p>Doug Liman</p>
+      </div>
+
+      <div class="info-column">
+        <h2>Main Cast</h2>
+        <ul class="cast-list">
+          <li>Brad Pitt - John Smith</li>
+          <li>Angelina Jolie - Jane Smith</li>
+          <li>Vince Vaughn - Eddie</li>
+          <li>Adam Brody - Benjamin Danz</li>
+        </ul>
+      </div>
+
+      <div class="info-column">
+        <h2>Overview</h2>
+        <p>
+          John and Jane Smith appear to be an ordinary married couple, but each is
+          secretly a highly skilled assassin working for rival organizations.
+          Their worlds collide when they are assigned to eliminate each other,
+          leading to explosive action, hilarious conflict, and a renewed spark
+          in their marriage.
+        </p>
+
+        <h2>Trivia</h2>
+        <ul class="trivia">
+          <li>The film's production is famous for bringing Brad Pitt and Angelina Jolie together.</li>
+          <li>It became one of the highest-grossing action-comedy films of 2005.</li>
+          <li>The mix of romance, comedy, and action inspired a TV series adaptation years later.</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <audio id="bgMusic" autoplay loop controls>
+      <source src="audio/mams.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+      const audio = document.getElementById("bgMusic");
+
+      audio.addEventListener("loadedmetadata", function () {
+        audio.currentTime = 0;
+      });
+    </script>
+
+  </body>
+</html>

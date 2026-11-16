@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Truman Show</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body class="movie truman">
+    <h3><a href="index.html">Back to Home</a></h3>
+
+    <!-- HEADING -->
+    <h1>THE TRUMAN SHOW</h1>
+
+    <div class="poster-row">
+      <div class="poster-card">
+        <img src="images/truman.jpg" alt="The Truman Show" loading="lazy">
+        <div class="poster-overlay">
+          <p>"Good morning! And in case I don't see ya..."</p>
+        </div>
+      </div>
+
+      <div class="poster-card">
+        <img src="images/truman-1.jpg" alt="The Truman Show" loading="lazy">
+        <div class="poster-overlay">
+          <p>"The world is watching."</p>
+        </div>
+      </div>
+
+      <div class="poster-card">
+        <img src="images/truman-2.jpg" alt="The Truman Show" loading="lazy">
+        <div class="poster-overlay">
+          <p>"What if your whole life was a lie?"</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- DESCRIPTION -->
+    <div class="movie-info">
+
+      <div class="info-column">
+        <h2>Genre</h2>
+        <p>Comedy, Drama, Science Fiction</p>
+
+        <h2>Release Date</h2>
+        <p>1998</p>
+
+        <h2>Runtime</h2>
+        <p>103 minutes</p>
+
+        <h2>Director</h2>
+        <p>Peter Weir</p>
+      </div>
+
+      <div class="info-column">
+        <h2>Main Cast</h2>
+        <ul class="cast-list">
+          <li>Jim Carrey - Truman Burbank</li>
+          <li>Laura Linney - Meryl Burbank</li>
+          <li>Ed Harris - Christof</li>
+          <li>Natascha McElhone - Sylvia</li>
+          <li>Noah Emmerich - Marlon</li>
+        </ul>
+      </div>
+
+      <div class="info-column">
+        <h2>Overview</h2>
+        <p>
+          <em>The Truman Show</em> follows Truman Burbank, who unknowingly
+          lives his entire life inside a massive television set where every
+          moment is broadcast to millions around the world. As strange events
+          begin to expose the truth, Truman embarks on a journey to discover
+          reality and reclaim his freedom.
+        </p>
+
+        <h2>Trivia</h2>
+        <ul class="trivia">
+          <li>Jim Carrey received a Golden Globe Award for his performance.</li>
+          <li>The film explores themes of free will, surveillance, and media culture.</li>
+          <li>It has become one of the most influential and thought-provoking films of the 1990s.</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <audio id="bgMusic" autoplay loop controls>
+      <source src="audio/truman.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+      const audio = document.getElementById("bgMusic");
+
+      audio.addEventListener("loadedmetadata", function () {
+        audio.currentTime = 1;
+      });
+    </script>
+
+  </body>
+</html>

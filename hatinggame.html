@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Hating Game</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body class="movie hatinggame">
+    <h3><a href="index.html">Back to Home</a></h3>
+
+    <!-- HEADING -->
+    <h1>THE HATING GAME</h1>
+
+    <div class="poster-row">
+      <div class="poster-card">
+        <img src="images/hatinggame.jpg" alt="The Hating Game" loading="lazy">
+        <div class="poster-overlay">
+          <p>"Love is the ultimate competition."</p>
+        </div>
+      </div>
+
+      <div class="poster-card">
+        <img src="images/hatinggame-1.jpg" alt="The Hating Game" loading="lazy">
+        <div class="poster-overlay">
+          <p>"From enemies to lovers."</p>
+        </div>
+      </div>
+
+      <div class="poster-card">
+        <img src="images/hatinggame-2.jpg" alt="The Hating Game" loading="lazy">
+        <div class="poster-overlay">
+          <p>"Sometimes the person you can't stand is the one you can't resist."</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- DESCRIPTION -->
+    <div class="movie-info">
+
+      <div class="info-column">
+        <h2>Genre</h2>
+        <p>Romantic Comedy</p>
+
+        <h2>Release Date</h2>
+        <p>2021</p>
+
+        <h2>Runtime</h2>
+        <p>102 minutes</p>
+
+        <h2>Director</h2>
+        <p>Peter Hutchings</p>
+      </div>
+
+      <div class="info-column">
+        <h2>Main Cast</h2>
+        <ul class="cast-list">
+          <li>Lucy Hale - Lucy Hutton</li>
+          <li>Austin Stowell - Joshua Templeman</li>
+          <li>Damon Daunno - Danny</li>
+          <li>Sakina Jaffrey - Helen</li>
+        </ul>
+      </div>
+
+      <div class="info-column">
+        <h2>Overview</h2>
+        <p>
+          Lucy Hutton and Joshua Templeman are executive assistants working at
+          the same publishing company. Their intense workplace rivalry turns
+          into unexpected attraction as promotions, personal ambitions, and
+          hidden feelings blur the line between love and hate.
+        </p>
+
+        <h2>Trivia</h2>
+        <ul class="trivia">
+          <li>The film is based on Sally Thorne's bestselling 2016 novel.</li>
+          <li>Lucy Hale was a longtime fan of the book before being cast.</li>
+          <li>The enemies-to-lovers romance made it a favorite among rom-com fans.</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <audio id="bgMusic" autoplay loop controls>
+      <source src="audio/hatinggame.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+      const audio = document.getElementById("bgMusic");
+
+      audio.addEventListener("loadedmetadata", function () {
+        audio.currentTime = 9;
+      });
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Girl</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body class="movie my-girl">
+    <h3><a href="index.html">Back to Home</a></h3>
+
+    <!-- HEADING -->
+    <h1>MY GIRL</h1>
+
+    <div class="poster-row">
+      <div class="poster-card">
+        <img src="images/my-girl.jpg" alt="My Girl" loading="lazy">
+        <div class="poster-overlay">
+          <p>"Life isn’t just death. Don’t ignore the living."</p>
+        </div>
+      </div>
+
+      <div class="poster-card">
+        <img src="images/my-girl-1.jpg" alt="My Girl" loading="lazy">
+        <div class="poster-overlay">
+          <p>"Where's his glasses? He can't see without his glasses!"</p>
+        </div>
+      </div>
+
+      <div class="poster-card">
+        <img src="images/my-girl-2.jpg" alt="My Girl" loading="lazy">
+        <div class="poster-overlay">
+          <p>"You don't have to be blood to be family."</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- DESCRIPTION -->
+    <div class="movie-info">
+
+      <div class="info-column">
+        <h2>Genre</h2>
+        <p>Drama, Comedy, Coming-of-Age</p>
+
+        <h2>Release Date</h2>
+        <p>1991</p>
+
+        <h2>Runtime</h2>
+        <p>102 minutes</p>
+
+        <h2>Director</h2>
+        <p>Howard Zieff</p>
+      </div>
+
+      <div class="info-column">
+        <h2>Main Cast</h2>
+        <ul class="cast-list">
+          <li>Anna Chlumsky - Vada Sultenfuss</li>
+          <li>Macaulay Culkin - Thomas J. Sennett</li>
+          <li>Dan Aykroyd - Harry Sultenfuss</li>
+          <li>Jamie Lee Curtis - Shelly DeVoto</li>
+        </ul>
+      </div>
+
+      <div class="info-column">
+        <h2>Overview</h2>
+        <p>
+          <em>My Girl</em> follows 11-year-old Vada Sultenfuss, an imaginative
+          girl growing up in the early 1970s as she navigates first love,
+          family changes, and the challenges of childhood. Alongside her best
+          friend Thomas J., Vada learns valuable lessons about friendship,
+          loss, and growing up.
+        </p>
+
+        <h2>Trivia</h2>
+        <ul class="trivia">
+          <li>The film launched Anna Chlumsky's acting career and remains one of her most memorable performances.</li>
+          <li>Macaulay Culkin starred in the film shortly after the success of <em>Home Alone</em>.</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <audio id="bgMusic" autoplay loop controls>
+      <source src="audio/my-girl.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+      const audio = document.getElementById("bgMusic");
+
+      audio.addEventListener("loadedmetadata", function () {
+        audio.currentTime = 0;
+      });
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To All the Boys I've Loved Before</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body class="movie tatb">
+    <h3><a href="index.html">Back to Home</a></h3>
+
+    <!-- HEADING -->
+    <h1>TO ALL THE BOYS I'VE <br>LOVED BEFORE</h1>
+
+    <div class="poster-row">
+      <div class="poster-card">
+        <img src="images/tatb.jpg" alt="To All the Boys I've Loved Before" loading="lazy">
+        <div class="poster-overlay">
+          <p>"You can be mad at someone and still miss them."</p>
+        </div>
+      </div>
+
+      <div class="poster-card">
+        <img src="images/tatb-1.jpg" alt="To All the Boys I've Loved Before" loading="lazy">
+        <div class="poster-overlay">
+          <p>"You'd rather make up a fantasy version of somebody in your head than be with a real person."</p>
+        </div>
+      </div>
+
+      <div class="poster-card">
+        <img src="images/tatb-2.jpg" alt="To All the Boys I've Loved Before" loading="lazy">
+        <div class="poster-overlay">
+          <p>"It's not like in the movies. It's better, because it's real."</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- DESCRIPTION -->
+    <div class="movie-info">
+
+      <div class="info-column">
+        <h2>Genre</h2>
+        <p>Romance, Comedy, Drama</p>
+
+        <h2>Release Date</h2>
+        <p>2018</p>
+
+        <h2>Runtime</h2>
+        <p>99 minutes</p>
+
+        <h2>Director</h2>
+        <p>Susan Johnson</p>
+      </div>
+
+      <div class="info-column">
+        <h2>Main Cast</h2>
+        <ul class="cast-list">
+          <li>Lana Condor - Lara Jean Song-Covey</li>
+          <li>Noah Centineo - Peter Kavinsky</li>
+          <li>Anna Cathcart - Kitty</li>
+          <li>Janel Parrish - Margot</li>
+          <li>Israel Broussard - Josh Sanderson</li>
+        </ul>
+      </div>
+
+      <div class="info-column">
+        <h2>Overview</h2>
+        <p>
+          <em>To All the Boys I've Loved Before</em> follows Lara Jean Covey,
+          a shy high school student whose secret love letters are unexpectedly
+          mailed to her past crushes. As her private feelings become public,
+          she enters a fake relationship with Peter Kavinsky, only to discover
+          that their pretend romance may be turning into something real.
+        </p>
+
+        <h2>Trivia</h2>
+        <ul class="trivia">
+          <li>The film is based on the bestselling novel <em>To All the Boys I've Loved Before</em> by Jenny Han.</li>
+          <li>Its success led to two sequel films: <em>To All the Boys: P.S. I Still Love You</em> (2020) and <em>To All the Boys: Always and Forever</em> (2021).</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <audio id="bgMusic" autoplay loop controls>
+      <source src="audio/tatb.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+      const audio = document.getElementById("bgMusic");
+
+      audio.addEventListener("loadedmetadata", function () {
+        audio.currentTime = 0;
+      });
+    </script>
+
+  </body>
+</html>

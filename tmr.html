@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Maze Runner</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body class="movie mazerunner">
+    <h3><a href="index.html">Back to Home</a></h3>
+
+    <!-- HEADING -->
+    <h1>THE MAZE RUNNER</h1>
+
+    <div class="poster-row">
+      <div class="poster-card">
+        <img src="images/tmr.jpg" alt="The Maze Runner" loading="lazy">
+        <div class="poster-overlay">
+          <p>"Remember. Survive. Run."</p>
+        </div>
+      </div>
+
+      <div class="poster-card">
+        <img src="images/tmr-1.jpg" alt="The Maze Runner" loading="lazy">
+        <div class="poster-overlay">
+          <p>"Every maze has an end."</p>
+        </div>
+      </div>
+
+      <div class="poster-card">
+        <img src="images/tmr-2.jpg" alt="The Maze Runner" loading="lazy">
+        <div class="poster-overlay">
+          <p>"Find the way out."</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- DESCRIPTION -->
+    <div class="movie-info">
+
+      <div class="info-column">
+        <h2>Genre</h2>
+        <p>Science Fiction, Action, Adventure</p>
+
+        <h2>Release Date</h2>
+        <p>2014</p>
+
+        <h2>Runtime</h2>
+        <p>113 minutes</p>
+
+        <h2>Director</h2>
+        <p>Wes Ball</p>
+      </div>
+
+      <div class="info-column">
+        <h2>Main Cast</h2>
+        <ul class="cast-list">
+          <li>Dylan O'Brien - Thomas</li>
+          <li>Kaya Scodelario - Teresa</li>
+          <li>Thomas Brodie-Sangster - Newt</li>
+          <li>Ki Hong Lee - Minho</li>
+          <li>Will Poulter - Gally</li>
+        </ul>
+      </div>
+
+      <div class="info-column">
+        <h2>Overview</h2>
+        <p>
+          <em>The Maze Runner</em> follows Thomas, who awakens in a mysterious
+          place known as the Glade with no memory of his past. Alongside a
+          group of other boys trapped inside a massive, ever-changing maze, he
+          must uncover its secrets and find a way to escape before time runs
+          out.
+        </p>
+
+        <h2>Trivia</h2>
+        <ul class="trivia">
+          <li>The film is based on James Dashner's bestselling novel.</li>
+          <li>Most of the maze was created using a mix of practical sets and CGI.</li>
+          <li>It launched a successful trilogy of Maze Runner films.</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <audio id="bgMusic" autoplay loop controls>
+      <source src="audio/tmr.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+      const audio = document.getElementById("bgMusic");
+
+      audio.addEventListener("loadedmetadata", function () {
+        audio.currentTime = 4;
+      });
+    </script>
+
+  </body>
+</html>

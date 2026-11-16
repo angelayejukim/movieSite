@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juno</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body class="movie juno">
+    <h3><a href="index.html">Back to Home</a></h3>
+
+    <!-- HEADING -->
+    <h1>JUNO</h1>
+
+    <div class="poster-row">
+      <div class="poster-card">
+        <img src="images/juno.jpg" alt="Juno" loading="lazy">
+        <div class="poster-overlay">
+          <p>"Honest to blog?"</p>
+        </div>
+      </div>
+
+      <div class="poster-card">
+        <img src="images/juno-1.jpg" alt="Juno" loading="lazy">
+        <div class="poster-overlay">
+          <p>"No... I mean for real. 'Cause you're, like, the coolest person I've ever met, and you don't even have to try, you know..."</p>
+        </div>
+      </div>
+
+      <div class="poster-card">
+        <img src="images/juno-2.jpg" alt="Juno" loading="lazy">
+        <div class="poster-overlay">
+          <p>"The best thing you can do is find a person who loves you for exactly what you are."</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- DESCRIPTION -->
+    <div class="movie-info">
+
+      <div class="info-column">
+        <h2>Genre</h2>
+        <p>Comedy, Drama, Coming-of-Age</p>
+
+        <h2>Release Date</h2>
+        <p>2007</p>
+
+        <h2>Runtime</h2>
+        <p>96 minutes</p>
+
+        <h2>Director</h2>
+        <p>Jason Reitman</p>
+      </div>
+
+      <div class="info-column">
+        <h2>Main Cast</h2>
+        <ul class="cast-list">
+          <li>Elliot Page - Juno MacGuff</li>
+          <li>Michael Cera - Paulie Bleeker</li>
+        </ul>
+      </div>
+
+      <div class="info-column">
+        <h2>Overview</h2>
+        <p>
+          <em>Juno</em> follows witty and independent teenager Juno MacGuff
+          after an unexpected pregnancy leads her to choose adoption. As she
+          navigates family, friendship, and first love, Juno discovers that
+          growing up means facing life's biggest decisions with honesty, humor,
+          and heart.
+        </p>
+
+        <h2>Trivia</h2>
+        <ul class="trivia">
+          <li>The film won the Academy Award for Best Original Screenplay for Diablo Cody.</li>
+          <li>Its distinctive indie soundtrack, featuring songs by Kimya Dawson and The Moldy Peaches, became closely associated with the film's unique style.</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <audio id="bgMusic" autoplay loop controls>
+      <source src="audio/juno.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+      const audio = document.getElementById("bgMusic");
+
+      audio.addEventListener("loadedmetadata", function () {
+        audio.currentTime = 0;
+      });
+    </script>
+
+  </body>
+</html>

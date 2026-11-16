@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>If I Had Legs I'd Kick You</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body class="movie legs">
+    <h3><a href="index.html">Back to Home</a></h3>
+
+    <!-- HEADING -->
+    <h1>IF I HAD LEGS I'D KICK YOU</h1>
+
+    <div class="poster-row">
+      <div class="poster-card">
+        <img src="images/legs.jpg" alt="If I Had Legs I'd Kick You" loading="lazy">
+        <div class="poster-overlay">
+          <p>"Everything is falling apart."</p>
+        </div>
+      </div>
+
+      <div class="poster-card">
+        <img src="images/legs-1.jpg" alt="If I Had Legs I'd Kick You" loading="lazy">
+        <div class="poster-overlay">
+          <p>"Anxiety has a breaking point."</p>
+        </div>
+      </div>
+
+      <div class="poster-card">
+        <img src="images/legs-2.jpg" alt="If I Had Legs I'd Kick You" loading="lazy">
+        <div class="poster-overlay">
+          <p>"Holding it together is the hardest part."</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- DESCRIPTION -->
+    <div class="movie-info">
+
+      <div class="info-column">
+        <h2>Genre</h2>
+        <p>Drama</p>
+
+        <h2>Release Date</h2>
+        <p>2025</p>
+
+        <h2>Runtime</h2>
+        <p>113 minutes</p>
+
+        <h2>Director</h2>
+        <p>Mary Bronstein</p>
+      </div>
+
+      <div class="info-column">
+        <h2>Main Cast</h2>
+        <ul class="cast-list">
+          <li>Rose Byrne - Linda</li>
+          <li>A$AP Rocky - James</li>
+          <li>Conan O'Brien - Therapist</li>
+          <li>Danielle Macdonald - Dr. Spring</li>
+        </ul>
+      </div>
+
+      <div class="info-column">
+        <h2>Overview</h2>
+        <p>
+          <em>If I Had Legs I'd Kick You</em> follows a woman struggling under
+          the pressures of motherhood, work, and personal anxiety as her life
+          spirals into chaos after a series of unsettling events. As reality
+          and emotional exhaustion blur together, she is forced to confront
+          the limits of her resilience.
+        </p>
+
+        <h2>Trivia</h2>
+        <ul class="trivia">
+          <li>The film premiered at the 2025 Sundance Film Festival.</li>
+          <li>Rose Byrne received widespread critical acclaim for her performance.</li>
+          <li>The film blends psychological tension with dark humor.</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <audio id="bgMusic" autoplay loop controls>
+      <source src="audio/legs.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+      const audio = document.getElementById("bgMusic");
+
+      audio.addEventListener("loadedmetadata", function () {
+        audio.currentTime = 0;
+      });
+    </script>
+
+  </body>
+</html>

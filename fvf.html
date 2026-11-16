@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ford v Ferrari</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body class="movie fvf">
+    <h3><a href="index.html">Back to Home</a></h3>
+
+    <!-- HEADING -->
+    <h1>FORD V FERRARI</h1>
+
+    <div class="poster-row">
+      <div class="poster-card">
+        <img src="images/fvf.jpg" alt="Ford v Ferrari" loading="lazy">
+        <div class="poster-overlay">
+          <p>"There's a point at 7,000 RPM where everything fades."</p>
+        </div>
+      </div>
+
+      <div class="poster-card">
+        <img src="images/fvf-1.jpg" alt="Ford v Ferrari" loading="lazy">
+        <div class="poster-overlay">
+          <p>"Go like hell."</p>
+        </div>
+      </div>
+
+      <div class="poster-card">
+        <img src="images/fvf-2.jpg" alt="Ford v Ferrari" loading="lazy">
+        <div class="poster-overlay">
+          <p>"If this were a beauty pageant, we'd just lost to a dump truck."</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- DESCRIPTION -->
+    <div class="movie-info">
+
+      <div class="info-column">
+        <h2>Genre</h2>
+        <p>Action, Biography, Drama</p>
+
+        <h2>Release Date</h2>
+        <p>2019</p>
+
+        <h2>Runtime</h2>
+        <p>152 minutes</p>
+
+        <h2>Director</h2>
+        <p>James Mangold</p>
+      </div>
+
+      <div class="info-column">
+        <h2>Main Cast</h2>
+        <ul class="cast-list">
+          <li>Matt Damon - Carroll Shelby</li>
+          <li>Christian Bale - Ken Miles</li>
+          <li>Jon Bernthal - Lee Iacocca</li>
+        </ul>
+      </div>
+
+      <div class="info-column">
+        <h2>Overview</h2>
+        <p>
+          <em>Ford v Ferrari</em> tells the true story of visionary automotive
+          designer Carroll Shelby and fearless British driver Ken Miles as they
+          build a revolutionary race car for Ford. Facing corporate pressure and
+          fierce competition from Ferrari, the team races to challenge the
+          legendary Italian manufacturer at the 1966 24 Hours of Le Mans.
+        </p>
+
+        <h2>Trivia</h2>
+        <ul class="trivia">
+          <li>The film is based on the true story behind Ford's historic victory over Ferrari at the 1966 24 Hours of Le Mans.</li>
+          <li>It won two Academy Awards for Best Film Editing and Best Sound Editing.</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <audio id="bgMusic" autoplay loop controls>
+      <source src="audio/fvf.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+      const audio = document.getElementById("bgMusic");
+
+      audio.addEventListener("loadedmetadata", function () {
+        audio.currentTime = 0;
+      });
+    </script>
+
+  </body>
+</html>

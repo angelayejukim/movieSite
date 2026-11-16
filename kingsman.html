@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kingsman</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body class="movie kingsman">
+    <h3><a href="index.html">Back to Home</a></h3>
+
+    <!-- HEADING -->
+    <h1>KINGSMAN</h1>
+
+    <div class="poster-row">
+      <div class="poster-card">
+        <img src="images/kingsman.jpg" alt="Kingsman" loading="lazy">
+        <div class="poster-overlay">
+          <p>"Manners maketh man."</p>
+        </div>
+      </div>
+
+      <div class="poster-card">
+        <img src="images/kingsman-1.jpg" alt="Kingsman" loading="lazy">
+        <div class="poster-overlay">
+          <p>"A spy is born."</p>
+        </div>
+      </div>
+
+      <div class="poster-card">
+        <img src="images/kingsman-2.jpg" alt="Kingsman" loading="lazy">
+        <div class="poster-overlay">
+          <p>"Saving the world never goes out of style."</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- DESCRIPTION -->
+    <div class="movie-info">
+
+      <div class="info-column">
+        <h2>Genre</h2>
+        <p>Action, Adventure, Comedy</p>
+
+        <h2>Release Date</h2>
+        <p>2014</p>
+
+        <h2>Runtime</h2>
+        <p>129 minutes</p>
+
+        <h2>Director</h2>
+        <p>Matthew Vaughn</p>
+      </div>
+
+      <div class="info-column">
+        <h2>Main Cast</h2>
+        <ul class="cast-list">
+          <li>Taron Egerton - Gary "Eggsy" Unwin</li>
+          <li>Colin Firth - Harry Hart</li>
+          <li>Samuel L. Jackson - Richmond Valentine</li>
+          <li>Mark Strong - Merlin</li>
+          <li>Michael Caine - Arthur</li>
+        </ul>
+      </div>
+
+      <div class="info-column">
+        <h2>Overview</h2>
+        <p>
+          <em>Kingsman: The Secret Service</em> follows Gary "Eggsy" Unwin, a
+          talented but troubled young man who is recruited into a secret
+          British spy agency. Under the guidance of Harry Hart, Eggsy trains to
+          become a gentleman spy while confronting the tech billionaire
+          Richmond Valentine, whose plan threatens the future of humanity.
+        </p>
+
+        <h2>Trivia</h2>
+        <ul class="trivia">
+          <li>The film is based on the comic book <em>The Secret Service</em> by Mark Millar and Dave Gibbons.</li>
+          <li>The church fight scene became one of the most iconic action sequences in modern cinema.</li>
+          <li>"Manners maketh man" became the franchise's signature quote.</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <audio id="bgMusic" autoplay loop controls>
+      <source src="audio/kingsman.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+      const audio = document.getElementById("bgMusic");
+
+      audio.addEventListener("loadedmetadata", function () {
+        audio.currentTime = 0;
+      });
+    </script>
+
+  </body>
+</html>

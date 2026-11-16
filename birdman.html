@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birdman</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body class="movie birdman">
+    <h3><a href="index.html">Back to Home</a></h3>
+
+    <!-- HEADING -->
+    <h1>BIRDMAN</h1>
+
+    <div class="poster-row">
+      <div class="poster-card">
+        <img src="images/birdman.jpg" alt="Birdman" loading="lazy">
+        <div class="poster-overlay">
+          <p>"Popularity is the slutty little cousin of prestige."</p>
+        </div>
+      </div>
+
+      <div class="poster-card">
+        <img src="images/birdman-1.jpg" alt="Birdman" loading="lazy">
+        <div class="poster-overlay">
+          <p>"A thing is a thing, not what is said of that thing."</p>
+        </div>
+      </div>
+
+      <div class="poster-card">
+        <img src="images/birdman-2.jpg" alt="Birdman" loading="lazy">
+        <div class="poster-overlay">
+          <p>"You are not an actor. You are a celebrity."</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- DESCRIPTION -->
+    <div class="movie-info">
+
+      <div class="info-column">
+        <h2>Genre</h2>
+        <p>Comedy, Drama</p>
+
+        <h2>Release Date</h2>
+        <p>2014</p>
+
+        <h2>Runtime</h2>
+        <p>119 minutes</p>
+
+        <h2>Director</h2>
+        <p>Alejandro G. Iñárritu</p>
+      </div>
+
+      <div class="info-column">
+        <h2>Main Cast</h2>
+        <ul class="cast-list">
+          <li>Michael Keaton - Riggan Thomson</li>
+          <li>Edward Norton - Mike Shiner</li>
+          <li>Emma Stone - Sam Thomson</li>
+        </ul>
+      </div>
+
+      <div class="info-column">
+        <h2>Overview</h2>
+        <p>
+          Birdman follows Riggan Thomson, a washed-up actor once famous for
+          portraying the superhero Birdman, as he attempts to revive his career
+          by directing and starring in a Broadway play. As opening night
+          approaches, Riggan struggles with family, fame, and his own sanity
+          while confronting the voice of the iconic character that made him famous.
+        </p>
+
+        <h2>Trivia</h2>
+        <ul class="trivia">
+          <li>The film won four Academy Awards, including Best Picture and Best Director.</li>
+          <li>Its seamless visual style creates the illusion of being filmed in one continuous shot.</li>
+        </ul>
+      </div>
+
+    </div>
+    <audio id="bgMusic" autoplay loop controls>
+      <source src="audio/birdman.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+      const audio = document.getElementById("bgMusic");
+
+      audio.addEventListener("loadedmetadata", function () {
+        audio.currentTime = 30;
+      });
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Now You See Me</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body class="movie nysm">
+    <h3><a href="index.html">Back to Home</a></h3>
+
+    <!-- HEADING -->
+    <h1>NOW YOU SEE ME</h1>
+
+    <div class="poster-row">
+      <div class="poster-card">
+        <img src="images/nysm.jpg" alt="Now You See Me" loading="lazy">
+        <div class="poster-overlay">
+          <p>"First rule of magic: always be the smartest guy in the room."</p>
+        </div>
+      </div>
+
+      <div class="poster-card">
+        <img src="images/nysm-1.jpg" alt="Now You See Me" loading="lazy">
+        <div class="poster-overlay">
+          <p>"The closer you think you are, the less you'll actually see."</p>
+        </div>
+      </div>
+
+      <div class="poster-card">
+        <img src="images/nysm-2.jpg" alt="Now You See Me" loading="lazy">
+        <div class="poster-overlay">
+          <p>"Because no matter what you think you might know, we will always be one step, three steps, seven steps ahead of you."</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- DESCRIPTION -->
+    <div class="movie-info">
+
+      <div class="info-column">
+        <h2>Genre</h2>
+        <p>Crime, Thriller, Mystery</p>
+
+        <h2>Release Date</h2>
+        <p>2013</p>
+
+        <h2>Runtime</h2>
+        <p>115 minutes</p>
+
+        <h2>Director</h2>
+        <p>Louis Leterrier</p>
+      </div>
+
+      <div class="info-column">
+        <h2>Main Cast</h2>
+        <ul class="cast-list">
+          <li>Jesse Eisenberg - J. Daniel Atlas</li>
+          <li>Woody Harrelson - Merritt McKinney</li>
+          <li>Isla Fisher - Henley Reeves</li>
+          <li>Dave Franco - Jack Wilder</li>
+          <li>Mark Ruffalo - Dylan Rhodes</li>
+          <li>Morgan Freeman - Thaddeus Bradley</li>
+        </ul>
+      </div>
+
+      <div class="info-column">
+        <h2>Overview</h2>
+        <p>
+          <em>Now You See Me</em> follows a group of talented illusionists known
+          as "The Four Horsemen" who perform spectacular magic shows while
+          secretly pulling off daring bank heists. As an FBI agent and an
+          Interpol detective pursue them, the line between illusion and reality
+          becomes increasingly blurred.
+        </p>
+
+        <h2>Trivia</h2>
+        <ul class="trivia">
+          <li>The film combines stage magic with crime and thriller elements.</li>
+          <li>The cast trained with professional magicians to make the illusion performances look authentic.</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <audio id="bgMusic" autoplay loop controls>
+      <source src="audio/nysm.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+      const audio = document.getElementById("bgMusic");
+
+      audio.addEventListener("loadedmetadata", function () {
+        audio.currentTime = 0;
+      });
+    </script>
+
+  </body>
+</html>

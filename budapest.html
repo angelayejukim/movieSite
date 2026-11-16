@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Grand Budapest Hotel</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body class="movie budapest">
+    <h3><a href="index.html">Back to Home</a></h3>
+
+    <!-- HEADING -->
+    <h1>THE GRAND <br>BUDAPEST HOTEL</h1>
+
+    <div class="poster-row">
+      <div class="poster-card">
+        <img src="images/budapest.jpg" alt="The Grand Budapest Hotel" loading="lazy">
+        <div class="poster-overlay">
+          <p>"You see, there are still faint glimmers of civilization left in this barbaric slaughterhouse that was once known as humanity."</p>
+        </div>
+      </div>
+
+      <div class="poster-card">
+        <img src="images/budapest-1.jpg" alt="The Grand Budapest Hotel" loading="lazy">
+        <div class="poster-overlay">
+          <p>"Take your hands off my lobby boy!"</p>
+        </div>
+      </div>
+
+      <div class="poster-card">
+        <img src="images/budapest-2.jpg" alt="The Grand Budapest Hotel" loading="lazy">
+        <div class="poster-overlay">
+          <p>"Rudeness is merely an expression of fear. People fear they won't get what they want."</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- DESCRIPTION -->
+    <div class="movie-info">
+
+      <div class="info-column">
+        <h2>Genre</h2>
+        <p>Comedy, Drama, Crime</p>
+
+        <h2>Release Date</h2>
+        <p>2014</p>
+
+        <h2>Runtime</h2>
+        <p>100 minutes</p>
+
+        <h2>Director</h2>
+        <p>Wes Anderson</p>
+      </div>
+
+      <div class="info-column">
+        <h2>Main Cast</h2>
+        <ul class="cast-list">
+          <li>Ralph Fiennes - M. Gustave</li>
+          <li>Tony Revolori - Zero Moustafa</li>
+          <li>Saoirse Ronan - Agatha</li>
+        </ul>
+      </div>
+
+      <div class="info-column">
+        <h2>Overview</h2>
+        <p>
+          The Grand Budapest Hotel follows the adventures of M. Gustave, a
+          legendary concierge at a famous European hotel, and Zero Moustafa,
+          his loyal lobby boy. After one of Gustave's wealthy guests dies and
+          leaves him a priceless painting, the pair become entangled in a
+          murder mystery, a stolen fortune, and a battle for family inheritance
+          against the backdrop of a changing Europe.
+        </p>
+
+        <h2>Trivia</h2>
+        <ul class="trivia">
+          <li>The film was directed by Wes Anderson and released in 2014.</li>
+          <li>It won four Academy Awards, including Best Production Design and Best Original Score.</li>
+          <li>The fictional Republic of Zubrowka was inspired by Central European history and culture.</li>
+        </ul>
+      </div>
+
+    </div>
+    <audio id="bgMusic" autoplay loop controls>
+      <source src="audio/budapest.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+      const audio = document.getElementById("bgMusic");
+
+      audio.addEventListener("loadedmetadata", function () {
+        audio.currentTime = 30;
+      });
+    </script>
+
+  </body>
+</html>

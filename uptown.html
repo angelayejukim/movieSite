@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uptown Girls</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body class="movie uptown">
+    <h3><a href="index.html">Back to Home</a></h3>
+
+    <!-- HEADING -->
+    <h1>UPTOWN GIRLS</h1>
+
+    <div class="poster-row">
+      <div class="poster-card">
+        <img src="images/uptown.jpg" alt="Uptown Girls" loading="lazy">
+        <div class="poster-overlay">
+          <p>"The only rule is there are no rules."</p>
+        </div>
+      </div>
+
+      <div class="poster-card">
+        <img src="images/uptown-1.jpg" alt="Uptown Girls" loading="lazy">
+        <div class="poster-overlay">
+          <p>"You have to be your own hero."</p>
+        </div>
+      </div>
+
+      <div class="poster-card">
+        <img src="images/uptown-2.jpg" alt="Uptown Girls" loading="lazy">
+        <div class="poster-overlay">
+          <p>"Sometimes the people who need taking care of the most are the ones taking care of everyone else."</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- DESCRIPTION -->
+    <div class="movie-info">
+
+      <div class="info-column">
+        <h2>Genre</h2>
+        <p>Comedy, Drama, Romance</p>
+
+        <h2>Release Date</h2>
+        <p>2003</p>
+
+        <h2>Runtime</h2>
+        <p>92 minutes</p>
+
+        <h2>Director</h2>
+        <p>Boaz Yakin</p>
+      </div>
+
+      <div class="info-column">
+        <h2>Main Cast</h2>
+        <ul class="cast-list">
+          <li>Brittany Murphy - Molly Gunn</li>
+          <li>Dakota Fanning - Ray Schleine</li>
+        </ul>
+      </div>
+
+      <div class="info-column">
+        <h2>Overview</h2>
+        <p>
+          <em>Uptown Girls</em> follows Molly Gunn, the carefree daughter of a
+          late rock legend whose extravagant lifestyle comes to an abrupt end
+          after she loses her inheritance. Taking a job as nanny to the
+          precocious and tightly wound Ray Schleine, Molly and Ray form an
+          unlikely friendship that teaches them both about responsibility,
+          family, and growing up.
+        </p>
+
+        <h2>Trivia</h2>
+        <ul class="trivia">
+          <li>The film stars Brittany Murphy and Dakota Fanning, whose heartfelt chemistry became one of its most beloved aspects.</li>
+          <li>Although it received mixed reviews upon release, <em>Uptown Girls</em> has since developed a devoted cult following.</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <audio id="bgMusic" autoplay loop controls>
+      <source src="audio/uptown.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+      const audio = document.getElementById("bgMusic");
+
+      audio.addEventListener("loadedmetadata", function () {
+        audio.currentTime = 4;
+      });
+    </script>
+
+  </body>
+</html>

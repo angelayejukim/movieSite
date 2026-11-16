@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Hunger Games</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body class="movie hunger-games">
+    <h3><a href="index.html">Back to Home</a></h3>
+
+    <!-- HEADING -->
+    <h1>THE HUNGER GAMES</h1>
+
+    <div class="poster-row">
+      <div class="poster-card">
+        <img src="images/hunger-games.jpg" alt="The Hunger Games" loading="lazy">
+        <div class="poster-overlay">
+          <p>"I volunteer as tribute!"</p>
+        </div>
+      </div>
+
+      <div class="poster-card">
+        <img src="images/hunger-games-1.jpg" alt="The Hunger Games" loading="lazy">
+        <div class="poster-overlay">
+          <p>"May the odds be ever in your favor."</p>
+        </div>
+      </div>
+
+      <div class="poster-card">
+        <img src="images/hunger-games-2.jpg" alt="The Hunger Games" loading="lazy">
+        <div class="poster-overlay">
+          <p>"Hope. It is the only thing stronger than fear."</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- DESCRIPTION -->
+    <div class="movie-info">
+
+      <div class="info-column">
+        <h2>Genre</h2>
+        <p>Action, Adventure, Sci-Fi</p>
+
+        <h2>Release Date</h2>
+        <p>2012</p>
+
+        <h2>Runtime</h2>
+        <p>142 minutes</p>
+
+        <h2>Director</h2>
+        <p>Gary Ross</p>
+      </div>
+
+      <div class="info-column">
+        <h2>Main Cast</h2>
+        <ul class="cast-list">
+          <li>Jennifer Lawrence - Katniss Everdeen</li>
+          <li>Josh Hutcherson - Peeta Mellark</li>
+          <li>Liam Hemsworth - Gale Hawthorne</li>
+          <li>Woody Harrelson - Haymitch Abernathy</li>
+          <li>Elizabeth Banks - Effie Trinket</li>
+          <li>Donald Sutherland - President Snow</li>
+        </ul>
+      </div>
+
+      <div class="info-column">
+        <h2>Overview</h2>
+        <p>
+          <em>The Hunger Games</em> takes place in a dystopian future where the
+          nation of Panem forces 24 teenagers from its districts to compete in a
+          televised fight to the death called the Hunger Games. Katniss
+          Everdeen volunteers to take her sister's place and must rely on
+          survival skills, intelligence, and courage to stay alive in the
+          arena.
+        </p>
+
+        <h2>Trivia</h2>
+        <ul class="trivia">
+          <li>The film is based on the novel by Suzanne Collins.</li>
+          <li>The movie was a massive box office success and launched a four-film series.</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <audio id="bgMusic" autoplay loop controls>
+      <source src="audio/hunger-games.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+      const audio = document.getElementById("bgMusic");
+
+      audio.addEventListener("loadedmetadata", function () {
+        audio.currentTime = 0;
+      });
+    </script>
+
+  </body>
+</html>

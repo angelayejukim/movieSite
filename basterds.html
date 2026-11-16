@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inglourious Basterds</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body class="movie basterds">
+    <h3><a href="index.html">Back to Home</a></h3>
+
+    <h1>INGLOURIOUS BASTERDS</h1>
+
+    <div class="poster-row">
+      <div class="poster-card">
+        <img src="images/basterds.jpg" alt="Inglourious Basterds Poster" loading="lazy">
+        <div class="poster-overlay">
+          <p>"Once upon a time... in Nazi-occupied France."</p>
+        </div>
+      </div>
+
+      <div class="poster-card">
+        <img src="images/basterds-1.jpg" alt="Lt. Aldo Raine and the Basterds" loading="lazy">
+        <div class="poster-overlay">
+          <p>"Each and every man under my command owes me one hundred Nazi scalps."</p>
+        </div>
+      </div>
+
+      <div class="poster-card">
+        <img src="images/basterds-2.jpg" alt="Shosanna Dreyfus and Hans Landa" loading="lazy">
+        <div class="poster-overlay">
+          <p>"Revenge is never forgotten."</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="movie-info">
+
+      <div class="info-column">
+        <h2>Genre</h2>
+        <p>War, Drama, Adventure</p>
+
+        <h2>Release Date</h2>
+        <p>2009</p>
+
+        <h2>Runtime</h2>
+        <p>153 minutes</p>
+
+        <h2>Director</h2>
+        <p>Quentin Tarantino</p>
+      </div>
+
+      <div class="info-column">
+        <h2>Main Cast</h2>
+        <ul class="cast-list">
+          <li>Brad Pitt - Lt. Aldo Raine</li>
+          <li>Christoph Waltz - Col. Hans Landa</li>
+          <li>Mélanie Laurent - Shosanna Dreyfus</li>
+          <li>Diane Kruger - Bridget von Hammersmark</li>
+          <li>Michael Fassbender - Lt. Archie Hicox</li>
+        </ul>
+      </div>
+
+      <div class="info-column">
+        <h2>Overview</h2>
+        <p>
+          In Nazi-occupied France during World War II, a group of Jewish-American
+          soldiers known as the Basterds carries out a ruthless campaign against
+          the Third Reich. At the same time, a young cinema owner plots her own
+          revenge against the Nazi leadership, setting the stage for an explosive
+          confrontation that could change history forever.
+        </p>
+
+        <h2>Trivia</h2>
+        <ul class="trivia">
+          <li>Christoph Waltz won the Academy Award for Best Supporting Actor for his role as Hans Landa.</li>
+          <li>Quentin Tarantino spent over ten years developing the screenplay.</li>
+          <li>The film presents an alternate-history version of World War II.</li>
+        </ul>
+      </div>
+
+    </div>
+    <audio id="bgMusic" autoplay loop controls>
+      <source src="audio/basterds.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+      const audio = document.getElementById("bgMusic");
+
+      audio.addEventListener("loadedmetadata", function () {
+        audio.currentTime = 30;
+      });
+    </script>
+
+
+  </body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamilton</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body class="movie hamilton">
+    <h3><a href="index.html">Back to Home</a></h3>
+
+    <!-- HEADING -->
+    <h1>HAMILTON</h1>
+
+    <div class="poster-row">
+      <div class="poster-card">
+        <img src="images/hamilton.jpg" alt="Hamilton" loading="lazy">
+        <div class="poster-overlay">
+          <p>"History has its eyes on you."</p>
+        </div>
+      </div>
+
+      <div class="poster-card">
+        <img src="images/hamilton-1.jpg" alt="Hamilton" loading="lazy">
+        <div class="poster-overlay">
+          <p>"Who lives, who dies, who tells your story."</p>
+        </div>
+      </div>
+
+      <div class="poster-card">
+        <img src="images/hamilton-2.jpg" alt="Hamilton" loading="lazy">
+        <div class="poster-overlay">
+          <p>"I am not throwing away my shot."</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- DESCRIPTION -->
+    <div class="movie-info">
+
+      <div class="info-column">
+        <h2>Genre</h2>
+        <p>Musical, Drama, History</p>
+
+        <h2>Release Date</h2>
+        <p>2020</p>
+
+        <h2>Runtime</h2>
+        <p>160 minutes</p>
+
+        <h2>Director</h2>
+        <p>Thomas Kail</p>
+      </div>
+
+      <div class="info-column">
+        <h2>Main Cast</h2>
+        <ul class="cast-list">
+          <li>Lin-Manuel Miranda - Alexander Hamilton</li>
+          <li>Leslie Odom Jr. - Aaron Burr</li>
+          <li>Phillipa Soo - Eliza Hamilton</li>
+          <li>Renée Elise Goldsberry - Angelica Schuyler</li>
+          <li>Daveed Diggs - Lafayette / Jefferson</li>
+        </ul>
+      </div>
+
+      <div class="info-column">
+        <h2>Overview</h2>
+        <p>
+          <em>Hamilton</em> tells the story of American Founding Father
+          Alexander Hamilton through a groundbreaking blend of hip-hop,
+          R&amp;B, pop, and traditional musical theatre. The filmed stage
+          production captures the original Broadway cast performing the
+          award-winning musical.
+        </p>
+
+        <h2>Trivia</h2>
+        <ul class="trivia">
+          <li>The musical was created by Lin-Manuel Miranda.</li>
+          <li>It won 11 Tony Awards, including Best Musical.</li>
+          <li>The Disney+ film features the original Broadway cast.</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <audio id="bgMusic" autoplay loop controls>
+      <source src="audio/hamilton.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+      const audio = document.getElementById("bgMusic");
+
+      audio.addEventListener("loadedmetadata", function () {
+        audio.currentTime = 0;
+      });
+    </script>
+
+  </body>
+</html>

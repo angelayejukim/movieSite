@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descendants</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body class="movie descendants">
+    <h3><a href="index.html">Back to Home</a></h3>
+
+    <!-- HEADING -->
+    <h1>DESCENDANTS</h1>
+
+    <div class="poster-row">
+      <div class="poster-card">
+        <img src="images/descendants.jpg" alt="Descendants" loading="lazy">
+        <div class="poster-overlay">
+          <p>"They're the kids of Disney's greatest villains."</p>
+        </div>
+      </div>
+
+      <div class="poster-card">
+        <img src="images/descendants-1.jpg" alt="Descendants" loading="lazy">
+        <div class="poster-overlay">
+          <p>"Good is the new bad."</p>
+        </div>
+      </div>
+
+      <div class="poster-card">
+        <img src="images/descendants-2.jpg" alt="Descendants" loading="lazy">
+        <div class="poster-overlay">
+          <p>"Choose your own destiny."</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- DESCRIPTION -->
+    <div class="movie-info">
+
+      <div class="info-column">
+        <h2>Genre</h2>
+        <p>Fantasy, Musical, Adventure</p>
+
+        <h2>Release Date</h2>
+        <p>2015</p>
+
+        <h2>Runtime</h2>
+        <p>112 minutes</p>
+
+        <h2>Director</h2>
+        <p>Kenny Ortega</p>
+      </div>
+
+      <div class="info-column">
+        <h2>Main Cast</h2>
+        <ul class="cast-list">
+          <li>Dove Cameron - Mal</li>
+          <li>Cameron Boyce - Carlos</li>
+          <li>Sofia Carson - Evie</li>
+          <li>Booboo Stewart - Jay</li>
+        </ul>
+      </div>
+
+      <div class="info-column">
+        <h2>Overview</h2>
+        <p>
+          The teenage children of Disney's most infamous villains leave the Isle
+          of the Lost to attend Auradon Prep. As they adjust to a new life, Mal,
+          Evie, Carlos, and Jay must decide whether to follow in their parents'
+          footsteps or forge their own paths.
+        </p>
+
+        <h2>Trivia</h2>
+        <ul class="trivia">
+          <li>The film premiered on Disney Channel in 2015.</li>
+          <li>It launched a successful franchise with sequels, animated specials, and music albums.</li>
+          <li>Cameron Boyce's performance as Carlos became one of his most beloved roles.</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <audio id="bgMusic" autoplay loop controls>
+      <source src="audio/descendants.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+      const audio = document.getElementById("bgMusic");
+
+      audio.addEventListener("loadedmetadata", function () {
+        audio.currentTime = 0;
+      });
+    </script>
+
+  </body>
+</html>

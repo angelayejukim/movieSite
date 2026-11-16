@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Sheep Detectives</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body class="movie sheep">
+    <h3><a href="index.html">Back to Home</a></h3>
+
+    <!-- HEADING -->
+    <h1>THE SHEEP DETECTIVES</h1>
+
+    <div class="poster-row">
+      <div class="poster-card">
+        <img src="images/sheep.jpg" alt="The Sheep Detectives poster" loading="lazy">
+        <div class="poster-overlay">
+          <p>"Every flock has its secrets."</p>
+        </div>
+      </div>
+
+      <div class="poster-card">
+        <img src="images/sheep-1.jpg" alt="The Sheep Detectives still" loading="lazy">
+        <div class="poster-overlay">
+          <p>"Sheep notice everything."</p>
+        </div>
+      </div>
+
+      <div class="poster-card">
+        <img src="images/sheep-2.jpg" alt="The Sheep Detectives still" loading="lazy">
+        <div class="poster-overlay">
+          <p>"The truth is never as quiet as it seems."</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- DESCRIPTION -->
+    <div class="movie-info">
+
+      <div class="info-column">
+        <h2>Genre</h2>
+        <p>Mystery, Comedy</p>
+
+        <h2>Release Date</h2>
+        <p>2026</p>
+
+        <h2>Runtime</h2>
+        <p>109 minutes</p>
+
+        <h2>Director</h2>
+        <p>Kyle Balda</p>
+      </div>
+
+      <div class="info-column">
+        <h2>Main Cast</h2>
+        <ul class="cast-list">
+          <li>Hugh Jackman - George Hardy</li>
+          <li>Molly Gordon - Rebecca Hampstead</li>
+          <li>Nicholas Galitzine - Elliot Matthews</li>
+          <li>Nicholas Braun - Tim Derry</li>
+        </ul>
+      </div>
+
+      <div class="info-column">
+        <h2>Overview</h2>
+        <p>
+          <em>The Sheep Detectives</em> follows a flock of clever sheep whose
+          beloved shepherd, George Hardy, is found dead under mysterious
+          circumstances. Inspired by the detective stories he read to them,
+          the sheep secretly set out to solve the murder themselves,
+          uncovering long-buried secrets hidden within their quiet English
+          village.
+        </p>
+
+        <h2>Trivia</h2>
+        <ul class="trivia">
+          <li>The film is based on Leonie Swann's bestselling novel <em>Three Bags Full: A Sheep Detective Story</em>.</li>
+          <li>The movie was produced by Illumination, the animation studio behind <em>Despicable Me</em>, <em>Minions</em>, and <em>The Super Mario Bros. Movie</em>.</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <audio id="bgMusic" autoplay loop controls>
+      <source src="audio/sheep.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+
+    <script>
+      const audio = document.getElementById("bgMusic");
+
+      audio.addEventListener("loadedmetadata", function () {
+        audio.currentTime = 0;
+      });
+    </script>
+
+  </body>
+</html>

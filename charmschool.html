@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbie: Princess Charm School</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body class="movie charmschool">
+    <h3><a href="index.html">Back to Home</a></h3>
+
+    <!-- HEADING -->
+    <h1>BARBIE: PRINCESS CHARM SCHOOL</h1>
+
+    <div class="poster-row">
+      <div class="poster-card">
+        <img src="images/charmschool.jpg" alt="Barbie: Princess Charm School" loading="lazy">
+        <div class="poster-overlay">
+          <p>"Every girl has a princess within."</p>
+        </div>
+      </div>
+
+      <div class="poster-card">
+        <img src="images/charmschool-1.jpg" alt="Barbie: Princess Charm School" loading="lazy">
+        <div class="poster-overlay">
+          <p>"Believe in yourself."</p>
+        </div>
+      </div>
+
+      <div class="poster-card">
+        <img src="images/charmschool-2.jpg" alt="Barbie: Princess Charm School" loading="lazy">
+        <div class="poster-overlay">
+          <p>"Kindness is the greatest crown."</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- DESCRIPTION -->
+    <div class="movie-info">
+
+      <div class="info-column">
+        <h2>Genre</h2>
+        <p>Animation, Family, Fantasy</p>
+
+        <h2>Release Date</h2>
+        <p>2011</p>
+
+        <h2>Runtime</h2>
+        <p>81 minutes</p>
+
+        <h2>Director</h2>
+        <p>Ezekiel Norton</p>
+      </div>
+
+      <div class="info-column">
+        <h2>Main Cast</h2>
+        <ul class="cast-list">
+          <li>Diana Kaarina - Blair Willows (Barbie)</li>
+          <li>Morwenna Banks - Dame Devin</li>
+          <li>Nicole Oliver - Princess Delancy</li>
+          <li>Brittney Wilson - Hadley</li>
+        </ul>
+      </div>
+
+      <div class="info-column">
+        <h2>Overview</h2>
+        <p>
+          Blair Willows receives a once-in-a-lifetime opportunity to attend Princess
+          Charm School. As she learns royal etiquette, friendship, and courage, she
+          uncovers a secret about her past that could change the kingdom forever.
+        </p>
+
+        <h2>Trivia</h2>
+        <ul class="trivia">
+          <li>The film is part of the popular Barbie animated movie series.</li>
+          <li>Princess Charm School emphasizes friendship, kindness, and self-confidence.</li>
+          <li>The movie features several original songs and magical fantasy elements.</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <audio id="bgMusic" autoplay loop controls>
+      <source src="audio/charmschool.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+      const audio = document.getElementById("bgMusic");
+
+      audio.addEventListener("loadedmetadata", function () {
+        audio.currentTime = 0;
+      });
+    </script>
+
+  </body>
+</html>

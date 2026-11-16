@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Social Network</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body class="movie social-network">
+    <h3><a href="index.html">Back to Home</a></h3>
+
+    <!-- HEADING -->
+    <h1>THE SOCIAL NETWORK</h1>
+
+    <div class="poster-row">
+      <div class="poster-card">
+        <img src="images/social-network.jpg" alt="The Social Network" loading="lazy">
+        <div class="poster-overlay">
+          <p>"You know what's cooler than a million dollars? A billion dollars."</p>
+        </div>
+      </div>
+
+      <div class="poster-card">
+        <img src="images/social-network-1.jpg" alt="The Social Network" loading="lazy">
+        <div class="poster-overlay">
+          <p>"If you guys were the inventors of Facebook, you'd have invented Facebook."</p>
+        </div>
+      </div>
+
+      <div class="poster-card">
+        <img src="images/social-network-2.jpg" alt="The Social Network" loading="lazy">
+        <div class="poster-overlay">
+          <p>"You're not an asshole, Mark. You're just trying so hard to be."</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- DESCRIPTION -->
+    <div class="movie-info">
+
+      <div class="info-column">
+        <h2>Genre</h2>
+        <p>Drama, Biography</p>
+
+        <h2>Release Date</h2>
+        <p>2010</p>
+
+        <h2>Runtime</h2>
+        <p>120 minutes</p>
+
+        <h2>Director</h2>
+        <p>David Fincher</p>
+      </div>
+
+      <div class="info-column">
+        <h2>Main Cast</h2>
+        <ul class="cast-list">
+          <li>Jesse Eisenberg - Mark Zuckerberg</li>
+          <li>Andrew Garfield - Eduardo Saverin</li>
+          <li>Justin Timberlake - Sean Parker</li>
+        </ul>
+      </div>
+
+      <div class="info-column">
+        <h2>Overview</h2>
+        <p>
+          <em>The Social Network</em> tells the story of how Mark Zuckerberg
+          created Facebook while studying at Harvard University. As the website
+          rapidly grows into a global social media platform, Zuckerberg faces
+          lawsuits and personal conflicts with former friends and business
+          partners.
+        </p>
+
+        <h2>Trivia</h2>
+        <ul class="trivia">
+          <li>The screenplay was written by Aaron Sorkin and won the Academy Award for Best Adapted Screenplay.</li>
+          <li>The film's soundtrack by Trent Reznor and Atticus Ross won the Academy Award for Best Original Score.</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <audio id="bgMusic" autoplay loop controls>
+      <source src="audio/social-network.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+      const audio = document.getElementById("bgMusic");
+
+      audio.addEventListener("loadedmetadata", function () {
+        audio.currentTime = 60;
+      });
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saturday Night</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body class="movie snl">
+    <h3><a href="index.html">Back to Home</a></h3>
+
+    <!-- HEADING -->
+    <h1>SATURDAY NIGHT</h1>
+
+    <div class="poster-row">
+      <div class="poster-card">
+        <img src="images/snl.jpg" alt="Saturday Night" loading="lazy">
+        <div class="poster-overlay">
+          <p>"Live from New York..."</p>
+        </div>
+      </div>
+
+      <div class="poster-card">
+        <img src="images/snl-1.jpg" alt="Saturday Night" loading="lazy">
+        <div class="poster-overlay">
+          <p>"90 minutes to make television history."</p>
+        </div>
+      </div>
+
+      <div class="poster-card">
+        <img src="images/snl-2.jpg" alt="Saturday Night" loading="lazy">
+        <div class="poster-overlay">
+          <p>"Chaos is part of the show."</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- DESCRIPTION -->
+    <div class="movie-info">
+
+      <div class="info-column">
+        <h2>Genre</h2>
+        <p>Comedy, Drama</p>
+
+        <h2>Release Date</h2>
+        <p>2024</p>
+
+        <h2>Runtime</h2>
+        <p>109 minutes</p>
+
+        <h2>Director</h2>
+        <p>Jason Reitman</p>
+      </div>
+
+      <div class="info-column">
+        <h2>Main Cast</h2>
+        <ul class="cast-list">
+          <li>Gabriel LaBelle - Lorne Michaels</li>
+          <li>Rachel Sennott - Rosie Shuster</li>
+          <li>Cory Michael Smith - Chevy Chase</li>
+          <li>Dylan O'Brien - Dan Aykroyd</li>
+        </ul>
+      </div>
+
+      <div class="info-column">
+        <h2>Overview</h2>
+        <p>
+          <em>Saturday Night</em> is set during the 90 minutes leading up to
+          the first broadcast of <em>Saturday Night Live</em> in 1975. The film
+          follows producer Lorne Michaels and his cast as they race against
+          time to overcome technical disasters, network pressure, and backstage
+          chaos before going live.
+        </p>
+
+        <h2>Trivia</h2>
+        <ul class="trivia">
+          <li>The film dramatizes the events before the debut episode of <em>Saturday Night Live</em>.</li>
+          <li>Jason Reitman co-wrote the screenplay after extensive interviews with original cast and crew members.</li>
+          <li>The ensemble cast portrays many of the original SNL performers and creators.</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <audio id="bgMusic" autoplay loop controls>
+      <source src="audio/snl.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+      const audio = document.getElementById("bgMusic");
+
+      audio.addEventListener("loadedmetadata", function () {
+        audio.currentTime = 0;
+      });
+    </script>
+
+  </body>
+</html>

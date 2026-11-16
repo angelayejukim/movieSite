@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hadestown</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body class="movie hadestown">
+    <h3><a href="index.html">Back to Home</a></h3>
+
+    <!-- HEADING -->
+    <h1>HADESTOWN</h1>
+
+    <div class="poster-row">
+      <div class="poster-card">
+        <img src="images/hadestown.jpg" alt="Hadestown" loading="lazy">
+        <div class="poster-overlay">
+          <p>"To the world we dream about."</p>
+        </div>
+      </div>
+
+      <div class="poster-card">
+        <img src="images/hadestown-1.jpg" alt="Hadestown" loading="lazy">
+        <div class="poster-overlay">
+          <p>"It's an old song, but we're gonna sing it again."</p>
+        </div>
+      </div>
+
+      <div class="poster-card">
+        <img src="images/hadestown-2.jpg" alt="Hadestown" loading="lazy">
+        <div class="poster-overlay">
+          <p>"Wait for me."</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="movie-info">
+
+      <div class="info-column">
+        <h2>Genre</h2>
+        <p>Musical, Drama, Romance</p>
+
+        <h2>Premiere</h2>
+        <p>2019 (Broadway)</p>
+
+        <h2>Runtime</h2>
+        <p>Approximately 2 hours 30 minutes</p>
+
+        <h2>Creator</h2>
+        <p>Anaïs Mitchell</p>
+      </div>
+
+      <div class="info-column">
+        <h2>Main Cast</h2>
+        <ul class="cast-list">
+          <li>Reeve Carney – Orpheus</li>
+          <li>Eva Noblezada – Eurydice</li>
+          <li>Patrick Page – Hades</li>
+          <li>Amber Gray – Persephone</li>
+          <li>André De Shields – Hermes</li>
+        </ul>
+      </div>
+
+      <div class="info-column">
+        <h2>Overview</h2>
+        <p>
+          <em>Hadestown</em> retells the Greek myths of Orpheus and Eurydice
+          alongside Hades and Persephone. Set in a haunting, jazz-inspired
+          underworld, the musical explores love, hope, sacrifice, and the
+          power of storytelling.
+        </p>
+
+        <h2>Trivia</h2>
+        <ul class="trivia">
+          <li>Written by singer-songwriter Anaïs Mitchell.</li>
+          <li>Won the 2019 Tony Award for Best Musical.</li>
+          <li>Blends folk, jazz, blues, and New Orleans-inspired music.</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <audio id="bgMusic" autoplay loop controls>
+      <source src="audio/hadestown.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+      const audio = document.getElementById("bgMusic");
+
+      audio.addEventListener("loadedmetadata", function () {
+        audio.currentTime = 0;
+      });
+    </script>
+
+  </body>
+</html>

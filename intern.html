@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Intern</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body class="movie intern">
+    <h3><a href="index.html">Back to Home</a></h3>
+
+    <!-- HEADING -->
+    <h1>THE INTERN</h1>
+
+    <div class="poster-row">
+      <div class="poster-card">
+        <img src="images/intern.jpg" alt="The Intern" loading="lazy">
+        <div class="poster-overlay">
+          <p>"Experience never gets old."</p>
+        </div>
+      </div>
+
+      <div class="poster-card">
+        <img src="images/intern-1.jpg" alt="The Intern" loading="lazy">
+        <div class="poster-overlay">
+          <p>"You're never wrong to do the right thing."</p>
+        </div>
+      </div>
+
+      <div class="poster-card">
+        <img src="images/intern-2.jpg" alt="The Intern" loading="lazy">
+        <div class="poster-overlay">
+          <p>"Musicians don't retire. They stop when there's no more music in them."</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- DESCRIPTION -->
+    <div class="movie-info">
+
+      <div class="info-column">
+        <h2>Genre</h2>
+        <p>Comedy, Drama</p>
+
+        <h2>Release Date</h2>
+        <p>2015</p>
+
+        <h2>Runtime</h2>
+        <p>121 minutes</p>
+
+        <h2>Director</h2>
+        <p>Nancy Meyers</p>
+      </div>
+
+      <div class="info-column">
+        <h2>Main Cast</h2>
+        <ul class="cast-list">
+          <li>Robert De Niro - Ben Whittaker</li>
+          <li>Anne Hathaway - Jules Ostin</li>
+        </ul>
+      </div>
+
+      <div class="info-column">
+        <h2>Overview</h2>
+        <p>
+          <em>The Intern</em> follows Ben Whittaker, a 70-year-old widower who
+          joins an online fashion startup as a senior intern. As he forms an
+          unexpected friendship with the company's busy CEO, Jules Ostin, they
+          both learn valuable lessons about work, life, and personal growth.
+        </p>
+
+        <h2>Trivia</h2>
+        <ul class="trivia">
+          <li>Robert De Niro and Anne Hathaway starred together for the first time in this film.</li>
+          <li>In one scene, Ben is confused about who Jay-Z is, a humorous reference that became one of the film's memorable moments.</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <audio id="bgMusic" autoplay loop controls>
+      <source src="audio/intern.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+      const audio = document.getElementById("bgMusic");
+
+      audio.addEventListener("loadedmetadata", function () {
+        audio.currentTime = 0;
+      });
+    </script>
+
+  </body>
+</html>

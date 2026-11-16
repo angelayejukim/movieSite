@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harry Potter</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body class="movie hp">
+    <h3><a href="index.html">Back to Home</a></h3>
+
+    <!-- HEADING -->
+    <h1>HARRY POTTER</h1>
+
+    <div class="poster-row">
+      <div class="poster-card">
+        <img src="images/hp.jpg" alt="Harry Potter" loading="lazy">
+        <div class="poster-overlay">
+          <p>"It does not do to dwell on dreams and forget to live."</p>
+        </div>
+      </div>
+
+      <div class="poster-card">
+        <img src="images/hp-1.jpg" alt="Harry Potter" loading="lazy">
+        <div class="poster-overlay">
+          <p>"Yer a wizard, Harry."</p>
+        </div>
+      </div>
+
+      <div class="poster-card">
+        <img src="images/hp-2.jpg" alt="Harry Potter" loading="lazy">
+        <div class="poster-overlay">
+          <p>"There is no good and evil, there is only power, and those too weak to seek it."</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- DESCRIPTION -->
+    <div class="movie-info">
+
+      <div class="info-column">
+        <h2>Genre</h2>
+        <p>Fantasy, Adventure, Family</p>
+
+        <h2>Release Date</h2>
+        <p>2001</p>
+
+        <h2>Runtime</h2>
+        <p>152 minutes</p>
+
+        <h2>Director</h2>
+        <p>Chris Columbus</p>
+      </div>
+
+      <div class="info-column">
+        <h2>Main Cast</h2>
+        <ul class="cast-list">
+          <li>Daniel Radcliffe - Harry Potter</li>
+          <li>Rupert Grint - Ron Weasley</li>
+          <li>Emma Watson - Hermione Granger</li>
+        </ul>
+      </div>
+
+      <div class="info-column">
+        <h2>Overview</h2>
+        <p>
+          <em>Harry Potter and the Philosopher's Stone</em> follows
+          eleven-year-old Harry Potter as he discovers that he is a wizard and
+          begins his first year at Hogwarts School of Witchcraft and Wizardry.
+          Alongside his new friends Ron and Hermione, Harry uncovers the
+          mystery surrounding the legendary Philosopher's Stone while
+          confronting the dark forces connected to his past.
+        </p>
+
+        <h2>Trivia</h2>
+        <ul class="trivia">
+          <li>The film is based on J.K. Rowling's bestselling debut novel of the same name.</li>
+          <li>It was the first installment in the Harry Potter film series and introduced audiences to Hogwarts, Diagon Alley, and many of the franchise's iconic characters.</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <audio id="bgMusic" autoplay loop controls>
+      <source src="audio/hp.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+      const audio = document.getElementById("bgMusic");
+
+      audio.addEventListener("loadedmetadata", function () {
+        audio.currentTime = 2;
+      });
+    </script>
+
+  </body>
+</html>

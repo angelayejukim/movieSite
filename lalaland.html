@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La La Land</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body class="movie lalaland">
+    <h3><a href="index.html">Back to Home</a></h3>
+
+    <!-- HEADING -->
+    <h1>LA LA LAND</h1>
+
+    <div class="poster-row">
+      <div class="poster-card">
+        <img src="images/lalaland.png" alt="La La Land" loading="lazy">
+        <div class="poster-overlay">
+          <p>"Here's to the fools who dream."</p>
+        </div>
+      </div>
+
+      <div class="poster-card">
+        <img src="images/lalaland-1.jpg" alt="La La Land" loading="lazy">
+        <div class="poster-overlay">
+          <p>"I'm always gonna love you."<br><br>"I'm always gonna love you, too."</p>
+        </div>
+      </div>
+
+      <div class="poster-card">
+        <img src="images/lalaland-2.jpg" alt="La La Land" loading="lazy">
+        <div class="poster-overlay">
+          <p>"People love what other people are passionate about."</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- DESCRIPTION -->
+    <div class="movie-info">
+
+      <div class="info-column">
+        <h2>Genre</h2>
+        <p>Musical, Romance, Drama</p>
+
+        <h2>Release Date</h2>
+        <p>2016</p>
+
+        <h2>Runtime</h2>
+        <p>128 minutes</p>
+
+        <h2>Director</h2>
+        <p>Damien Chazelle</p>
+      </div>
+
+      <div class="info-column">
+        <h2>Main Cast</h2>
+        <ul class="cast-list">
+          <li>Ryan Gosling - Sebastian Wilder</li>
+          <li>Emma Stone - Mia Dolan</li>
+        </ul>
+      </div>
+
+      <div class="info-column">
+        <h2>Overview</h2>
+        <p>
+          <em>La La Land</em> follows Mia, an aspiring actress, and Sebastian,
+          a passionate jazz pianist, who meet while pursuing their dreams in
+          Los Angeles. As their careers begin to flourish, they struggle to
+          balance their ambitions with their relationship.
+        </p>
+
+        <h2>Trivia</h2>
+        <ul class="trivia">
+          <li>The opening highway dance scene took two days to film.</li>
+          <li>Emma Stone won the Academy Award for Best Actress.</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <audio id="bgMusic" autoplay loop controls>
+      <source src="audio/lalaland.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+      const audio = document.getElementById("bgMusic");
+
+      audio.addEventListener("loadedmetadata", function () {
+        audio.currentTime = 0;
+      });
+    </script>
+
+  </body>
+</html>

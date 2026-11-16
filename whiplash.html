@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whiplash</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body class="movie whiplash">
+    <h3><a href="index.html">Back to Home</a></h3>
+
+    <!-- HEADING -->
+    <h1>WHIPLASH</h1>
+
+    <div class="poster-row">
+      <div class="poster-card">
+        <img src="images/whiplash.jpg" alt="Whiplash" loading="lazy">
+        <div class="poster-overlay">
+          <p>"Not quite my tempo."</p>
+        </div>
+      </div>
+
+      <div class="poster-card">
+        <img src="images/whiplash-1.jpg" alt="Whiplash" loading="lazy">
+        <div class="poster-overlay">
+          <p>"I'd rather die drunk, broke at 34 and have people at a dinner table talk about me than live to be rich and sober at 90 and nobody remembered who I was."</p>
+        </div>
+      </div>
+
+      <div class="poster-card">
+        <img src="images/whiplash-2.jpg" alt="Whiplash" loading="lazy">
+        <div class="poster-overlay">
+          <p>"Were you rushing or were you dragging?"</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- DESCRIPTION -->
+    <div class="movie-info">
+
+      <div class="info-column">
+        <h2>Genre</h2>
+        <p>Drama, Music</p>
+
+        <h2>Release Date</h2>
+        <p>2014</p>
+
+        <h2>Runtime</h2>
+        <p>106 minutes</p>
+
+        <h2>Director</h2>
+        <p>Damien Chazelle</p>
+      </div>
+
+      <div class="info-column">
+        <h2>Main Cast</h2>
+        <ul class="cast-list">
+          <li>Miles Teller - Andrew Neiman</li>
+          <li>J. K. Simmons - Terence Fletcher</li>
+        </ul>
+      </div>
+
+      <div class="info-column">
+        <h2>Overview</h2>
+        <p>
+          <em>Whiplash</em> follows Andrew Neiman, a jazz drummer studying at a
+          prestigious music conservatory. He is mentored by Terence Fletcher,
+          who pushes his students to their limits. Andrew becomes obsessed with
+          achieving greatness, leading to an intense struggle between ambition,
+          perfection, and personal sacrifice.
+        </p>
+
+        <h2>Trivia</h2>
+        <ul class="trivia">
+          <li>The movie started as a short film before becoming a full feature.</li>
+          <li>The final drum performance scene took many takes to film.</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <audio id="bgMusic" autoplay loop controls>
+      <source src="audio/whiplash.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+      const audio = document.getElementById("bgMusic");
+
+      audio.addEventListener("loadedmetadata", function () {
+        audio.currentTime = 0;
+      });
+    </script>
+
+  </body>
+</html>

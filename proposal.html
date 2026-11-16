@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Proposal</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body class="movie proposal">
+    <h3><a href="index.html">Back to Home</a></h3>
+
+    <!-- HEADING -->
+    <h1>THE PROPOSAL</h1>
+
+    <div class="poster-row">
+      <div class="poster-card">
+        <img src="images/proposal.jpg" alt="The Proposal" loading="lazy">
+        <div class="poster-overlay">
+          <p>"Here comes the bride... maybe."</p>
+        </div>
+      </div>
+
+      <div class="poster-card">
+        <img src="images/proposal-1.jpg" alt="The Proposal" loading="lazy">
+        <div class="poster-overlay">
+          <p>"A fake engagement. A real connection."</p>
+        </div>
+      </div>
+
+      <div class="poster-card">
+        <img src="images/proposal-2.jpg" alt="The Proposal" loading="lazy">
+        <div class="poster-overlay">
+          <p>"Love wasn't part of the plan."</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- DESCRIPTION -->
+    <div class="movie-info">
+
+      <div class="info-column">
+        <h2>Genre</h2>
+        <p>Romantic Comedy</p>
+
+        <h2>Release Date</h2>
+        <p>2009</p>
+
+        <h2>Runtime</h2>
+        <p>108 minutes</p>
+
+        <h2>Director</h2>
+        <p>Anne Fletcher</p>
+      </div>
+
+      <div class="info-column">
+        <h2>Main Cast</h2>
+        <ul class="cast-list">
+          <li>Sandra Bullock - Margaret Tate</li>
+          <li>Ryan Reynolds - Andrew Paxton</li>
+          <li>Betty White - Grandma Annie</li>
+          <li>Mary Steenburgen - Grace Paxton</li>
+        </ul>
+      </div>
+
+      <div class="info-column">
+        <h2>Overview</h2>
+        <p>
+          <em>The Proposal</em> follows Margaret Tate, a demanding book editor
+          facing deportation from the United States, who convinces her
+          assistant Andrew Paxton to pretend to be her fiancé. As they travel
+          to his family home in Alaska to maintain the charade, unexpected
+          romance begins to blossom.
+        </p>
+
+        <h2>Trivia</h2>
+        <ul class="trivia">
+          <li>The film was a major box office success, grossing over $300 million worldwide.</li>
+          <li>Betty White's comedic performance became one of the film's highlights.</li>
+          <li>The movie was filmed primarily in Massachusetts, standing in for Alaska.</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <audio id="bgMusic" autoplay loop controls>
+      <source src="audio/proposal.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+      const audio = document.getElementById("bgMusic");
+
+      audio.addEventListener("loadedmetadata", function () {
+        audio.currentTime = 3;
+      });
+    </script>
+
+  </body>
+</html>
