@@ -47,8 +47,8 @@
 <a class="movie lms" data-genre="Comedy" href="lms.html"><img src="images/lms.jpg" alt="Little Miss Sunshine" loading="lazy"></a>
 <a class="movie scheme" data-genre="Comedy" href="scheme.html"><img src="images/scheme.jpg" alt="The Phoenician Scheme" loading="lazy"></a>
 <a class="movie priscilla" data-genre="Drama" href="priscilla.html"><img src="images/priscilla.jpg" alt="Priscilla" loading="lazy"></a>
-<a class="movie hamilton" data-genre="Musical / Drama / History" href="hamilton.html"><img src="images/hamilton.jpg" alt="Hamilton" loading="lazy"></a>
-<a class="movie hadestown" data-genre="Musical / Drama / Romance" href="hadestown.html"><img src="images/hadestown.jpg" alt="Hadestown" loading="lazy"></a>
+<a class="movie hamilton" data-genre="Drama" href="hamilton.html"><img src="images/hamilton.jpg" alt="Hamilton" loading="lazy"></a>
+<a class="movie hadestown" data-genre="Drama" href="hadestown.html"><img src="images/hadestown.jpg" alt="Hadestown" loading="lazy"></a>
 <a class="movie kingsman" data-genre="Action / Thriller" href="kingsman.html"><img src="images/kingsman.jpg" alt="Kingsman" loading="lazy"></a>
 <a class="movie marriage" data-genre="Drama" href="marriage.html"><img src="images/marriage.jpg" alt="Marriage Story" loading="lazy"></a>
 <a class="movie mams" data-genre="Action / Thriller" href="mams.html"><img src="images/mams.jpg" alt="Mr. & Mrs. Smith" loading="lazy"></a>
@@ -100,12 +100,16 @@
 </audio>
 
 <script>
-  const bgMusic = document.getElementById("bgMusic");
+const audio = document.getElementById("bgMusic");
 
-  document.addEventListener("click", () => {
-    bgMusic.play();
-  }, { once: true });
-<script>
+audio.addEventListener("loadedmetadata", () => {
+  audio.currentTime = 1;
+});
+
+document.addEventListener("click", () => {
+  audio.play();
+}, { once: true });
+  
 window.addEventListener("load", () => {
   const search = document.getElementById("search");
   const sort = document.getElementById("sort");
