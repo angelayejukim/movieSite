@@ -1,36 +1,42 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movie Site</title>
-    <link rel="icon" type="image/png" href="favicon.png">
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body class="home">
-    <!-- HEADING + DESCRIPTION -->
-<div class="cinema-header">
-    <h1>MOVIES</h1>
-</div>
-<div class="controls">
-    <input
-        type="text"
-        id="search"
-        placeholder="Search movies..."
-        autocomplete="off"
-    >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Site</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
 
-    <select id="sort">
-        <option value="favorites">Favorites</option>
-        <option value="az">A–Z</option>
-        <option value="genre">Genre</option>
-    </select>
+<body class="home">
+
+<!-- HEADING -->
+<div class="cinema-header">
+  <h1>MOVIES</h1>
 </div>
+
+<!-- SEARCH AND SORT -->
+<div class="controls">
+  <input
+    type="text"
+    id="search"
+    placeholder="Search movies..."
+    autocomplete="off"
+  >
+
+  <select id="sort">
+    <option value="favorites">Favorites</option>
+    <option value="az">A–Z</option>
+    <option value="genre">Genre</option>
+  </select>
+</div>
+
 <br>
 
-    <!-- MOVIE POSTERS -->
-    <div class="container">
+<!-- MOVIE POSTERS -->
+<div class="container">
+
 <a class="movie lalaland" data-genre="Romance" href="lalaland.html"><img src="images/lalaland.png" alt="La La Land" loading="lazy"></a>
 <a class="movie whiplash" data-genre="Drama" href="whiplash.html"><img src="images/whiplash.jpg" alt="Whiplash" loading="lazy"></a>
 <a class="movie hamnet" data-genre="Drama" href="hamnet.html"><img src="images/hamnet.jpg" alt="Hamnet" loading="lazy"></a>
@@ -92,40 +98,201 @@
 <a class="movie hatinggame" data-genre="Romance" href="hatinggame.html"><img src="images/hatinggame.jpg" alt="The Hating Game" loading="lazy"></a>
 <a class="movie descendants" data-genre="Animation / Family" href="descendants.html"><img src="images/descendants.jpg" alt="Descendants" loading="lazy"></a>
 
+</div>
 
+<!-- MUSIC PLAYER -->
+<div class="music-player">
+  <audio id="bgMusic" controls loop preload="metadata">
+    <source src="audio/main.mp3" type="audio/mpeg">
+  </audio>
+</div>
 
-    </div>
-<audio id="bgMusic" loop>
-  <source src="audio/main.mp3" type="audio/mpeg">
-</audio>
+<button id="resumeMusic" type="button" hidden>
+  ▶ Tap to resume music
+</button>
+
+<style>
+.music-player {
+  position: fixed;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(380px, calc(100% - 24px));
+  z-index: 1000;
+}
+
+.music-player audio {
+  width: 100%;
+}
+
+#resumeMusic {
+  position: fixed;
+  bottom: 75px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1001;
+  padding: 12px 20px;
+  border-radius: 25px;
+  border: none;
+  background: #333;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+#resumeMusic[hidden] {
+  display: none !important;
+}
+</style>
 
 <script>
-const audio = document.getElementById("bgMusic");
 
+// ==========================
+// MUSIC SYSTEM
+// ==========================
+
+const audio = document.getElementById("bgMusic");
+const resumeButton = document.getElementById("resumeMusic");
+
+let navigatingAway = false;
+
+// Restore the last music position
 audio.addEventListener("loadedmetadata", () => {
-  audio.currentTime = 1;
+  const savedTime = Number(
+    sessionStorage.getItem("movieMusicTime")
+  );
+
+  if (
+    Number.isFinite(savedTime) &&
+    savedTime > 0 &&
+    savedTime < audio.duration
+  ) {
+    audio.currentTime = savedTime;
+  } else {
+    audio.currentTime = 1;
+  }
 });
 
-document.addEventListener("click", () => {
-  audio.play();
-}, { once: true });
-  
+// Save current music position
+audio.addEventListener("timeupdate", () => {
+  sessionStorage.setItem(
+    "movieMusicTime",
+    String(audio.currentTime)
+  );
+});
+
+// Remember when music starts
+audio.addEventListener("play", () => {
+  sessionStorage.setItem("musicState", "playing");
+  resumeButton.hidden = true;
+});
+
+// Remember when user pauses
+audio.addEventListener("pause", () => {
+  if (!navigatingAway) {
+    sessionStorage.setItem("musicState", "paused");
+    resumeButton.hidden = true;
+  }
+});
+
+// Attempt to resume playback
+function resumeMusic() {
+  if (sessionStorage.getItem("musicState") !== "playing") {
+    return;
+  }
+
+  if (!audio.paused) {
+    resumeButton.hidden = true;
+    return;
+  }
+
+  audio.play()
+    .then(() => {
+      resumeButton.hidden = true;
+    })
+    .catch(() => {
+      if (
+        sessionStorage.getItem("musicState") === "playing"
+      ) {
+        resumeButton.hidden = false;
+      }
+    });
+}
+
+// Resume when returning home
+window.addEventListener("pageshow", () => {
+  navigatingAway = false;
+  resumeMusic();
+});
+
+// Save before leaving the page
+window.addEventListener("pagehide", () => {
+  navigatingAway = true;
+
+  sessionStorage.setItem(
+    "movieMusicTime",
+    String(audio.currentTime)
+  );
+});
+
+// Start music on first click
+document.addEventListener("click", (event) => {
+  if (
+    event.target === audio ||
+    audio.contains(event.target) ||
+    event.target === resumeButton
+  ) {
+    return;
+  }
+
+  const state = sessionStorage.getItem("musicState");
+
+  if (state === null) {
+    sessionStorage.setItem("musicState", "playing");
+    resumeMusic();
+  } else if (state === "playing" && audio.paused) {
+    resumeMusic();
+  }
+});
+
+// Button for browsers blocking autoplay
+resumeButton.addEventListener("click", () => {
+  sessionStorage.setItem("musicState", "playing");
+  resumeMusic();
+});
+
+
+// ==========================
+// MOVIE SEARCH AND SORT
+// ==========================
+
 window.addEventListener("load", () => {
+
   const search = document.getElementById("search");
   const sort = document.getElementById("sort");
   const container = document.querySelector(".container");
-  const movies = Array.from(document.querySelectorAll(".movie"));
+  const movies = Array.from(
+    document.querySelectorAll(".movie")
+  );
 
+  // Remember favorite order
   movies.forEach((movie, index) => {
     movie.dataset.favorite = index;
 
     movie.addEventListener("click", () => {
-      sessionStorage.setItem("movieScroll", window.scrollY);
+      sessionStorage.setItem(
+        "movieScroll",
+        window.scrollY
+      );
     });
   });
 
+  // Restore sort preference
   const savedSort = localStorage.getItem("movieSort");
-  if (savedSort) sort.value = savedSort;
+
+  if (savedSort) {
+    sort.value = savedSort;
+  }
 
   function getTitle(movie) {
     return movie.querySelector("img").alt;
@@ -142,29 +309,42 @@ window.addEventListener("load", () => {
   function movieMatchesSearch(movie) {
     const value = search.value.trim().toLowerCase();
     const title = getTitle(movie).toLowerCase();
+
     return value === "" || title.includes(value);
   }
 
+  // Favorites order
   function showFavorites() {
     clearContainer();
 
     movies
-      .sort((a, b) => Number(a.dataset.favorite) - Number(b.dataset.favorite))
+      .sort((a, b) =>
+        Number(a.dataset.favorite) -
+        Number(b.dataset.favorite)
+      )
       .forEach(movie => {
-        if (movieMatchesSearch(movie)) container.appendChild(movie);
+        if (movieMatchesSearch(movie)) {
+          container.appendChild(movie);
+        }
       });
   }
 
+  // Alphabetical order
   function showAZ() {
     clearContainer();
 
     movies
-      .sort((a, b) => getTitle(a).localeCompare(getTitle(b)))
+      .sort((a, b) =>
+        getTitle(a).localeCompare(getTitle(b))
+      )
       .forEach(movie => {
-        if (movieMatchesSearch(movie)) container.appendChild(movie);
+        if (movieMatchesSearch(movie)) {
+          container.appendChild(movie);
+        }
       });
   }
 
+  // Genre order
   function showGenres() {
     clearContainer();
 
@@ -179,57 +359,97 @@ window.addEventListener("load", () => {
     ];
 
     genreOrder.forEach(genreName => {
+
       const matchingMovies = movies
-        .filter(movie => getGenre(movie) === genreName && movieMatchesSearch(movie))
-        .sort((a, b) => getTitle(a).localeCompare(getTitle(b)));
+        .filter(movie =>
+          getGenre(movie) === genreName &&
+          movieMatchesSearch(movie)
+        )
+        .sort((a, b) =>
+          getTitle(a).localeCompare(getTitle(b))
+        );
 
       if (matchingMovies.length > 0) {
+
         const heading = document.createElement("h2");
         heading.className = "genre-heading";
         heading.textContent = genreName;
+
         container.appendChild(heading);
 
-        matchingMovies.forEach(movie => container.appendChild(movie));
+        matchingMovies.forEach(movie => {
+          container.appendChild(movie);
+        });
       }
     });
   }
 
+  // Update display
   function updateMovies() {
+
     if (sort.value === "az") {
       showAZ();
+
     } else if (sort.value === "genre") {
       showGenres();
+
     } else {
       showFavorites();
     }
   }
 
+  // Sorting change
   sort.addEventListener("change", () => {
-    localStorage.setItem("movieSort", sort.value);
+
+    localStorage.setItem(
+      "movieSort",
+      sort.value
+    );
+
     sessionStorage.setItem("movieScroll", 0);
+
     updateMovies();
     window.scrollTo(0, 0);
   });
 
+  // Live movie search
   search.addEventListener("input", () => {
+
     sessionStorage.setItem("movieScroll", 0);
+
     updateMovies();
     window.scrollTo(0, 0);
   });
 
+  // Save scroll position
   window.addEventListener("scroll", () => {
-    sessionStorage.setItem("movieScroll", window.scrollY);
+
+    sessionStorage.setItem(
+      "movieScroll",
+      window.scrollY
+    );
   });
 
+  // Show initial movies
   updateMovies();
 
-  const savedScroll = sessionStorage.getItem("movieScroll");
+  // Restore scroll position
+  const savedScroll =
+    sessionStorage.getItem("movieScroll");
+
   if (savedScroll !== null) {
+
     requestAnimationFrame(() => {
-      window.scrollTo(0, Number(savedScroll));
+      window.scrollTo(
+        0,
+        Number(savedScroll)
+      );
     });
   }
+
 });
+
 </script>
-  </body>
+
+</body>
 </html>
